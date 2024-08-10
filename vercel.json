@@ -6,19 +6,6 @@
       "use": "@vercel/next"
     }
   ],
-  "rewrites": [
-    {
-      "source": "/old-path",
-      "destination": "/new-path"
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/old-route",
-      "destination": "/new-route",
-      "permanent": true
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
