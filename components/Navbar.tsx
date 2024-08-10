@@ -4,43 +4,57 @@ import logo from "@/assets/logo.svg";
 export default function Navbar() {
   return (
     <>
-      <div className="absolute z-10 w-full">
-        <div className="flex p-4 text-zinc-50">
-          <p>Mon – Sun: 9.00 am – 8.00pm</p>
-          <p className="ml-auto border-r-2 ">info@igual.com</p>
-          <p>4b, Walse Street , USA</p>
-        </div>
+      <div className="flex items-center justify-center px-3">
+        <p>Mon - Sun: 9.00 am - 5.00pm</p>
+        <p className="ml-auto border-r-2 border-secondary p-3">halt-o.com</p>
+        <p className="pl-3">Chennai, INDIA</p>
+      </div>
 
-        <ul className="w-full flex justify-around items-center border-y-2 border-secondary p-4">
-          <li className="border-r-2">
+      <ul className="w-full flex justify-around items-center border-y-2 border-secondary  ">
+        <li className="py-6 pr-24 border-r-2 border-secondary">
+          <a href="/">
             <Image src={logo} alt="logo" className="size-10" />
-          </li>
-          <li className="cursor-pointer text-zinc-50">Home</li>
-          <li className="cursor-pointer text-zinc-50">About Us</li>
-          <li className="cursor-pointer text-zinc-50">Features</li>
-          <li>
-            <button className="flex justify-center items-center border-2 border-secondary">
-              <div>
+          </a>
+        </li>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="aboutus">About Us</a>
+        </li>
+        <li>
+          <a href="features">Features</a>
+        </li>
+        <li>
+          <a href="blog">Blog</a>
+        </li>
+        <li>+91 XXXXX XXXXX</li>
+        <li>
+          <a href="contactus">
+            <button className="flex justify-center items-center border-2 border-secondary rounded-tl-lg rounded-br-lg">
+              <div className="p-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="icon icon-tabler icon-tabler-plus size-7"
+                  className="icon icon-tabler icon-tabler-plus size-6"
                   viewBox="0 0 24 24"
-                  strokeWidth="1.5"
+                  stroke-width="2"
                   stroke="#b9967e"
                   fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                   <path d="M12 5l0 14" />
                   <path d="M5 12l14 0" />
                 </svg>
               </div>
-              <div className="bg-secondary text-zinc-50">Contact Us</div>
+              <div className="bg-secondary p-3 text-white font-semibold">
+                Contact Us
+              </div>
             </button>
-          </li>
-        </ul>
-      </div>
+          </a>
+        </li>
+      </ul>
     </>
   );
 }

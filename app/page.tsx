@@ -1,11 +1,11 @@
 import Navbar from "@/components/Navbar";
-import Carousel from "@/components/Carousel";
+import OurResources from "./OurResources";
 
 export default function Home() {
   return (
     <div className="relative">
       <Navbar />
-      <Carousel />
-    </div>
+      <OurResources />
+    </>
   );
 }
