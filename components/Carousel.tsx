@@ -30,7 +30,7 @@ const Carousel = () => {
               alt={`Slide ${index + 1}`}
               className="w-full h-full object-cover"
             />
-            <div className="absolute left-0 top-0 h-full w-1/3  bg-opacity-50 flex flex-col justify-between p-6">
+            <div className="absolute left-0 top-0 h-full w-1/3 bg-black  bg-opacity-50 flex flex-col justify-between p-6">
               <div className="flex-1 flex items-center">
                 <h2 className="text-white text-3xl font-bold">{slide.text}</h2>
               </div>
