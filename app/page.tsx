@@ -6,6 +6,6 @@ export default function Home() {
     <div className="relative">
       <Navbar />
       <OurResources />
-    </>
+    </div>
   );
 }
