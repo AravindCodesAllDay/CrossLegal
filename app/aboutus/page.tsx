@@ -1,10 +1,10 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import team from "@/assets/abtHeader.jpg";
 import lawyer from "@/assets/lawyerAbt.jpg";
 import justice from "@/assets/justice.svg";
+import Navbar from "@/app/_components/Navbar";
 
 export default function page() {
   const [currentNumber, setCurrentNumber] = useState(0);
