@@ -1,9 +1,9 @@
 "use client";
-
 import { useState } from "react";
-import ladyJustice from "@/assets/ladyJustice.jpeg";
-import officeTable from "@/assets/justice.jpeg";
 import Image from "next/image";
+
+import ladyJustice from "@/app/_assets/ladyJustice.jpeg";
+import officeTable from "@/app/_assets/justice.jpeg";
 
 const Carousel = () => {
   const slides = [

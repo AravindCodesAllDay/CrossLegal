@@ -12,7 +12,7 @@ const config: Config = {
         primary: "#181a22",
         secondary: "#b9967e",
       },
-      backgroundImage: {},
+      backgroundImage: { statue: "url('/app/_assets/statue.jpg')" },
     },
   },
   plugins: [],
