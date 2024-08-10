@@ -22,7 +22,7 @@ export default function Footer() {
             <div className="h-3 w-5 bg-gradient-to-l from-secondary rounded-tl-md rounded-br-md"></div>
           </h3>
           <p className="flex flex-col text-4xl font-bold">
-            <span>Let's Get Started With Us, Further</span>
+            <span>Let&apos;s Get Started With Us, Further</span>
             <span>Info & Support Team</span>
           </p>
         </div>
