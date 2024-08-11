@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
 
 @import "tailwindcss/base";
 @import "tailwindcss/components";
@@ -6,5 +6,5 @@
 
 
 body {
-    font-family: 'Marcellus SC', serif;
+    font-family: 'Marcellus', serif;
 }

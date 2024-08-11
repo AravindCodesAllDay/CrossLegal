@@ -13,7 +13,7 @@ const config: Config = {
         secondary: "#b9967e",
       },
       fontFamily: {
-        marcellus: ['Marcellus SC', 'serif'],
+        marcellus: ['Marcellus', 'serif'],
       },
       backgroundImage: { statue: "url('/app/_assets/statue.jpg')" },
     },
