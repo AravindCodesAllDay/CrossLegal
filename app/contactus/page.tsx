@@ -1,5 +1,4 @@
-import { CSSProperties } from 'react';
-import Navbar from "../_components/Navbar";
+import Navbar from "@/components/Navbar";
 
 export default function ContactPage() {
     return (
