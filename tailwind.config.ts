@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-
+// import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -11,6 +11,9 @@ const config: Config = {
       colors: {
         primary: "#181a22",
         secondary: "#b9967e",
+      },
+      fontFamily: {
+        marcellus: ['Marcellus', 'serif'],
       },
       backgroundImage: { statue: "url('/app/_assets/statue.jpg')" },
     },

@@ -10,7 +10,7 @@ import AboutUs from "./_homepage/AboutUs";
 
 export default function Home() {
   return (
-    <>
+    <div className="relative">
       <Navbar />
       <div className="flex flex-col gap-8">
         <Carousel />
@@ -22,6 +22,6 @@ export default function Home() {
         <RecentArticles />
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
