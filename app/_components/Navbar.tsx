@@ -39,7 +39,7 @@ export default function Navbar() {
                     xmlns="http://www.w3.org/2000/svg"
                     className="icon icon-tabler icon-tabler-plus size-6"
                     viewBox="0 0 24 24"
-                    stroke-width="2"
+                    strokeWidth="2"
                     stroke="#b9967e"
                     fill="none"
                     strokeLinecap="round"
