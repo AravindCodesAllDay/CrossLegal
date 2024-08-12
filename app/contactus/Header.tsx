@@ -1,45 +1,31 @@
 import React from "react";
+import Image from "next/image";
+
+import team from "@/app/_assets/abtHeader.jpg";
 
 export default function Header() {
   return (
-    <div className="h-[500px] w-full bg-primary text-white flex gap-5 justify-around overflow-hidden items-center">
-      <div
-        className="relative block w-1/6 pb-[25%] overflow-hidden"
-        style={{
-          transformOrigin: "0 100%",
-          transform: "skewX(-30deg) translateZ(1px)",
-        }}
-      >
-        <div
-          className="absolute w-[190%] h-full bg-center bg-cover bg-gradient-to-b from-secondary"
-          style={{
-            transformOrigin: "inherit",
-            transform: "skewX(30deg)",
-          }}
-        ></div>
-      </div>
-      <div>
-        <h2 className="text-6xl font-bold">Contact Us</h2>
-        <p className="flex gap-3 items-center">
-          <a href="/">Home</a>
-          <span className="size-4 rounded-tl-lg rounded-br-lg bg-gradient-to-l from-secondary"></span>
-          Contact Us
-        </p>
-      </div>
-      <div
-        className="relative block w-1/6 pb-[25%] overflow-hidden"
-        style={{
-          transformOrigin: "0 100%",
-          transform: "skewX(-30deg) translateZ(1px)",
-        }}
-      >
-        <div
-          className="absolute w-[190%] h-full bg-center bg-cover bg-gradient-to-b from-secondary"
-          style={{
-            transformOrigin: "inherit",
-            transform: "skewX(30deg)",
-          }}
-        ></div>
+    <div className="relative h-[400px] overflow-clip bg-[#15171f]">
+      <Image
+        src={team}
+        alt="Team Image"
+        className="w-full h-[60vh] opacity-10"
+      />
+      <div className="absolute z-10 top-2/4 left-[45%]">
+        <div className="flex flex-col items-center">
+          <h1 className="text-5xl font-marcellus text-zinc-100">Contact</h1>
+          <div className="flex text-zinc-50 text-sm py-5 items-center list-none">
+            <li className="px-2 hover:text-secondary">
+              <a href="/">Home</a>
+            </li>
+            <span>
+              <div className="h-3 w-3 bg-[#65554d] mt-0.5 rounded-tl-md rounded-br-md"></div>
+            </span>
+            <li className="px-2">
+              <a href="">Contact</a>
+            </li>
+          </div>
+        </div>
       </div>
     </div>
   );

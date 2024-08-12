@@ -90,7 +90,10 @@ export default function WhatWeDo() {
       </div>
       <div className="flex justify-around">
         {testimonials.slice(currentIndex, currentIndex + 3).map((data) => (
-          <div className="flex flex-col gap-3 max-w-96" key={data.id}>
+          <div
+            className="flex flex-col gap-3 max-w-96 group hover:shadow-xl"
+            key={data.id}
+          >
             <div className="flex">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -109,11 +112,11 @@ export default function WhatWeDo() {
                 <path d="M8 15h8" />
                 <path d="M11 11v7" />
               </svg>
-              <div className="h-16 w-6 rounded-bl-full ml-auto bg-gradient-to-l from-secondary to-white"></div>
+              <div className="h-20 w-8 rounded-bl-full ml-auto opacity-25 group-hover:opacity-55 bg-gradient-to-l from-secondary"></div>
             </div>
             <div className="flex flex-col gap-3 p-3">
               <h3 className="text-3xl">{data.header}</h3>
-              <p>{data.text}</p>
+              <p className="text-secondary line-clamp-2">{data.text}</p>
             </div>
             <Image src={card} alt="card" />
           </div>

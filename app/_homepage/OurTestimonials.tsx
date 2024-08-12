@@ -31,6 +31,10 @@ export default function OurTestimonials() {
     return () => clearInterval(interval);
   }, []);
 
+  const handleDotClick = (index: number) => {
+    setCurrentIndex(index);
+  };
+
   return (
     <div className="flex flex-col justify-center items-center gap-3 p-5">
       <h3 className="flex items-center gap-3 text-2xl text-secondary">
@@ -75,6 +79,19 @@ export default function OurTestimonials() {
             </svg>
           </div>
         ))}
+        <div className="flex justify-center gap-2 mt-4">
+          {testimonials.map((_, index) => (
+            <div
+              key={index}
+              className={`w-3 h-3 rounded-full cursor-pointer transition-all duration-300 ${
+                currentIndex === index
+                  ? "bg-secondary transform scale-125"
+                  : "bg-gray-300"
+              }`}
+              onClick={() => handleDotClick(index)}
+            ></div>
+          ))}
+        </div>
       </div>
     </div>
   );
