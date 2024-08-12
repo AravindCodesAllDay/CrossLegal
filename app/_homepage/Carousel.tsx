@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 import ladyJustice from "@/app/_assets/ladyJustice.jpeg";
@@ -7,11 +7,21 @@ import officeTable from "@/app/_assets/justice.jpeg";
 
 const Carousel = () => {
   const slides = [
-    { image: ladyJustice, text: "Justice for All" },
-    { image: officeTable, text: "Workspace Excellence" },
+    { image: ladyJustice, text: "LEAVE COURT TO US" },
+    { image: officeTable, text: "WELCOME TO CROSS LEGAL" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState<number>(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === slides.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 8000);
+
+    return () => clearInterval(interval);
+  }, [slides.length]);
 
   const handlePointerClick = (index: number) => {
     setCurrentIndex(index);
@@ -24,16 +34,39 @@ const Carousel = () => {
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {slides.map((slide, index) => (
-          <div key={index} className="relative w-full flex-shrink-0">
+          <div key={index} className="relative w-full flex-shrink-0 h-full">
             <Image
               src={slide.image}
               alt={`Slide ${index + 1}`}
               className="w-full h-full object-cover"
             />
-            <div className="absolute left-0 top-0 h-full w-1/3  bg-opacity-50 flex flex-col justify-between p-6">
-              <div className="flex-1 flex items-center">
-                <h2 className="text-white text-3xl font-bold">{slide.text}</h2>
-              </div>
+            <div className="absolute inset-0 flex flex-col justify-center items-center p-6 z-10 bg-black bg-opacity-40">
+              <h2 className="text-white text-4xl font-bold text-shadow-md">
+                {slide.text}
+              </h2>
+              <a href="contactus">
+                <button className="flex justify-center items-center mt-4">
+                  <div className="p-2 bg-white rounded-tl-lg">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="icon icon-tabler icon-tabler-plus size-6"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      stroke="#b9967e"
+                      fill="none"
+                      stroke-linecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M12 5l0 14" />
+                      <path d="M5 12l14 0" />
+                    </svg>
+                  </div>
+                  <div className="bg-secondary rounded-br-lg p-2 text-white font-semibold">
+                    Contact Us
+                  </div>
+                </button>
+              </a>
             </div>
           </div>
         ))}

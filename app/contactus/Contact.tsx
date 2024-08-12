@@ -1,0 +1,133 @@
+import React from "react";
+import StarRating from "../_animations/StarRating";
+
+export default function Contact() {
+  return (
+    <div className="flex justify-between p-5 gap-5">
+      <div className="flex flex-col gap-5 p-5 w-1/2 rounded-lg">
+        <h3 className="flex items-center gap-3 text-2xl text-secondary">
+          <div className="h-3 w-5 bg-gradient-to-r from-secondary rounded-tl-md rounded-br-md"></div>
+          Get In Touch
+          <div className="h-3 w-5 bg-gradient-to-l from-secondary rounded-tl-md rounded-br-md"></div>
+        </h3>
+        <p className="flex flex-col text-5xl">Contact Information</p>
+        <div className="flex gap-5 justify-around">
+          <div className="flex flex-col items-center gap-5 border p-4 rounded-lg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-20 p-3 border-2 text-secondary border-secondary rounded-full"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+              />
+            </svg>
+
+            <h2 className="text-3xl">Location</h2>
+            <p className="flex flex-col items-center">
+              <span>4821 Ridge Top Cir, Anchorage</span>
+              <span>Street, Alaska 99508, USA.</span>
+            </p>
+          </div>
+          <div className="flex flex-col items-center gap-5 border p-4 rounded-lg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-20 p-3 border-2 text-secondary border-secondary rounded-full"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z"
+              />
+            </svg>
+
+            <h2 className="text-3xl">24/7 Support</h2>
+            <p className="flex flex-col items-center">
+              <span>+(91) XXXXX XXXXX</span>
+              <span>contact@halt-o.com</span>
+            </p>
+          </div>
+        </div>
+        <div className="flex bg-secondary text-white text-lg p-3 items-center justify-center gap-3">
+          <p>Our Best Skilled Attorneys, Trust Score 4.5</p>
+          <StarRating rating={4} />
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-5 w-1/2 p-5 bg-white rounded-lg shadow-md">
+        <h3 className="flex items-center gap-3 text-2xl text-secondary">
+          <div className="h-3 w-5 bg-gradient-to-r from-secondary rounded-tl-md rounded-br-md"></div>
+          Drop Us a Line
+          <div className="h-3 w-5 bg-gradient-to-l from-secondary rounded-tl-md rounded-br-md"></div>
+        </h3>
+        <p className="flex flex-col text-5xl">Drop Us a Line</p>
+
+        <form className="flex flex-col gap-3 items-center">
+          <div className="w-full">
+            <label htmlFor="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              className="w-full p-2 mt-1 border-b-2 border-gray-300 rounded-md"
+            />
+          </div>
+          <div className="flex w-full gap-3">
+            <div className="w-full">
+              <label htmlFor="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                className="w-full p-2 mt-1 border-b-2 border-gray-300 rounded-md"
+              />
+            </div>
+            <div className="w-full">
+              <label htmlFor="phone">Phone:</label>
+              <input
+                type="text"
+                id="phone"
+                name="phone"
+                required
+                className="w-full p-2 mt-1 border-b-2 border-gray-300 rounded-md"
+              />
+            </div>
+          </div>
+          <div className="w-full">
+            <label htmlFor="message">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              className="w-full p-2 mt-1 border-b-2 border-gray-300 rounded-md"
+            />
+          </div>
+          <div>
+            <button
+              type="submit"
+              className="p-3 bg-secondary text-white rounded-tl-3xl rounded-br-3xl cursor-pointer text-lg"
+            >
+              Send Now
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+}

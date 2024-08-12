@@ -53,7 +53,7 @@ export default function WhatWeDo() {
   };
 
   return (
-    <>
+    <div className="p-5 flex flex-col gap-5">
       <div className="flex items-center justify-center gap-10">
         <div className="flex flex-col gap-3">
           <h3 className="flex items-center gap-3 text-2xl text-secondary">
@@ -119,16 +119,14 @@ export default function WhatWeDo() {
           </div>
         ))}
       </div>
-      <div className="flex gap-4 mt-4">
+      <div className="flex gap-4 ml-auto">
         <button
           onClick={handlePrev}
-          className="px-4 py-2 bg-secondary rounded-tl-3xl rounded-br-3xl"
+          className="px-3 py-1 bg-secondary rounded-tl-3xl rounded-br-3xl"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="icon icon-tabler icon-tabler-arrow-badge-left-filled"
-            width="44"
-            height="44"
+            className="icon icon-tabler icon-tabler-arrow-badge-left-filled size-10"
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="#fff"
@@ -146,13 +144,11 @@ export default function WhatWeDo() {
         </button>
         <button
           onClick={handleNext}
-          className="px-4 py-2 bg-secondary rounded-tl-3xl rounded-br-3xl"
+          className="px-3 py-1 bg-secondary rounded-tl-3xl rounded-br-3xl"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="icon icon-tabler icon-tabler-arrow-badge-right-filled"
-            width="44"
-            height="44"
+            className="icon icon-tabler icon-tabler-arrow-badge-right-filled size-10"
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="#fff"
@@ -169,6 +165,6 @@ export default function WhatWeDo() {
           </svg>
         </button>
       </div>
-    </>
+    </div>
   );
 }

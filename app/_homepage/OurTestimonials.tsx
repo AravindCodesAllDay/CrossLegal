@@ -26,13 +26,13 @@ export default function OurTestimonials() {
       setCurrentIndex((prevIndex) =>
         prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
       );
-    }, 5000);
+    }, 8000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="bg-statue bg-no-repeat bg-center flex flex-col justify-center items-center gap-3">
+    <div className="flex flex-col justify-center items-center gap-3 p-5">
       <h3 className="flex items-center gap-3 text-2xl text-secondary">
         <div className="h-3 w-5 bg-gradient-to-r from-secondary rounded-tl-md rounded-br-md"></div>
         Our Testimonials
