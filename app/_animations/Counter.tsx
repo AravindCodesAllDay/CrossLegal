@@ -24,13 +24,14 @@ export default function Counter({ start, targetNumber, count }: CounterProps) {
       }
     );
 
-    if (counterRef.current) {
-      observer.observe(counterRef.current);
+    const currentRef = counterRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (counterRef.current) {
-        observer.unobserve(counterRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, [hasStarted]);
@@ -50,7 +51,7 @@ export default function Counter({ start, targetNumber, count }: CounterProps) {
 
       return () => clearInterval(interval);
     }
-  }, [targetNumber, hasStarted]);
+  }, [targetNumber, count, hasStarted]);
 
   return (
     <span

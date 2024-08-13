@@ -74,10 +74,10 @@ export default function AboutUs() {
             <div className="h-3.5 w-6 bg-gradient-to-r from-white to-secondary rounded-tr-md rounded-bl-md"></div>
           </div>
           <div className="w-[95%] flex flex-wrap">
-            <p className="font-marcellus font-light leading-[55px] text-[2.8em] text-[#1e1e1e] ">
-              We're Advocates for People Justice and Right
+            <p className="font-marcellus font-light leading-[55px] text-[2.8em] text-[#1e1e1e]">
+              We're Advocates for People’s Justice and Right
             </p>
-            <div className="w-[18%] mt-4 h-0.5  bg-gradient-to-r from-secondary to-white"></div>
+            <div className="w-[18%] mt-4 h-0.5 bg-gradient-to-r from-secondary to-white"></div>
             <p className="text-[16px] py-6 leading-loose text-gray-500">
               All the Lorem Ipsum generators on the Internet tend to predefined
               chunks as necessary, making this the first true generator on net
@@ -88,7 +88,7 @@ export default function AboutUs() {
               <Image
                 className="w-[55px] h-[55px]"
                 src={quote}
-                alt="leftQuote"
+                alt="Left Quote"
               />
               <p className="w-[80%] leading-loose italic font-[500] text-lg text-[#1e1e1e]">
                 We believe everyone deserves affordable and simple access to
