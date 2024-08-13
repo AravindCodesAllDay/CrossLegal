@@ -1,62 +1,63 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-// import Image from "next/image";
-// import team from "@/app/_assets/abtHeader.jpg";
-// import lawyer from "@/app/_assets/lawyerAbt.jpg";
-// import justice from "@/app/_assets/justice.svg";
-// import quote from "@/app/_assets/leftQuote.png";
-// import lookingFor from "@/app/_assets/lookingFor.jpg";
+import Image from "next/image";
+
+import team from "@/app/_assets/abtHeader.jpg";
+import lawyer from "@/app/_assets/lawyerAbt.jpg";
+import justice from "@/app/_assets/justice.svg";
+import quote from "@/app/_assets/leftQuote.png";
+import lookingFor from "@/app/_assets/lookingFor.jpg";
 import Navbar from "@/app/_components/Navbar";
 import Footer from "../_components/Footer";
 
-export default function page() {
-  //   const [currentNumber, setCurrentNumber] = useState(0);
-  //   const [isInView, setIsInView] = useState(false);
-  //   const elementRef = useRef<HTMLDivElement>(null);
+export default function Page() {
+  const [currentNumber, setCurrentNumber] = useState(0);
+  const [isInView, setIsInView] = useState(false);
+  const elementRef = useRef<HTMLDivElement>(null);
 
-  //   useEffect(() => {
-  //     const observer = new IntersectionObserver(
-  //       (entries) => {
-  //         const [entry] = entries;
-  //         if (entry.isIntersecting) {
-  //           setIsInView(true);
-  //           observer.disconnect(); // Stop observing after the first intersection
-  //         }
-  //       },
-  //       { threshold: 0.1 } // Trigger when 10% of the element is in view
-  //     );
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
 
-  //     if (elementRef.current) {
-  //       observer.observe(elementRef.current);
-  //     }
+    const currentElement = elementRef.current;
+    if (currentElement) {
+      observer.observe(currentElement);
+    }
 
-  //     return () => {
-  //       if (elementRef.current) {
-  //         observer.unobserve(elementRef.current);
-  //       }
-  //     };
-  //   }, []);
+    return () => {
+      if (currentElement) {
+        observer.unobserve(currentElement);
+      }
+    };
+  }, []);
 
-  //   useEffect(() => {
-  //     const interval = setInterval(() => {
-  //       setCurrentNumber((prevNumber) => {
-  //         if (prevNumber < 3200) {
-  //           return prevNumber + 32;
-  //         } else {
-  //           clearInterval(interval);
-  //           return prevNumber;
-  //         }
-  //       });
-  //     }, 35);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentNumber((prevNumber) => {
+        if (prevNumber < 3200) {
+          return prevNumber + 32;
+        } else {
+          clearInterval(interval);
+          return prevNumber;
+        }
+      });
+    }, 35);
 
-  //     return () => clearInterval(interval);
-  //   }, []);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
       <Navbar />
-      {/* <div className="flex flex-col gap-5"> */}
-      {/* 
+      <div className="flex flex-col gap-5">
         <div className="relative h-[400px] overflow-clip bg-[#15171f]">
           <Image
             src={team}
@@ -189,59 +190,20 @@ export default function page() {
                   </p>
                   <div className="h-3.5 w-6 bg-gradient-to-r from-white to-secondary rounded-tr-md rounded-bl-md"></div>
                 </div>
-                <div className="w-[70%] flex flex-wrap">
-                  <p className="font-marcellus font-light text-center text-[2.5em] text-[#1e1e1e] ">
-                    Are You Looking for Help From a Lawyer?
-                  </p>
-                </div>
-                <a href="contactus" className="group">
-                  <button className="flex justify-center items-center">
-                    <div className="p-2 bg-[#00192c] transform transition-transform duration-500 group-hover:bg-secondary rounded-tl-lg">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="icon icon-tabler icon-tabler-plus size-6 transform transition-transform duration-300 group-hover:rotate-90"
-                        viewBox="0 0 24 24"
-                        strokeWidth="2"
-                        stroke="#ffffff"
-                        fill="none"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M12 5l0 14" />
-                        <path d="M5 12l14 0" />
-                      </svg>
-                    </div>
-                    <div className="bg-secondary transform transition-transform duration-500 group-hover:bg-[#00192c] rounded-br-lg p-2 text-white font-semibold">
-                      Contact Us
-                    </div>
+                <p className="text-center text-sm font-[350] leading-7 p-3 text-black">
+                  If you need someone on your side who knows your rights and has
+                  the training to help you navigate the law, contact us today.
+                </p>
+                <a href="contactus">
+                  <button className="p-3 w-[170px] rounded-br-[15px] rounded-tr-[15px] bg-secondary hover:bg-[#00192c] transform transition-colors duration-300 text-white">
+                    Contact Us
                   </button>
                 </a>
               </div>
             </div>
           </div>
-
-          <div className="flex flex-col items-center justify-center gap-5 mt-56 p-12">
-            <div className="flex">
-              <div className="h-3.5 w-6 bg-gradient-to-r from-secondary to-[#09172e] rounded-tr-md rounded-bl-md"></div>
-              <p className="text-secondary text-sm px-2 font-[550] -mt-0.5">
-                OUR TESTIMONALS
-              </p>
-              <div className="h-3.5 w-6 bg-gradient-to-r from-[#09172e] to-secondary rounded-tr-md rounded-bl-md"></div>
-            </div>
-            <div className="w-1/3 flex flex-wrap items-center gap-5 justify-center">
-              <p className="font-marcellus font-light text-center text-[2.5em] leading-10 text-[#ffffff] ">
-                What They Are Talking About Igual
-              </p>
-              <div className="w-[15%] h-0.5  bg-gradient-to-r from-secondary to-[#09172e]"></div>
-            </div>
-          </div>
-
-          <div className="flex">
-            <div></div>
-          </div>
         </div>
-      </div> */}
+      </div>
       <Footer />
     </>
   );
