@@ -75,7 +75,7 @@ export default function AboutUs() {
           </div>
           <div className="w-[95%] flex flex-wrap">
             <p className="font-marcellus font-light leading-[55px] text-[2.8em] text-[#1e1e1e]">
-              We're Advocates for People’s Justice and Right
+              We're Advocates for People's Justice and Right
             </p>
             <div className="w-[18%] mt-4 h-0.5 bg-gradient-to-r from-secondary to-white"></div>
             <p className="text-[16px] py-6 leading-loose text-gray-500">
