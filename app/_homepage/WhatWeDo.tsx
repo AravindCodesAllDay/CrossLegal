@@ -63,24 +63,24 @@ export default function WhatWeDo() {
             line2={"Our Practice Areas"}
           />
         </div>
-        <button className="flex justify-center items-center">
-          <div className="p-3 bg-primary rounded-tl-lg">
+        <button className="flex justify-center items-center group">
+          <div className="p-2 bg-[#00192c] transform transition-transform duration-500 group-hover:bg-secondary rounded-tl-lg">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="icon icon-tabler icon-tabler-plus size-6"
+              className="icon icon-tabler icon-tabler-plus size-6 transform transition-transform duration-300 group-hover:rotate-90"
               viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="#fff"
+              strokeWidth="2"
+              stroke="#ffffff"
               fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path d="M12 5l0 14" />
               <path d="M5 12l14 0" />
             </svg>
           </div>
-          <div className="bg-secondary rounded-br-lg p-3 text-white font-semibold">
+          <div className="bg-secondary transform transition-transform duration-500 group-hover:bg-[#00192c] rounded-br-lg p-2 text-white font-semibold">
             Learn More
           </div>
         </button>

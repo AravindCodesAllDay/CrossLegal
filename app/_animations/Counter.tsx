@@ -2,11 +2,13 @@
 import React, { useState, useEffect, useRef } from "react";
 
 interface CounterProps {
+  start: number;
   targetNumber: number;
+  count: number;
 }
 
-export default function Counter({ targetNumber }: CounterProps) {
-  const [currentNumber, setCurrentNumber] = useState(0);
+export default function Counter({ start, targetNumber, count }: CounterProps) {
+  const [currentNumber, setCurrentNumber] = useState(start);
   const [hasStarted, setHasStarted] = useState(false);
   const counterRef = useRef<HTMLSpanElement>(null);
 
@@ -38,13 +40,13 @@ export default function Counter({ targetNumber }: CounterProps) {
       let interval = setInterval(() => {
         setCurrentNumber((prevNumber) => {
           if (prevNumber < targetNumber) {
-            return prevNumber + 1;
+            return prevNumber + count;
           } else {
             clearInterval(interval);
             return prevNumber;
           }
         });
-      }, 20);
+      }, 60);
 
       return () => clearInterval(interval);
     }
@@ -53,7 +55,7 @@ export default function Counter({ targetNumber }: CounterProps) {
   return (
     <span
       ref={counterRef}
-      className="text-6xl text-secondary font-bold transition-all duration-1000 ease-out opacity-100"
+      className="transition-all duration-1000 ease-out opacity-100"
     >
       {currentNumber}
     </span>

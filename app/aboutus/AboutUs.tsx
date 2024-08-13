@@ -5,9 +5,9 @@ import Image from "next/image";
 import lawyer from "@/app/_assets/lawyerAbt.jpg";
 import justice from "@/app/_assets/justice.svg";
 import quote from "@/app/_assets/leftQuote.png";
+import Counter from "../_animations/Counter";
 
 export default function AboutUs() {
-  const [currentNumber, setCurrentNumber] = useState(0);
   const [isInView, setIsInView] = useState(false);
   const elementRef = useRef<HTMLDivElement>(null);
 
@@ -35,21 +35,6 @@ export default function AboutUs() {
     };
   }, []);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentNumber((prevNumber) => {
-        if (prevNumber < 3200) {
-          return prevNumber + 32;
-        } else {
-          clearInterval(interval);
-          return prevNumber;
-        }
-      });
-    }, 35);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div
       ref={elementRef}
@@ -68,7 +53,9 @@ export default function AboutUs() {
           />
           <div className="absolute top-[510px] flex items-center justify-center">
             <div className="w-[320px] bg-secondary p-8 text-center text-zinc-50 rounded-bl-[50px]">
-              <p className="text-[56px] font-marcellus">{currentNumber}+</p>
+              <p className="text-[56px] font-marcellus">
+                <Counter start={1000} count={200} targetNumber={3200} />+
+              </p>
               <p className="text-[14.5px] font-semibold">
                 LAWYERS ACROSS OUR GLOBAL PLATFORM
               </p>
@@ -88,7 +75,7 @@ export default function AboutUs() {
           </div>
           <div className="w-[95%] flex flex-wrap">
             <p className="font-marcellus font-light leading-[55px] text-[2.8em] text-[#1e1e1e] ">
-              We’re Advocates for People Justice and Right
+              We're Advocates for People Justice and Right
             </p>
             <div className="w-[18%] mt-4 h-0.5  bg-gradient-to-r from-secondary to-white"></div>
             <p className="text-[16px] py-6 leading-loose text-gray-500">

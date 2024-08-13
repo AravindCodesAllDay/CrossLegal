@@ -9,15 +9,8 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      keyframes: {
-        fadeOut: {
-          "0%": { opacity: "1" },
-          "100%": { opacity: "0" },
-        },
-      },
-      animation: {
-        fadeOut: "fadeOut 1.5s ease-out",
-      },
+      keyframes: {},
+      animation: {},
       colors: {
         primary: "#181a22",
         secondary: "#b9967e",

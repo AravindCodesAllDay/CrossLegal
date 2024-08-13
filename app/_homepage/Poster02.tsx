@@ -29,9 +29,7 @@ export default function Poster02() {
   }, []);
   return (
     <div
-      className={`w-4/5 bg-primary text-white h-96 flex justify-between items-center mx-auto overflow-hidden transform transition-transform duration-1000 ease-out ${
-        isInView ? "translate-y-0" : "translate-y-32 opacity-0"
-      }`}
+      className={`w-4/5 bg-primary text-white h-96 flex justify-between items-center mx-auto overflow-hidden`}
       ref={elementRef}
     >
       <div
@@ -80,7 +78,11 @@ export default function Poster02() {
           }}
         ></div>
       </div>
-      <div className="flex flex-col gap-5 p-5">
+      <div
+        className={`flex flex-col gap-5 p-5 transform transition-transform duration-1000 ease-out ${
+          isInView ? "translate-y-0" : "translate-y-32 opacity-0"
+        }`}
+      >
         <h3 className="flex items-center gap-2 text-2xl text-secondary">
           <div className="h-3 w-5 bg-gradient-to-r from-secondary rounded-tl-md rounded-br-md"></div>
           Contact
@@ -91,24 +93,23 @@ export default function Poster02() {
           <span>From a Lawyer?</span>
         </p>
         <a href="contactus">
-          <button className="flex justify-center items-center">
-            <div className="p-2 bg-white rounded-tl-lg">
+          <button className="flex justify-center items-center group">
+            <div className="p-2 bg-white transform transition-transform duration-500 group-hover:bg-secondary rounded-tl-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="icon icon-tabler icon-tabler-plus size-6"
+                className="icon icon-tabler icon-tabler-plus size-6 transform transition-transform duration-300 group-hover:rotate-90 stroke-primary"
                 viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="#b9967e"
+                strokeWidth="2"
                 fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M12 5l0 14" />
                 <path d="M5 12l14 0" />
               </svg>
             </div>
-            <div className="bg-secondary rounded-br-lg p-2 text-white font-semibold">
+            <div className="bg-secondary transform transition-transform duration-500 group-hover:bg-[#00192c] rounded-br-lg p-2 text-white font-semibold">
               Contact Us
             </div>
           </button>

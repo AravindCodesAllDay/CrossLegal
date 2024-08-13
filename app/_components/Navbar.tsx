@@ -76,14 +76,13 @@ export default function Navbar() {
         <li className="text-secondary">+91 XXXXX XXXXX</li>
         <li>
           <a href="/contactus">
-            <button className="flex justify-center items-center">
-              <div className="p-2 bg-white rounded-tl-lg">
+            <button className="flex justify-center items-center group">
+              <div className="p-2 bg-white transform transition-transform duration-500 group-hover:bg-secondary rounded-tl-lg">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="icon icon-tabler icon-tabler-plus size-6"
+                  className="icon icon-tabler icon-tabler-plus size-6 transform transition-transform duration-300 group-hover:rotate-90 stroke-primary"
                   viewBox="0 0 24 24"
                   strokeWidth="2"
-                  stroke="#b9967e"
                   fill="none"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -93,7 +92,7 @@ export default function Navbar() {
                   <path d="M5 12l14 0" />
                 </svg>
               </div>
-              <div className="bg-secondary rounded-br-lg p-2 text-white font-semibold">
+              <div className="bg-secondary transform transition-transform duration-500 group-hover:bg-[#00192c] rounded-br-lg p-2 text-white font-semibold">
                 Contact Us
               </div>
             </button>
