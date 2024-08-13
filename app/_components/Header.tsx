@@ -1,9 +1,9 @@
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface HeaderProps {
   title: string;
-  photo: string;
+  photo: StaticImageData;
 }
 
 export default function Header({ title, photo }: HeaderProps) {
