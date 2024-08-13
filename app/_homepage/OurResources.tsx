@@ -23,7 +23,7 @@ export default function OurResources() {
               <Counter start={0} count={10} targetNumber={100} />%
             </p>
             <p className="text-center">
-              ON HUMAN RIGHTS CAMPAIGN FOUNDATION'S 2023
+              ON HUMAN RIGHTS CAMPAIGN FOUNDATION&apos;S 2023
             </p>
           </div>
           <div className="flex flex-col items-center justify-center border-b p-3 h-full">

@@ -11,6 +11,8 @@ export default function AboutUs() {
   const elementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const currentRef = elementRef.current;
+
     const observer = new IntersectionObserver(
       (entries) => {
         const [entry] = entries;
@@ -22,13 +24,13 @@ export default function AboutUs() {
       { threshold: 0.1 }
     );
 
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (elementRef.current) {
-        observer.unobserve(elementRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);

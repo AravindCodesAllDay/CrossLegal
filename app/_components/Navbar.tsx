@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import logo from "@/app/_assets/logo.svg";
@@ -9,7 +9,7 @@ export default function Navbar() {
   const [navbarVisible, setNavbarVisible] = useState(true);
   const pathname = usePathname();
 
-  const controlNavbar = () => {
+  const controlNavbar = useCallback(() => {
     if (typeof window !== "undefined") {
       if (window.scrollY > lastScrollY) {
         setNavbarVisible(false);
@@ -18,7 +18,7 @@ export default function Navbar() {
       }
       setLastScrollY(window.scrollY);
     }
-  };
+  }, [lastScrollY]);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -28,7 +28,7 @@ export default function Navbar() {
         window.removeEventListener("scroll", controlNavbar);
       };
     }
-  }, [lastScrollY]);
+  }, [controlNavbar]);
 
   const navItems = [
     { name: "Home", path: "/" },
