@@ -37,17 +37,11 @@ export default function AboutUs() {
     <div className="relative w-full flex justify-around" ref={elementRef}>
       <div className="h-1/2 w-full bg-[#f9f9f9] absolute -z-20"></div>
 
-      <div
-        className={`transform transition-transform duration-1000 ease-out ${
-          isInView ? "translate-y-0" : "translate-y-32 opacity-0"
-        }`}
-      >
-        <Image
-          src={women}
-          alt="women"
-          className="rounded-tl-3xl rounded-br-3xl"
-        />
-      </div>
+      <Image
+        src={women}
+        alt="women"
+        className="rounded-tl-3xl rounded-br-3xl"
+      />
 
       <div className={`w-2/5 flex flex-col gap-8 `}>
         <div className="h-1/2 flex flex-col justify-center gap-3">
@@ -56,11 +50,17 @@ export default function AboutUs() {
             line1={"We're Advocates for"}
             line2={"Justice and Right"}
           />
-          <p>
-            All the Lorem Ipsum generators on the Internet tend to predefined
-            chunks as necessary, making this the first true generator on net.
-            Uses a dictionary of over always true latin words.
-          </p>
+          <div
+            className={`transform transition-transform duration-1000 ease-out ${
+              isInView ? "translate-y-0" : "translate-y-32 opacity-0"
+            }`}
+          >
+            <p>
+              All the Lorem Ipsum generators on the Internet tend to predefined
+              chunks as necessary, making this the first true generator on net.
+              Uses a dictionary of over always true latin words.
+            </p>
+          </div>
         </div>
 
         <div className="relative flex justify-center h-1/2">
