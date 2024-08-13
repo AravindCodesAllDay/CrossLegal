@@ -9,21 +9,35 @@ export default function StarRating({ rating }: StarRatingProps) {
 
   return (
     <div className="flex">
-      {stars.map((star) => (
-        <svg
-          key={star}
-          xmlns="http://www.w3.org/2000/svg"
-          fill={star <= rating ? "currentColor" : "#fff"}
-          viewBox="0 0 24 24"
-          className="size-6 text-yellow-500"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M12 17.27l5.18 3.73-1.64-5.81L21 10.24l-5.9-.51L12 4.5 8.9 9.73 3 10.24l4.46 4.95L5.82 21z"
-          />
-        </svg>
-      ))}
+      {stars.map((star) => {
+        const fillPercentage =
+          Math.min(Math.max(rating - (star - 1), 0), 1) * 100;
+        return (
+          <div key={star} className="relative">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              className="size-6 text-yellow-500"
+            >
+              <defs>
+                <linearGradient id={`grad-${star}`}>
+                  <stop
+                    offset={`${fillPercentage}%`}
+                    stopColor="currentColor"
+                  />
+                  <stop offset={`${fillPercentage}%`} stopColor="#fff" />
+                </linearGradient>
+              </defs>
+              <path
+                fill={`url(#grad-${star})`}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 17.27l5.18 3.73-1.64-5.81L21 10.24l-5.9-.51L12 4.5 8.9 9.73 3 10.24l4.46 4.95L5.82 21z"
+              />
+            </svg>
+          </div>
+        );
+      })}
     </div>
   );
 }

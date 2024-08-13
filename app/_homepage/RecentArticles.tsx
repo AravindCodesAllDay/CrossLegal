@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 
 import blog from "@/app/_assets/blog.jpg";
+import Heading from "../_animations/Heading";
 
 const articles = [
   {
@@ -44,15 +45,11 @@ export default function RecentArticles() {
 
   return (
     <div className="flex flex-col justify-center items-center gap-3 p-5">
-      <h3 className="flex items-center gap-3 text-2xl text-secondary">
-        <div className="h-3 w-5 bg-gradient-to-r from-secondary rounded-tl-md rounded-br-md"></div>
-        Recent Articles
-        <div className="h-3 w-5 bg-gradient-to-l from-secondary rounded-tl-md rounded-br-md"></div>
-      </h3>
-      <p className="flex flex-col text-primary text-4xl font-bold">
-        <span>What News Do We Have</span>
-        <span>Today, Latest Blog</span>
-      </p>
+      <Heading
+        title={"Recent Articles"}
+        line1={"What News Do We Have"}
+        line2={"Today, Latest Blog"}
+      />
       <div className="relative w-full max-w-[900px]">
         <div className="flex flex-wrap justify-between">
           {articles.slice(currentIndex, currentIndex + 2).map((article) => (
@@ -85,7 +82,7 @@ export default function RecentArticles() {
             (_, index) => (
               <div
                 key={index}
-                className={`w-3 h-3 rounded-full cursor-pointer transition-all duration-300 ${
+                className={`w-4 h-3 rounded-tl-md rounded-br-md cursor-pointer transition-all duration-300 ${
                   currentIndex === index * 2
                     ? "bg-secondary transform scale-125"
                     : "bg-gray-300"

@@ -1,5 +1,6 @@
+// tailwind.config.js
 import type { Config } from "tailwindcss";
-// import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
+
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,16 +9,28 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        fadeOut: {
+          "0%": { opacity: "1" },
+          "100%": { opacity: "0" },
+        },
+      },
+      animation: {
+        fadeOut: "fadeOut 1.5s ease-out",
+      },
       colors: {
         primary: "#181a22",
         secondary: "#b9967e",
       },
       fontFamily: {
-        marcellus: ['Marcellus', 'serif'],
+        marcellus: ["Marcellus", "serif"],
       },
-      backgroundImage: { statue: "url('/app/_assets/statue.jpg')" },
+      backgroundImage: {
+        statue: "url('/app/_assets/statue.jpg')",
+      },
     },
   },
   plugins: [],
 };
+
 export default config;

@@ -12,38 +12,75 @@ const Carousel = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [animate, setAnimate] = useState<boolean>(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
+      setAnimate(false);
       setCurrentIndex((prevIndex) =>
         prevIndex === slides.length - 1 ? 0 : prevIndex + 1
       );
-    }, 8000);
+      setTimeout(() => setAnimate(true), 50);
+    }, 15000);
 
     return () => clearInterval(interval);
   }, [slides.length]);
 
   const handlePointerClick = (index: number) => {
+    setAnimate(false);
     setCurrentIndex(index);
+    setTimeout(() => setAnimate(true), 50);
   };
 
   return (
     <div className="relative w-screen h-[100vh] max-w-full mx-auto overflow-hidden">
       <div
-        className="flex transition-transform duration-700 ease-in-out h-full"
+        className={`flex transition-transform duration-700 ease-in-out h-full ${
+          animate ? "animate-slide" : ""
+        }`}
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {slides.map((slide, index) => (
-          <div key={index} className="relative w-full flex-shrink-0 h-full">
+          <div
+            key={index}
+            className={`relative w-full flex-shrink-0 h-full ${
+              animate ? "animate-slide" : ""
+            }`}
+          >
             <Image
               src={slide.image}
               alt={`Slide ${index + 1}`}
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 flex flex-col justify-center items-center p-6 z-10 bg-black bg-opacity-40">
-              <h2 className="text-white text-4xl font-bold text-shadow-md">
+            <div className="absolute inset-0 flex flex-col gap-3 justify-center p-6 z-10 bg-black bg-opacity-40">
+              <h2
+                className={`text-secondary text-xl font-bold text-shadow-md ${
+                  animate ? "slide-in" : ""
+                }`}
+              >
                 {slide.text}
               </h2>
+              <div className="text-white text-6xl">
+                <p className={`slide-in ${animate ? "slide-in-1" : ""}`}>
+                  The Legal Advice
+                </p>
+                <p className={`slide-in ${animate ? "slide-in-2" : ""}`}>
+                  Need <span>Phone Call</span>
+                </p>
+                <div className="flex items-center gap-3">
+                  <p className={`slide-in ${animate ? "slide-in-3" : ""}`}>
+                    Away
+                  </p>
+                  <div className="border-l-2 border-secondary text-base pl-3 flex flex-col justify-center">
+                    <p className={`slide-in ${animate ? "slide-in-4" : ""}`}>
+                      Lorem ipsum dolor sit amet consectetur,
+                    </p>
+                    <p className={`slide-in ${animate ? "slide-in-4" : ""}`}>
+                      adipisicing elit. Odit, voluptates.
+                    </p>
+                  </div>
+                </div>
+              </div>
               <a href="contactus">
                 <button className="flex justify-center items-center mt-4">
                   <div className="p-2 bg-white rounded-tl-lg">
@@ -51,10 +88,10 @@ const Carousel = () => {
                       xmlns="http://www.w3.org/2000/svg"
                       className="icon icon-tabler icon-tabler-plus size-6"
                       viewBox="0 0 24 24"
-                      stroke-width="2"
+                      strokeWidth="2"
                       stroke="#b9967e"
                       fill="none"
-                      stroke-linecap="round"
+                      strokeLinecap="round"
                       strokeLinejoin="round"
                     >
                       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -72,18 +109,27 @@ const Carousel = () => {
         ))}
       </div>
 
-      <div className="absolute bottom-4 left-0 right-0 flex justify-start p-8">
+      <div className="absolute gap-3 bottom-4 left-0 right-0 flex justify-start p-8">
         {slides.map((_, pointerIndex) => (
           <button
             key={pointerIndex}
             onClick={() => handlePointerClick(pointerIndex)}
-            className={`w-3 h-3 mx-2 rounded-full border-2 ${
-              pointerIndex === currentIndex
-                ? "bg-white border-white"
-                : "border-white"
+            className={`w-4 h-3 rounded-tl-md rounded-br-md  border-2 border-secondary ${
+              pointerIndex === currentIndex ? "bg-secondary" : ""
             }`}
           ></button>
         ))}
+        <svg
+          viewBox="0 0 1024 1024"
+          className="icon size-20 opacity-20 absolute bottom-0 right-8"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M450.72 418.17c-42.29-21.86-144.5-220-171.65-198.22s-40.59 114.28 0.29 171.31 132 97 153.52 129.58 18.45 57.07 13.36 63.2S262.49 462 217.66 485.53s-28.41 84.69 17.56 132.54S427 651.39 455.57 672.76s32.72 55 20.49 55-145.88-32.38-192.77-24.15-68.25 39.89 0.12 73.42 180.26 8.87 199.28 28.21 6.8 28.54-7.47 29.58-110.14-4.91-143.78 0.24 6.21 56.07 23.57 69.3 80.59 19.24 98.94 16.15 36.67-26.58 51-20.48 3.14 45.88 8.25 53 46.92 9.1 53-0.09-10.26-37.71-0.09-51 32.65 11.16 66.28-1.13 109-70.55 111-104.2-132.52 27.76-167.19 26.8c-24.48-4-34.71-21.36-19.43-30.56s228.33-55.45 244.57-96.27 4-34.68-21.47-34.63S605.6 724.45 590.26 700 791 610 813.3 555.9s29.37-119.36-0.22-127.47-147.62 137.92-194.54 130.86-1.06-21.41 19.29-48 132.36-120.51 133.32-154.16 10.08-67.32-27.65-71.33-129.27 135.84-149.69 123.63 52.89-78.61 64-143.89S632.09 133 611.7 137.14s-19.37 4.11-19.34 22.47 10.33 79.52-1.85 114.21-13.14 60.18-23.35 54.08-10.27-43.83-4.2-73.41 23.3-92.83 13.07-112.19S545.27 48.53 467.8 68s-72.25 89.86-65 136.75 27.67 83.57 45.09 128.41 21.71 94.77 2.83 85.01z"
+            fill="#5AB286"
+          />
+        </svg>
       </div>
     </div>
   );

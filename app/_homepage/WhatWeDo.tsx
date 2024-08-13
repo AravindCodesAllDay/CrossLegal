@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 
 import card from "@/app/_assets/card.jpg";
+import Heading from "../_animations/Heading";
 
 export default function WhatWeDo() {
   const testimonials = [
@@ -56,15 +57,11 @@ export default function WhatWeDo() {
     <div className="p-5 flex flex-col gap-5">
       <div className="flex items-center justify-center gap-10">
         <div className="flex flex-col gap-3">
-          <h3 className="flex items-center gap-3 text-2xl text-secondary">
-            <div className="h-3 w-5 bg-gradient-to-r from-secondary rounded-tl-md rounded-br-md"></div>
-            What We Do
-            <div className="h-3 w-5 bg-gradient-to-l from-secondary rounded-tl-md rounded-br-md"></div>
-          </h3>
-          <p className="flex flex-col text-primary text-4xl font-bold">
-            <span>A Passion For Justice,</span>
-            <span>Our Practice Areas</span>
-          </p>
+          <Heading
+            title={"What We Do"}
+            line1={"A Passion For Justice,"}
+            line2={"Our Practice Areas"}
+          />
         </div>
         <button className="flex justify-center items-center">
           <div className="p-3 bg-primary rounded-tl-lg">

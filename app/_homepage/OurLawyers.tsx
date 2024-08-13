@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 
 import profile from "@/app/_assets/statue.jpg";
+import Heading from "../_animations/Heading";
 
 const profiles = [
   { name: "James Garcia", specialty: "Real Estate Law", image: profile },
@@ -30,15 +31,11 @@ export default function OurLawyers() {
 
   return (
     <div className="flex flex-col justify-center items-center gap-3">
-      <h3 className="flex items-center gap-3 text-2xl text-secondary">
-        <div className="h-3 w-5 bg-gradient-to-r from-secondary rounded-tl-md rounded-br-md"></div>
-        Our Lawyers
-        <div className="h-3 w-5 bg-gradient-to-l from-secondary rounded-tl-md rounded-br-md"></div>
-      </h3>
-      <p className="flex flex-col text-primary text-4xl font-bold">
-        <span>A Passion For Justice, Our</span>
-        <span>Practice Areas</span>
-      </p>
+      <Heading
+        title={"Our Lawyers"}
+        line1={"A Passion For Justice, Our"}
+        line2={"Practice Areas"}
+      />
 
       <div className="flex justify-around w-full">
         {profiles
@@ -49,34 +46,31 @@ export default function OurLawyers() {
               className="w-96 h-96 relative items-center flex flex-col justify-around"
             >
               <div className="w-full h-1/2 rounded-b-full bg-secondary opacity-15 absolute top-0"></div>
-              <h6 className="text-2xl">{profile.name}</h6>
-              <p className="text-secondary">{profile.specialty}</p>
+              <div className="flex flex-col items-center">
+                <h6 className="text-2xl">{profile.name}</h6>
+                <p className="text-secondary">{profile.specialty}</p>
+              </div>
               <Image
                 src={profile.image}
                 alt="profile"
                 className="size-56 rounded-full border-2 border-secondary p-2"
               />
-              <ul className="flex justify-around w-full">
-                <li className="rounded-full p-2 bg-secondary">
+              <ul className="flex gap-5">
+                <li className="rounded-full p-1 bg-secondary">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="icon icon-tabler icon-tabler-brand-facebook-filled size-8 text-white"
+                    className="icon icon-tabler icon-tabler-brand-facebook  size-8 stroke-white"
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
-                    stroke="#fff"
                     fill="none"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path
-                      d="M18 2a1 1 0 0 1 .993 .883l.007 .117v4a1 1 0 0 1 -.883 .993l-.117 .007h-3v1h3a1 1 0 0 1 .991 1.131l-.02 .112l-1 4a1 1 0 0 1 -.858 .75l-.113 .007h-2v6a1 1 0 0 1 -.883 .993l-.117 .007h-4a1 1 0 0 1 -.993 -.883l-.007 -.117v-6h-2a1 1 0 0 1 -.993 -.883l-.007 -.117v-4a1 1 0 0 1 .883 -.993l.117 -.007h2v-1a6 6 0 0 1 5.775 -5.996l.225 -.004h3z"
-                      stroke-width="0"
-                      fill="currentColor"
-                    />
+                    <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
                   </svg>
                 </li>
-                <li className="rounded-full p-2 bg-secondary">
+                <li className="rounded-full p-1 bg-secondary">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="icon icon-tabler icon-tabler-brand-linkedin size-8"
@@ -95,7 +89,7 @@ export default function OurLawyers() {
                     <path d="M16 16v-3a2 2 0 0 0 -4 0" />
                   </svg>
                 </li>
-                <li className="rounded-full p-2 bg-secondary">
+                <li className="rounded-full p-1 bg-secondary">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="icon icon-tabler icon-tabler-brand-instagram size-8"

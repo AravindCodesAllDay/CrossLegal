@@ -1,10 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Marcellus&display=swap");
 
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-
 body {
-    font-family: 'Marcellus', serif;
+  font-family: "Marcellus", serif;
+}
+
+@keyframes slideInFromLeftToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in {
+  opacity: 0;
+  animation: slideInFromLeftToRight 0.5s ease-in-out forwards;
+}
+
+.slide-in-1 {
+  animation-delay: 0.3s;
+}
+
+.slide-in-2 {
+  animation-delay: 0.6s;
+}
+
+.slide-in-3 {
+  animation-delay: 0.9s;
+}
+
+.slide-in-4 {
+  animation-delay: 1.2s;
+}
+
+.animate-slide .slide-in {
+  opacity: 0;
 }

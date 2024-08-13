@@ -10,16 +10,16 @@ export default function Contact() {
           Get In Touch
           <div className="h-3 w-5 bg-gradient-to-l from-secondary rounded-tl-md rounded-br-md"></div>
         </h3>
-        <p className="flex flex-col text-5xl">Contact Information</p>
-        <div className="flex gap-5 justify-around">
-          <div className="flex flex-col items-center gap-5 border p-4 rounded-lg">
+        <p className="flex flex-col text-4xl">Contact Information</p>
+        <div className="flex gap-5 justify-around w-full">
+          <div className="flex flex-col items-center gap-5 w-1/2 border p-4 rounded-tl-3xl rounded-br-3xl">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="size-20 p-3 border-2 text-secondary border-secondary rounded-full"
+              className="size-20 p-3 border-2 text-secondary border-secondary rounded-full transition-transform duration-500 hover:rotate-y-180"
             >
               <path
                 strokeLinecap="round"
@@ -32,14 +32,14 @@ export default function Contact() {
                 d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
               />
             </svg>
-
             <h2 className="text-3xl">Location</h2>
-            <p className="flex flex-col items-center">
+            <p className="flex flex-col items-center text-secondary">
               <span>4821 Ridge Top Cir, Anchorage</span>
               <span>Street, Alaska 99508, USA.</span>
             </p>
           </div>
-          <div className="flex flex-col items-center gap-5 border p-4 rounded-lg">
+
+          <div className="flex flex-col items-center gap-5 w-1/2 border p-4 rounded-tl-3xl rounded-br-3xl">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -56,26 +56,25 @@ export default function Contact() {
             </svg>
 
             <h2 className="text-3xl">24/7 Support</h2>
-            <p className="flex flex-col items-center">
+            <p className="flex flex-col items-center text-secondary">
               <span>+(91) XXXXX XXXXX</span>
               <span>contact@halt-o.com</span>
             </p>
           </div>
         </div>
-        <div className="flex bg-secondary text-white text-lg p-3 items-center justify-center gap-3">
-          <p>Our Best Skilled Attorneys, Trust Score 4.5</p>
-          <StarRating rating={4} />
+        <div className="flex bg-secondary text-white text-lg p-3 rounded items-center justify-center gap-3">
+          <p>Our Best Skilled Attorneys, Trust Score 4.6</p>
+          <StarRating rating={4.6} />
         </div>
       </div>
 
       <div className="flex flex-col gap-5 w-1/2 p-5 bg-white rounded-lg shadow-md">
         <h3 className="flex items-center gap-3 text-2xl text-secondary">
           <div className="h-3 w-5 bg-gradient-to-r from-secondary rounded-tl-md rounded-br-md"></div>
-          Drop Us a Line
+          Have Any Questions?
           <div className="h-3 w-5 bg-gradient-to-l from-secondary rounded-tl-md rounded-br-md"></div>
         </h3>
-        <p className="flex flex-col text-5xl">Drop Us a Line</p>
-
+        <p className="flex flex-col text-4xl">Drop Us a Line</p>
         <form className="flex flex-col gap-3 items-center">
           <div className="w-full">
             <label htmlFor="name">Name:</label>

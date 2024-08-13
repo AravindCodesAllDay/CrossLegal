@@ -1,8 +1,39 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect, useRef } from "react";
 
 export default function Poster02() {
+  const [isInView, setIsInView] = useState(false);
+  const elementRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+
+    return () => {
+      if (elementRef.current) {
+        observer.unobserve(elementRef.current);
+      }
+    };
+  }, []);
   return (
-    <div className="w-4/5 bg-primary text-white h-96 flex justify-between items-center mx-auto overflow-hidden">
+    <div
+      className={`w-4/5 bg-primary text-white h-96 flex justify-between items-center mx-auto overflow-hidden transform transition-transform duration-1000 ease-out ${
+        isInView ? "translate-y-0" : "translate-y-32 opacity-0"
+      }`}
+      ref={elementRef}
+    >
       <div
         className="relative block w-1/6 pb-[25%] overflow-hidden"
         style={{
@@ -33,7 +64,7 @@ export default function Poster02() {
             transform: "skewX(30deg)",
           }}
         ></div>
-      </div>{" "}
+      </div>
       <div
         className="relative block w-1/6 pb-[25%] overflow-hidden"
         style={{
@@ -50,9 +81,9 @@ export default function Poster02() {
         ></div>
       </div>
       <div className="flex flex-col gap-5 p-5">
-        <h3 className="flex items-center gap-3 text-2xl text-secondary">
+        <h3 className="flex items-center gap-2 text-2xl text-secondary">
           <div className="h-3 w-5 bg-gradient-to-r from-secondary rounded-tl-md rounded-br-md"></div>
-          Contact{" "}
+          Contact
           <div className="h-3 w-5 bg-gradient-to-l from-secondary rounded-tl-md rounded-br-md"></div>
         </h3>
         <p className="flex flex-col text-4xl font-bold">

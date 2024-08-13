@@ -1,13 +1,13 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { usePathname } from "next/navigation"; // Import usePathname instead of useRouter
+import { usePathname } from "next/navigation";
 import logo from "@/app/_assets/logo.svg";
 
 export default function Navbar() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [navbarVisible, setNavbarVisible] = useState(true);
-  const pathname = usePathname(); // Use usePathname to get the current path
+  const pathname = usePathname();
 
   const controlNavbar = () => {
     if (typeof window !== "undefined") {
@@ -30,6 +30,13 @@ export default function Navbar() {
     }
   }, [lastScrollY]);
 
+  const navItems = [
+    { name: "Home", path: "/" },
+    { name: "About Us", path: "/aboutus" },
+    { name: "Features", path: "/features" },
+    { name: "Blog", path: "/blog" },
+  ];
+
   return (
     <div
       className={`fixed z-30 w-full font-semibold transition-transform duration-300 ${
@@ -50,62 +57,23 @@ export default function Navbar() {
             <Image src={logo} alt="logo" className="size-12" />
           </a>
         </li>
-        <li>
-          <a
-            href="/"
-            className={`relative py-2 px-4 transition-all duration-300 ${
-              pathname === "/" ? "text-secondary" : "hover:text-secondary"
-            }`}
-          >
-            {pathname === "/" && (
-              <div className="absolute inset-0 w-full h-full border border-secondary rounded-tl-lg rounded-br-lg"></div>
-            )}
-            Home
-          </a>
-        </li>
-        <li>
-          <a
-            href="/aboutus"
-            className={`relative py-2 px-4 transition-all duration-300 ${
-              pathname === "/aboutus"
-                ? "text-secondary"
-                : "hover:text-secondary"
-            }`}
-          >
-            {pathname === "/aboutus" && (
-              <div className="absolute inset-0 w-full h-full border border-secondary rounded-tl-lg rounded-br-lg"></div>
-            )}
-            About Us
-          </a>
-        </li>
-        <li>
-          <a
-            href="/features"
-            className={`relative py-2 px-4 transition-all duration-300 ${
-              pathname === "/features"
-                ? "text-secondary"
-                : "hover:text-secondary"
-            }`}
-          >
-            {pathname === "/features" && (
-              <div className="absolute inset-0 w-full h-full border border-secondary rounded-tl-lg rounded-br-lg"></div>
-            )}
-            Features
-          </a>
-        </li>
-        <li>
-          <a
-            href="/blog"
-            className={`relative py-2 px-4 transition-all duration-300 ${
-              pathname === "/blog" ? "text-secondary" : "hover:text-secondary"
-            }`}
-          >
-            {pathname === "/blog" && (
-              <div className="absolute inset-0 w-full h-full border border-secondary rounded-tl-lg rounded-br-lg"></div>
-            )}
-            Blog
-          </a>
-        </li>
+        {navItems.map((item) => (
+          <li key={item.path}>
+            <a
+              href={item.path}
+              className={`relative flex items-center py-2 px-4 transition-all duration-300 ${
+                pathname === item.path
+                  ? "text-secondary"
+                  : "hover:text-secondary"
+              }`}
+            >
+              {pathname === item.path && (
+                <div className="absolute w-6 h-4 -translate-x-4 rounded-tl-lg rounded-br-lg bg-gradient-to-r from-secondary"></div>
+              )}
+              {item.name}
+            </a>
+          </li>
+        ))}
         <li className="text-secondary">+91 XXXXX XXXXX</li>
         <li>
           <a href="/contactus">

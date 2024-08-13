@@ -2,18 +2,22 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import profile from "@/app/_assets/statue.jpg";
+import Heading from "../_animations/Heading";
 
 const testimonials = [
   {
     id: 1,
+    photo: profile,
     text: "rem ipsum dolor sit amet consectetur adipisicing elit. Tempora veritatis magnam et ex laudantium nihil adipisci delectus quis, atque pariatur voluptatem magni dolorum iure quaerat soluta eum placeat saepe deserunt!",
   },
   {
     id: 2,
+    photo: profile,
     text: "orem ipsum dolor sit amet consectetur adipisicing elit. Tempora veritatis magnam et ex laudantium nihil adipisci delectus quis, atque pariatur voluptatem magni dolorum iure quaerat soluta eum placeat saepe deserunt!",
   },
   {
     id: 3,
+    photo: profile,
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora veritatis magnam et ex laudantium nihil adipisci delectus quis, atque pariatur voluptatem magni dolorum iure quaerat soluta eum placeat saepe deserunt!",
   },
 ];
@@ -37,38 +41,33 @@ export default function OurTestimonials() {
 
   return (
     <div className="flex flex-col justify-center items-center gap-3 p-5">
-      <h3 className="flex items-center gap-3 text-2xl text-secondary">
-        <div className="h-3 w-5 bg-gradient-to-r from-secondary rounded-tl-md rounded-br-md"></div>
-        Our Testimonials
-        <div className="h-3 w-5 bg-gradient-to-l from-secondary rounded-tl-md rounded-br-md"></div>
-      </h3>
-      <p className="flex flex-col text-primary text-4xl font-bold">
-        <span>What They Are Talking</span>
-        <span>About Igual</span>
-      </p>
+      <Heading
+        title={"Our Testimonials"}
+        line1={"What They Are Talking"}
+        line2={"About Igual"}
+      />
+
       <div className="relative w-full max-w-[900px]">
         {testimonials.map((testimonial, index) => (
           <div
             key={testimonial.id}
-            className={`flex items-center transition-transform duration-500 ease-in-out transform ${
+            className={`flex gap-3 items-center transition-transform duration-500 ease-in-out transform ${
               index === currentIndex ? "translate-x-0" : "translate-x-full"
             }`}
             style={{ display: index === currentIndex ? "flex" : "none" }}
           >
             <Image
-              src={profile}
+              src={testimonial.photo}
               alt="profile"
               className="size-24 rounded-full"
             />
             <p className="text-xl">{testimonial.text}</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="icon icon-tabler icon-tabler-quote"
-              width="44"
-              height="44"
+              className="icon icon-tabler icon-tabler-quote size-36"
               viewBox="0 0 24 24"
               stroke-width="1.5"
-              stroke="#2c3e50"
+              stroke="#b9967e"
               fill="none"
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -83,7 +82,7 @@ export default function OurTestimonials() {
           {testimonials.map((_, index) => (
             <div
               key={index}
-              className={`w-3 h-3 rounded-full cursor-pointer transition-all duration-300 ${
+              className={`w-4 h-3 rounded-tl-md rounded-br-md  cursor-pointer transition-all duration-300 ${
                 currentIndex === index
                   ? "bg-secondary transform scale-125"
                   : "bg-gray-300"
