@@ -5,36 +5,42 @@ import Image from "next/image";
 import card from "@/app/_assets/card.jpg";
 import Heading from "../_animations/Heading";
 
+import img1 from "@/app/_assets/whatWeDo/1.png";
+import img2 from "@/app/_assets/whatWeDo/2.png";
+import img3 from "@/app/_assets/whatWeDo/3.png";
+import img4 from "@/app/_assets/whatWeDo/4.png";
+import img5 from "@/app/_assets/whatWeDo/5.png";
+
 export default function WhatWeDo() {
   const testimonials = [
     {
       id: 1,
+      photo: img1,
       header: "Insurance Law1",
       text: "Awesome Services Grow Your Business Value There are many variations..",
     },
     {
       id: 2,
+      photo: img2,
       header: "Insurance Law2",
       text: "Awesome Services Grow Your Business Value There are many variations..",
     },
     {
       id: 3,
+      photo: img3,
       header: "Insurance Law3",
       text: "Awesome Services Grow Your Business Value There are many variations..",
     },
     {
       id: 4,
+      photo: img4,
       header: "Insurance Law4",
       text: "Awesome Services Grow Your Business Value There are many variations..",
     },
     {
       id: 5,
+      photo: img5,
       header: "Insurance Law5",
-      text: "Awesome Services Grow Your Business Value There are many variations..",
-    },
-    {
-      id: 6,
-      header: "Insurance Law6",
       text: "Awesome Services Grow Your Business Value There are many variations..",
     },
   ];

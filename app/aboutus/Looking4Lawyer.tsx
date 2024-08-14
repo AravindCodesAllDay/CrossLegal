@@ -5,7 +5,7 @@ import lookingFor from "@/app/_assets/lookingFor.jpg";
 
 export default function Looking4Lawyer() {
   return (
-    <div className="bg-[#09172e] flex flex-col mt-72">
+    <div className="flex flex-col mt-72">
       <div className="flex w-full justify-center p-2">
         <div className=" h-4/6 flex bg-white p-5 -mt-40 shadow-xl dro">
           <Image src={lookingFor} className="w-1/2 h-1/2 " alt="lookingFor" />

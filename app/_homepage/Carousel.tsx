@@ -48,7 +48,7 @@ const Carousel = () => {
             <Image
               src={slide.image}
               alt={`Slide ${index + 1}`}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover -z-20"
               layout="fill"
             />
             <div
@@ -122,7 +122,7 @@ const Carousel = () => {
         ))}
       </div>
 
-      <div className="absolute gap-3 bottom-4 left-0 right-0 flex justify-center p-8">
+      <div className="absolute gap-3 bottom-4 right-0 flex justify-center p-8">
         {slides.map((_, pointerIndex) => (
           <button
             key={pointerIndex}
@@ -134,7 +134,7 @@ const Carousel = () => {
         ))}
         <svg
           viewBox="0 0 1024 1024"
-          className="icon size-20 opacity-20 absolute bottom-0 right-8"
+          className="icon size-20 opacity-20 absolute bottom-0 right-12 -z-10"
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
         >

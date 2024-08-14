@@ -43,9 +43,9 @@ export default function OurLawyers() {
           .map((profile, index) => (
             <div
               key={index}
-              className="w-96 h-96 relative items-center flex flex-col justify-around"
+              className="w-96 h-96 relative items-center flex flex-col justify-around group"
             >
-              <div className="w-full h-1/2 rounded-b-full bg-secondary opacity-15 absolute top-0"></div>
+              <div className="w-full h-1/2 rounded-b-full bg-secondary opacity-15 -z-20 absolute top-0"></div>
               <div className="flex flex-col items-center">
                 <h6 className="text-2xl">{profile.name}</h6>
                 <p className="text-secondary">{profile.specialty}</p>
@@ -53,7 +53,7 @@ export default function OurLawyers() {
               <Image
                 src={profile.image}
                 alt="profile"
-                className="size-56 rounded-full border-2 border-secondary p-2"
+                className="size-56 rounded-full border-2 border-secondary p-2 group-hover:scale-95 transition-all ease-in-out duration-200"
               />
               <ul className="flex gap-5">
                 <li className="rounded-full p-1 bg-secondary">
@@ -107,7 +107,7 @@ export default function OurLawyers() {
                   </svg>
                 </li>
               </ul>
-              <div className="w-full h-1/2 rounded-t-full bg-secondary opacity-25 absolute bottom-0"></div>
+              <div className="w-full h-1/2 rounded-t-full -z-20 bg-secondary opacity-25 absolute bottom-0"></div>
             </div>
           ))}
       </div>

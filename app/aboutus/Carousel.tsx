@@ -50,7 +50,7 @@ export default function Carousel() {
               </div>
             </div>
             <div className="max-w-md">
-              <p className="text-gray-800">{slide.text}</p>
+              <p className="text-white">{slide.text}</p>
             </div>
           </div>
         </div>

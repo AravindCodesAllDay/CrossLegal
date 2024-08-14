@@ -4,7 +4,7 @@ import Heading from "../_animations/Heading";
 
 export default function OurResources() {
   return (
-    <div className="bg-[#f9f9f9] w-full flex flex-col justify-center items-center gap-5 p-5">
+    <div className="bg-[#f9f9f9] w-full flex flex-col justify-center items-center gap-5 p-16">
       <Heading
         title={"Our Resources"}
         line1={"We Live & Work Globally"}

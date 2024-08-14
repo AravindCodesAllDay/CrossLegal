@@ -19,8 +19,9 @@ export default function AboutPage() {
         <Header title={"About Us"} photo={team} />
         <AboutUs />
       </div>
-      <Looking4Lawyer />
-      <div className="container mx-auto">
+      <div className="relative">
+        <div className="w-full h-5/6 -z-20 bg-primary bottom-0 absolute"></div>
+        <Looking4Lawyer />
         <Carousel />
       </div>
       <OurLawyers />

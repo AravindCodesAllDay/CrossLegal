@@ -55,11 +55,12 @@ export default function RecentArticles() {
           {articles.slice(currentIndex, currentIndex + 2).map((article) => (
             <div
               key={article.id}
-              className="flex flex-col items-center transition-transform duration-500 ease-in-out transform"
+              className="flex flex-col items-center group transition-transform duration-500 ease-in-out transform"
               style={{ flexBasis: "45%" }}
             >
               <div className="relative max-w-[600px]">
                 <Image src={article.image} alt="blog" />
+                <div className="h-full w-full top-0 absolute group-hover:bg-primary group-hover:opacity-45 transition-colors ease-in-out duration-200"></div>
                 <div className="bg-white w-4/5 absolute bottom-0 left-0 p-2">
                   <div className="absolute right-0 translate-x-8 -translate-y-8 rounded-tl-xl rounded-br-xl bg-secondary size-16 text-white p-1 text-center font-semibold">
                     {article.date}
