@@ -90,7 +90,7 @@ export default function AboutUs() {
                 src={quote}
                 alt="Left Quote"
               />
-              <p className="w-[80%] leading-loose italic font-[500] text-lg text-[#1e1e1e]">
+              <p className="w-[80%] leading-loose italic font-marcellus font-[500] text-lg text-[#1e1e1e]">
                 We believe everyone deserves affordable and simple access to
                 legal services and helping people.
               </p>

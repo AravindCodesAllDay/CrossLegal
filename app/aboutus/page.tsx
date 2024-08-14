@@ -7,6 +7,9 @@ import Header from "../_components/Header";
 import Looking4Lawyer from "./Looking4Lawyer";
 import AboutUs from "./AboutUs";
 import team from "@/app/_assets/abtHeader.jpg";
+import Carousel from "./Carousel";
+import GetInTouch from "./GetInTouch";
+import OurLawyers from "./OurLawyers";
 
 export default function AboutPage() {
   return (
@@ -15,8 +18,13 @@ export default function AboutPage() {
       <div className="flex flex-col gap-5">
         <Header title={"About Us"} photo={team} />
         <AboutUs />
-        <Looking4Lawyer />
       </div>
+      <Looking4Lawyer />
+      <div className="container mx-auto">
+        <Carousel />
+      </div>
+      <OurLawyers />
+      <GetInTouch />
       <Footer />
     </>
   );
