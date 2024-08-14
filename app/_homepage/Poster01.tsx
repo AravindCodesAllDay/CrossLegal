@@ -1,11 +1,14 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
+import StarRating from "../_animations/StarRating";
 
 export default function Poster01() {
   const [isInView, setIsInView] = useState(false);
   const elementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const currentElement = elementRef.current;
+
     const observer = new IntersectionObserver(
       (entries) => {
         const [entry] = entries;
@@ -17,24 +20,27 @@ export default function Poster01() {
       { threshold: 0.1 }
     );
 
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
+    if (currentElement) {
+      observer.observe(currentElement);
     }
 
     return () => {
-      if (elementRef.current) {
-        observer.unobserve(elementRef.current);
+      if (currentElement) {
+        observer.unobserve(currentElement);
       }
     };
   }, []);
+
   return (
     <div
-      className={`w-4/5 bg-primary text-white h-96 flex justify-between items-center mx-auto overflow-hidden transform transition-transform duration-1000 ease-out ${
-        isInView ? "translate-y-0" : "translate-y-32 opacity-0"
-      }`}
+      className={`w-4/5 bg-primary text-white h-96 flex justify-between items-center mx-auto overflow-hidden`}
       ref={elementRef}
     >
-      <div className="p-5">
+      <div
+        className={`p-5 transform transition-transform duration-1000 ease-out ${
+          isInView ? "translate-y-0" : "translate-y-32 opacity-0"
+        }`}
+      >
         <h3 className="flex items-center gap-3 text-2xl text-secondary mb-2">
           <div className="h-3 w-5 bg-gradient-to-r from-secondary rounded-tl-md rounded-br-md"></div>
           Any Property Issues?
@@ -44,7 +50,10 @@ export default function Poster01() {
           <span>Start the App Few Steps,</span>
           <span>Download Easily..</span>
         </p>
-        <p>rust Score 4.5 (Based on 1,200 reviews)</p>
+        <div className="flex gap-3">
+          <p>Trust Score 4.6 (Based on 1,200 reviews)</p>
+          <StarRating rating={4.6} />
+        </div>
       </div>
       <div
         className="relative block w-1/6 pb-[25%] overflow-hidden"

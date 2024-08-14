@@ -6,6 +6,7 @@ import Footer from "../_components/Footer";
 import Header from "../_components/Header";
 import Looking4Lawyer from "./Looking4Lawyer";
 import AboutUs from "./AboutUs";
+import team from "@/app/_assets/abtHeader.jpg";
 import Carousel from "./Carousel";
 import GetInTouch from "./GetInTouch";
 import OurLawyers from "./OurLawyers";
@@ -15,7 +16,7 @@ export default function AboutPage() {
     <>
       <Navbar />
       <div className="flex flex-col gap-5">
-        <Header />
+        <Header title={"About Us"} photo={team} />
         <AboutUs />
       </div>
       <Looking4Lawyer />

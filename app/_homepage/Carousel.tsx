@@ -12,7 +12,7 @@ const Carousel = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState<number>(0);
-  const [animate, setAnimate] = useState<boolean>(false);
+  const [animate, setAnimate] = useState<boolean>(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -43,53 +43,66 @@ const Carousel = () => {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`relative w-full flex-shrink-0 h-full ${
-              animate ? "animate-slide" : ""
-            }`}
+            className={`relative w-full flex-shrink-0 h-full flex items-center justify-center bg-black bg-opacity-40`}
           >
             <Image
               src={slide.image}
               alt={`Slide ${index + 1}`}
               className="w-full h-full object-cover"
+              layout="fill"
             />
-            <div className="absolute inset-0 flex flex-col gap-3 justify-center p-6 z-10 bg-black bg-opacity-40">
+            <div
+              className={`absolute inset-0 flex flex-col gap-3 justify-center p-6 z-10 ml-24 ${
+                animate ? "block" : "hidden"
+              }`}
+            >
               <h2
-                className={`text-secondary text-xl font-bold text-shadow-md ${
-                  animate ? "slide-in" : ""
+                className={`text-secondary text-lg font-bold text-shadow-md ${
+                  animate ? "slide-in delay-300" : "hidden"
                 }`}
               >
                 {slide.text}
               </h2>
               <div className="text-white text-6xl">
-                <p className={`slide-in ${animate ? "slide-in-1" : ""}`}>
+                <p className={`${animate ? "slide-in delay-500" : "hidden"}`}>
                   The Legal Advice
                 </p>
-                <p className={`slide-in ${animate ? "slide-in-2" : ""}`}>
-                  Need <span>Phone Call</span>
+                <p className={`${animate ? "slide-in delay-500" : "hidden"}`}>
+                  Need{" "}
+                  <span className="text-transparent font-bold font-outline-2">
+                    Phone Call
+                  </span>
                 </p>
-                <div className="flex items-center gap-3">
-                  <p className={`slide-in ${animate ? "slide-in-3" : ""}`}>
+                <div className="flex gap-3 items-center mt-4">
+                  <p className={`${animate ? "slide-in delay-500" : "hidden"}`}>
                     Away
                   </p>
-                  <div className="border-l-2 border-secondary text-base pl-3 flex flex-col justify-center">
-                    <p className={`slide-in ${animate ? "slide-in-4" : ""}`}>
+                  <div className="border-l-2 border-secondary text-base pl-3">
+                    <p
+                      className={`${animate ? "slide-in delay-800" : "hidden"}`}
+                    >
                       Lorem ipsum dolor sit amet consectetur,
                     </p>
-                    <p className={`slide-in ${animate ? "slide-in-4" : ""}`}>
+                    <p
+                      className={`${animate ? "slide-in delay-800" : "hidden"}`}
+                    >
                       adipisicing elit. Odit, voluptates.
                     </p>
                   </div>
                 </div>
               </div>
-              <a href="contactus">
-                <button className="flex justify-center items-center mt-4">
-                  <div className="p-2 bg-white rounded-tl-lg">
+              <a
+                href="contactus"
+                className={`${animate ? "slide-in delay-1100" : "hidden"}`}
+              >
+                <button className="flex justify-center items-center group">
+                  <div className="p-2 bg-[#00192c] transform transition-transform duration-500 group-hover:bg-secondary rounded-tl-lg">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="icon icon-tabler icon-tabler-plus size-6"
+                      className="icon icon-tabler icon-tabler-plus size-6 transform transition-transform duration-300 group-hover:rotate-90"
                       viewBox="0 0 24 24"
                       strokeWidth="2"
-                      stroke="#b9967e"
+                      stroke="#ffffff"
                       fill="none"
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -99,8 +112,8 @@ const Carousel = () => {
                       <path d="M5 12l14 0" />
                     </svg>
                   </div>
-                  <div className="bg-secondary rounded-br-lg p-2 text-white font-semibold">
-                    Contact Us
+                  <div className="bg-secondary transform transition-transform duration-500 group-hover:bg-[#00192c] rounded-br-lg p-2 text-white font-semibold">
+                    Learn More
                   </div>
                 </button>
               </a>
@@ -109,12 +122,12 @@ const Carousel = () => {
         ))}
       </div>
 
-      <div className="absolute gap-3 bottom-4 left-0 right-0 flex justify-start p-8">
+      <div className="absolute gap-3 bottom-4 left-0 right-0 flex justify-center p-8">
         {slides.map((_, pointerIndex) => (
           <button
             key={pointerIndex}
             onClick={() => handlePointerClick(pointerIndex)}
-            className={`w-4 h-3 rounded-tl-md rounded-br-md  border-2 border-secondary ${
+            className={`w-4 h-3 rounded-tl-md rounded-br-md border-2 border-secondary ${
               pointerIndex === currentIndex ? "bg-secondary" : ""
             }`}
           ></button>

@@ -21,10 +21,11 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 1500);
 
     return () => clearTimeout(timer);
   }, [loading]);
+
   return (
     <>
       {loading && <Loader />}

@@ -32,7 +32,7 @@ export default function GetInTouch() {
             <div className="h-3.5 w-6 bg-gradient-to-r from-white to-secondary rounded-tr-md rounded-bl-md"></div>
           </div>
           <h1 className="text-4xl  font-marcellus text-[#1e1e1e] mb-4">
-            Work With Us. Let's Make Great Together.
+            Work With Us. Lets Make Great Together.
           </h1>
           <div className="text-lg text-gray-500 mb-6">
             Our Best Skilled Attorneys, Trust Score 4.5

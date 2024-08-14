@@ -8,12 +8,12 @@ export default function StarRating({ rating }: StarRatingProps) {
   const stars = Array.from({ length: 5 }, (_, index) => index + 1);
 
   return (
-    <div className="flex">
+    <p className="flex">
       {stars.map((star) => {
         const fillPercentage =
           Math.min(Math.max(rating - (star - 1), 0), 1) * 100;
         return (
-          <div key={star} className="relative">
+          <span key={star} className="relative">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -35,9 +35,9 @@ export default function StarRating({ rating }: StarRatingProps) {
                 d="M12 17.27l5.18 3.73-1.64-5.81L21 10.24l-5.9-.51L12 4.5 8.9 9.73 3 10.24l4.46 4.95L5.82 21z"
               />
             </svg>
-          </div>
+          </span>
         );
       })}
-    </div>
+    </p>
   );
 }

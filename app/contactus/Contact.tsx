@@ -12,14 +12,14 @@ export default function Contact() {
         </h3>
         <p className="flex flex-col text-4xl">Contact Information</p>
         <div className="flex gap-5 justify-around w-full">
-          <div className="flex flex-col items-center gap-5 w-1/2 border p-4 rounded-tl-3xl rounded-br-3xl">
+          <div className="flex flex-col items-center gap-5 group w-1/2 border p-4 rounded-tl-3xl rounded-br-3xl">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="size-20 p-3 border-2 text-secondary border-secondary rounded-full transition-transform duration-500 hover:rotate-y-180"
+              className="size-20 p-3 border-2 text-secondary group-hover:bg-primary  group-hover:text-white border-secondary rounded-full transition-colors duration-150 ease-in-out"
             >
               <path
                 strokeLinecap="round"
@@ -39,14 +39,14 @@ export default function Contact() {
             </p>
           </div>
 
-          <div className="flex flex-col items-center gap-5 w-1/2 border p-4 rounded-tl-3xl rounded-br-3xl">
+          <div className="flex flex-col items-center gap-5 group w-1/2 border p-4 rounded-tl-3xl rounded-br-3xl">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="size-20 p-3 border-2 text-secondary border-secondary rounded-full"
+              className="size-20 p-3 border-2 text-secondary border-secondary group-hover:bg-primary group-hover:text-white rounded-full  transition-colors duration-150 ease-in-out"
             >
               <path
                 strokeLinecap="round"

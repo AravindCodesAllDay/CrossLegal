@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import logo from "@/app/_assets/logo.svg";
@@ -9,7 +9,7 @@ export default function Navbar() {
   const [navbarVisible, setNavbarVisible] = useState(true);
   const pathname = usePathname();
 
-  const controlNavbar = () => {
+  const controlNavbar = useCallback(() => {
     if (typeof window !== "undefined") {
       if (window.scrollY > lastScrollY) {
         setNavbarVisible(false);
@@ -18,7 +18,7 @@ export default function Navbar() {
       }
       setLastScrollY(window.scrollY);
     }
-  };
+  }, [lastScrollY]);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -28,7 +28,7 @@ export default function Navbar() {
         window.removeEventListener("scroll", controlNavbar);
       };
     }
-  }, [lastScrollY]);
+  }, [controlNavbar]);
 
   const navItems = [
     { name: "Home", path: "/" },
@@ -38,20 +38,20 @@ export default function Navbar() {
 
   return (
     <div
-      className={`fixed z-30 w-full font-semibold transition-transform duration-300 ${
+      className={`fixed z-30 w-full transition-transform duration-300 ${
         navbarVisible ? "translate-y-0" : "-translate-y-full"
       } ${
         lastScrollY > 0 ? "bg-white text-black" : "bg-transparent text-white"
       }`}
     >
       <div className="flex items-center justify-center px-3">
-        <p>Mon - Sun: 9.00 am - 5.00pm</p>
-        <p className="ml-auto border-r-2 border-secondary p-3">halt-o.com</p>
-        <p className="pl-3">Chennai, INDIA</p>
+        <p>Mon-Sun : 9.00am-5.00pm</p>
+        <p className="ml-auto border-r border-secondary p-3">halt-o.com</p>
+        <p className="pl-3">Chennai, India</p>
       </div>
 
-      <ul className="w-full flex justify-around items-center border-y-2 border-secondary">
-        <li className="py-4 pr-20 border-r-2 border-secondary">
+      <ul className="w-full flex justify-around items-center border-y border-secondary">
+        <li className="py-4 pr-20 border-r border-secondary">
           <a href="/">
             <Image src={logo} alt="logo" className="size-12" />
           </a>
@@ -76,14 +76,13 @@ export default function Navbar() {
         <li className="text-secondary">+91 XXXXX XXXXX</li>
         <li>
           <a href="/contactus">
-            <button className="flex justify-center items-center">
-              <div className="p-2 bg-white rounded-tl-lg">
+            <button className="flex justify-center items-center group">
+              <div className="p-2 bg-white transform transition-transform duration-500 group-hover:bg-secondary rounded-tl-lg">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="icon icon-tabler icon-tabler-plus size-6"
+                  className="icon icon-tabler icon-tabler-plus size-6 transform transition-transform duration-300 group-hover:rotate-90 stroke-primary"
                   viewBox="0 0 24 24"
                   strokeWidth="2"
-                  stroke="#b9967e"
                   fill="none"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -93,7 +92,7 @@ export default function Navbar() {
                   <path d="M5 12l14 0" />
                 </svg>
               </div>
-              <div className="bg-secondary rounded-br-lg p-2 text-white font-semibold">
+              <div className="bg-secondary transform transition-transform duration-500 group-hover:bg-[#00192c] rounded-br-lg p-2 text-white font-semibold">
                 Contact Us
               </div>
             </button>
