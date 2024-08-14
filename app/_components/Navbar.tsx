@@ -38,20 +38,20 @@ export default function Navbar() {
 
   return (
     <div
-      className={`fixed z-30 w-full font-semibold transition-transform duration-300 ${
+      className={`fixed z-30 w-full transition-transform duration-300 ${
         navbarVisible ? "translate-y-0" : "-translate-y-full"
       } ${
         lastScrollY > 0 ? "bg-white text-black" : "bg-transparent text-white"
       }`}
     >
       <div className="flex items-center justify-center px-3">
-        <p>Mon - Sun: 9.00 am - 5.00pm</p>
-        <p className="ml-auto border-r-2 border-secondary p-3">halt-o.com</p>
-        <p className="pl-3">Chennai, INDIA</p>
+        <p>Mon-Sun : 9.00am-5.00pm</p>
+        <p className="ml-auto border-r border-secondary p-3">halt-o.com</p>
+        <p className="pl-3">Chennai, India</p>
       </div>
 
-      <ul className="w-full flex justify-around items-center border-y-2 border-secondary">
-        <li className="py-4 pr-20 border-r-2 border-secondary">
+      <ul className="w-full flex justify-around items-center border-y border-secondary">
+        <li className="py-4 pr-20 border-r border-secondary">
           <a href="/">
             <Image src={logo} alt="logo" className="size-12" />
           </a>
