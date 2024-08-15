@@ -8,13 +8,13 @@ interface HeaderProps {
 
 export default function Header({ title, photo }: HeaderProps) {
   return (
-    <div className="relative h-[400px] overflow-clip bg-[#15171f]">
+    <div className="relative flex justify-center items-center h-[400px] overflow-clip bg-[#15171f]">
       <Image
         src={photo}
         alt="Team Image"
         className="w-full h-[60vh] opacity-10"
       />
-      <div className="absolute z-10 top-2/4 left-[45%]">
+      <div className="absolute translate-y-12">
         <div className="flex flex-col items-center">
           <h1 className="text-5xl font-marcellus text-zinc-100">{title}</h1>
           <div className="flex text-zinc-50 text-sm py-5 items-center list-none">

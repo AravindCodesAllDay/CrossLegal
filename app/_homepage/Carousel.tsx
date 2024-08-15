@@ -33,7 +33,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="relative w-screen h-[100vh] max-w-full mx-auto overflow-hidden">
+    <div className="relative w-full h-screen overflow-hidden">
       <div
         className={`flex transition-transform duration-700 ease-in-out h-full ${
           animate ? "animate-slide" : ""
@@ -48,11 +48,11 @@ const Carousel = () => {
             <Image
               src={slide.image}
               alt={`Slide ${index + 1}`}
-              className="w-full h-full object-cover -z-20"
+              className="w-full h-full object-cover"
               layout="fill"
             />
             <div
-              className={`absolute inset-0 flex flex-col gap-3 justify-center p-6 z-10 ml-24 ${
+              className={`absolute inset-0 flex flex-col gap-3 justify-center p-6 z-10 ${
                 animate ? "block" : "hidden"
               }`}
             >

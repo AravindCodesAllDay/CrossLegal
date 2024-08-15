@@ -36,16 +36,19 @@ export default function AboutUs() {
   }, []);
 
   return (
-    <div className="relative w-full flex justify-around my-12" ref={elementRef}>
+    <div
+      className="relative w-full flex flex-col md:flex-row items-center justify-around my-12"
+      ref={elementRef}
+    >
       <div className="h-1/2 w-full bg-[#f9f9f9] absolute -z-20"></div>
 
       <Image
         src={women}
         alt="women"
-        className="rounded-tl-[100px] rounded-br-[100px]"
+        className="rounded-tl-[100px] w-full p-6 md:w-2/5 rounded-br-[100px] "
       />
 
-      <div className={`w-2/5 flex flex-col gap-8 `}>
+      <div className={`w-full md:w-2/5 flex flex-col gap-8 p-6`}>
         <div className="h-1/2 flex flex-col justify-center gap-3">
           <Heading
             title={"About Us"}
@@ -66,7 +69,7 @@ export default function AboutUs() {
         </div>
 
         <div className="relative flex justify-center h-1/2">
-          <Image src={team} alt="team" className="-translate-y-20" />
+          <Image src={team} alt="team" />
           <div
             className={`absolute flex flex-col gap-3 bottom-0 bg-white p-5 rounded-tl-3xl rounded-br-3xl shadow-xl transform transition-transform duration-1000 ease-out ${
               isInView ? "translate-y-0" : "translate-y-32 opacity-0"

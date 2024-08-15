@@ -1,8 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
-import card from "@/app/_assets/card.jpg";
 import Heading from "../_animations/Heading";
 
 import img1 from "@/app/_assets/whatWeDo/1.png";
@@ -11,62 +10,98 @@ import img3 from "@/app/_assets/whatWeDo/3.png";
 import img4 from "@/app/_assets/whatWeDo/4.png";
 import img5 from "@/app/_assets/whatWeDo/5.png";
 
+import photo1 from "@/app/_assets/whatWeDo/1.jpg";
+import photo2 from "@/app/_assets/whatWeDo/2.jpg";
+import photo3 from "@/app/_assets/whatWeDo/3.jpg";
+import photo4 from "@/app/_assets/whatWeDo/4.jpg";
+import photo5 from "@/app/_assets/whatWeDo/5.jpg";
+
 export default function WhatWeDo() {
   const testimonials = [
     {
       id: 1,
       photo: img1,
-      header: "Insurance Law1",
+      figure: photo1,
+      header: "Car Accidents",
       text: "Awesome Services Grow Your Business Value There are many variations..",
     },
     {
       id: 2,
-      photo: img2,
-      header: "Insurance Law2",
+      photo: img4,
+      figure: photo2,
+      header: "Health Care Law",
       text: "Awesome Services Grow Your Business Value There are many variations..",
     },
     {
       id: 3,
       photo: img3,
-      header: "Insurance Law3",
+      figure: photo3,
+      header: "Insurance Law",
       text: "Awesome Services Grow Your Business Value There are many variations..",
     },
     {
       id: 4,
-      photo: img4,
-      header: "Insurance Law4",
+      photo: img2,
+      figure: photo4,
+      header: "Family Violence",
       text: "Awesome Services Grow Your Business Value There are many variations..",
     },
     {
       id: 5,
       photo: img5,
-      header: "Insurance Law5",
+      figure: photo5,
+      header: "Domestic Violence",
       text: "Awesome Services Grow Your Business Value There are many variations..",
     },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [numberOfTestimonialsToShow, setNumberOfTestimonialsToShow] =
+    useState(1);
+
+  useEffect(() => {
+    const updateTestimonialsToShow = () => {
+      if (window.innerWidth >= 1024) {
+        setNumberOfTestimonialsToShow(3);
+      } else if (window.innerWidth >= 768) {
+        setNumberOfTestimonialsToShow(2);
+      } else {
+        setNumberOfTestimonialsToShow(1);
+      }
+    };
+
+    updateTestimonialsToShow();
+    window.addEventListener("resize", updateTestimonialsToShow);
+
+    return () => {
+      window.removeEventListener("resize", updateTestimonialsToShow);
+    };
+  }, []);
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex + 3 >= testimonials.length ? 0 : prevIndex + 3
+      prevIndex + numberOfTestimonialsToShow >= testimonials.length
+        ? 0
+        : prevIndex + numberOfTestimonialsToShow
     );
   };
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? testimonials.length - 3 : prevIndex - 3
+      prevIndex - numberOfTestimonialsToShow < 0
+        ? testimonials.length - numberOfTestimonialsToShow
+        : prevIndex - numberOfTestimonialsToShow
     );
   };
 
   return (
     <div className="p-5 flex flex-col gap-5">
-      <div className="flex items-center justify-center gap-10">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-10">
         <div className="flex flex-col gap-3">
           <Heading
-            title={"What We Do"}
-            line1={"A Passion For Justice,"}
-            line2={"Our Practice Areas"}
+            title="What We Do"
+            line1="A Passion For Justice,"
+            line2="Our Practice Areas"
           />
         </div>
         <button className="flex justify-center items-center group">
@@ -91,39 +126,25 @@ export default function WhatWeDo() {
           </div>
         </button>
       </div>
-      <div className="flex justify-around">
-        {testimonials.slice(currentIndex, currentIndex + 3).map((data) => (
-          <div
-            className="flex flex-col gap-3 max-w-96 group hover:shadow-xl"
-            key={data.id}
-          >
-            <div className="flex">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="icon icon-tabler icon-tabler-file-spreadsheet size-12 ml-3"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="#b9967e"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M14 3v4a1 1 0 0 0 1 1h4" />
-                <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
-                <path d="M8 11h8v7h-8z" />
-                <path d="M8 15h8" />
-                <path d="M11 11v7" />
-              </svg>
-              <div className="h-20 w-8 rounded-bl-full ml-auto opacity-25 group-hover:opacity-55 bg-gradient-to-l from-secondary"></div>
+      <div className="flex flex-col gap-5 md:flex-row justify-around transition-all duration-500 ease-in-out">
+        {testimonials
+          .slice(currentIndex, currentIndex + numberOfTestimonialsToShow)
+          .map((data) => (
+            <div
+              className="flex flex-col gap-3 w-full sm:max-w-1/2  lg:max-w-1/3 group hover:shadow-xl transform transition-transform duration-500 ease-in-out"
+              key={data.id}
+            >
+              <div className="flex">
+                <Image src={data.photo} alt="photo" className="w-1/4 h-20" />
+                <div className="h-20 w-8 rounded-bl-full ml-auto opacity-25 group-hover:opacity-55 bg-gradient-to-l from-secondary"></div>
+              </div>
+              <div className="flex flex-col gap-3 p-3">
+                <h3 className="text-xl md:text-3xl">{data.header}</h3>
+                <p className="text-secondary line-clamp-2">{data.text}</p>
+              </div>
+              <Image src={data.figure} alt="card" className="w-full" />
             </div>
-            <div className="flex flex-col gap-3 p-3">
-              <h3 className="text-3xl">{data.header}</h3>
-              <p className="text-secondary line-clamp-2">{data.text}</p>
-            </div>
-            <Image src={card} alt="card" />
-          </div>
-        ))}
+          ))}
       </div>
       <div className="flex gap-4 ml-auto">
         <button

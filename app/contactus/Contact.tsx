@@ -3,16 +3,16 @@ import StarRating from "../_animations/StarRating";
 
 export default function Contact() {
   return (
-    <div className="flex justify-between p-5 gap-5">
-      <div className="flex flex-col gap-5 p-5 w-1/2 rounded-lg">
+    <div className="flex flex-col md:flex-row justify-between p-5 gap-5">
+      <div className="flex flex-col gap-5 p-5 md:w-1/2 rounded-lg">
         <h3 className="flex items-center gap-3 text-2xl text-secondary">
           <div className="h-3 w-5 bg-gradient-to-r from-secondary rounded-tl-md rounded-br-md"></div>
           Get In Touch
           <div className="h-3 w-5 bg-gradient-to-l from-secondary rounded-tl-md rounded-br-md"></div>
         </h3>
-        <p className="flex flex-col text-4xl">Contact Information</p>
-        <div className="flex gap-5 justify-around w-full">
-          <div className="flex flex-col items-center gap-5 group w-1/2 border p-4 rounded-tl-3xl rounded-br-3xl">
+        <p className="flex text-4xl">Contact Information</p>
+        <div className="flex flex-col sm:flex-row gap-5 justify-around w-full">
+          <div className="flex flex-col items-center gap-5 group w-full sm:w-1/2 border p-4 rounded-tl-3xl rounded-br-3xl">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -39,7 +39,7 @@ export default function Contact() {
             </p>
           </div>
 
-          <div className="flex flex-col items-center gap-5 group w-1/2 border p-4 rounded-tl-3xl rounded-br-3xl">
+          <div className="flex flex-col items-center gap-5 group w-full sm:w-1/2 border p-4 rounded-tl-3xl rounded-br-3xl">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -62,13 +62,13 @@ export default function Contact() {
             </p>
           </div>
         </div>
-        <div className="flex bg-secondary text-white text-lg p-3 rounded items-center justify-center gap-3">
+        <div className="flex flex-col sm:flex-row bg-secondary text-white text-lg p-3 rounded items-center justify-center gap-3">
           <p>Our Best Skilled Attorneys, Trust Score 4.6</p>
           <StarRating rating={4.6} />
         </div>
       </div>
 
-      <div className="flex flex-col gap-5 w-1/2 p-5 bg-white rounded-lg shadow-md">
+      <div className="flex flex-col gap-5 md:w-1/2 p-5 bg-white rounded-lg shadow-md">
         <h3 className="flex items-center gap-3 text-2xl text-secondary">
           <div className="h-3 w-5 bg-gradient-to-r from-secondary rounded-tl-md rounded-br-md"></div>
           Have Any Questions?
