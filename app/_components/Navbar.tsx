@@ -51,7 +51,7 @@ export default function Navbar() {
   const navItems = [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/aboutus" },
-    { name: "Blog", path: "/blog" },
+    { name: "Practices", path: "/practices" },
   ];
 
   return (
@@ -60,12 +60,6 @@ export default function Navbar() {
         navbarVisible ? "translate-y-0" : "-translate-y-full"
       } ${scrolled ? "bg-white text-black" : "bg-transparent text-white"}`}
     >
-      <div className="hidden md:flex items-center justify-center px-3">
-        <p>Mon-Sun : 9.00am-5.00pm</p>
-        <p className="ml-auto border-r border-secondary p-3">halt-o.com</p>
-        <p className="pl-3">Chennai, India</p>
-      </div>
-
       <ul className="w-full flex justify-around items-center border-y border-secondary">
         <li>
           <svg

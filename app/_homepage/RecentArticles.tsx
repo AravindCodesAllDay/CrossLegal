@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Heading from "../_animations/Heading";
 
@@ -42,10 +42,30 @@ const articles = [
 
 export default function RecentArticles() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [articlesPerSlide, setArticlesPerSlide] = useState(1);
 
   const handleDotClick = (index: number) => {
     setCurrentIndex(index);
   };
+
+  useEffect(() => {
+    const updateArticlesPerSlide = () => {
+      if (window.innerWidth >= 1024) {
+        setArticlesPerSlide(3);
+      } else if (window.innerWidth >= 640) {
+        setArticlesPerSlide(2);
+      } else {
+        setArticlesPerSlide(1);
+      }
+    };
+
+    updateArticlesPerSlide();
+    window.addEventListener("resize", updateArticlesPerSlide);
+
+    return () => {
+      window.removeEventListener("resize", updateArticlesPerSlide);
+    };
+  }, []);
 
   return (
     <div className="flex flex-col justify-center items-center gap-3 p-5">
@@ -54,15 +74,15 @@ export default function RecentArticles() {
         line1={"What News Do We Have"}
         line2={"Today, Latest Blog"}
       />
-      <div className="relative w-full max-w-[900px] overflow-hidden">
+      <div className="relative w-full overflow-hidden">
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
-          {articles.map((article) => (
+          {articles.map((article, index) => (
             <div
               key={article.id}
-              className="flex-shrink-0 w-full sm:w-1/2 p-4 flex flex-col items-center group transition-transform duration-500 ease-in-out transform"
+              className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-4 flex flex-col items-center group transition-transform duration-500 ease-in-out transform"
             >
               <div className="relative max-w-full">
                 <Image
@@ -89,7 +109,7 @@ export default function RecentArticles() {
         </div>
         <div className="flex justify-center gap-2 mt-4">
           {Array.from(
-            { length: Math.ceil(articles.length / 2) },
+            { length: Math.ceil(articles.length / articlesPerSlide) },
             (_, index) => (
               <div
                 key={index}

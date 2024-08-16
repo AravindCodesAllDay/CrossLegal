@@ -3,8 +3,8 @@ import React from "react";
 export default function Footer() {
   return (
     <>
-      <div className="flex flex-col sm:flex-row w-full justify-around relative bg-primary text-white border-b border-secondary p-3">
-        <div className="my-8">
+      <div className="flex flex-col gap-5 sm:flex-row w-full justify-around relative bg-primary text-white border-b border-secondary p-3">
+        <div className=" md:my-8">
           <h3 className="flex items-center gap-3 md:text-2xl text-secondary">
             <div className="h-3 w-5 bg-gradient-to-r from-secondary rounded-tl-md rounded-br-md"></div>
             Get In Touch
@@ -15,7 +15,7 @@ export default function Footer() {
             <span>Info & Support Team</span>
           </p>
         </div>
-        <div className="bg-gradient-to-r from-secondary rounded-tl-3xl rounded-br-3xl p-4 flex flex-col items-center justify-center my-8">
+        <div className="bg-gradient-to-r from-secondary rounded-tl-3xl rounded-br-3xl p-4 flex flex-col items-center justify-center md:my-8">
           <p className="text-lg md:text-3xl">+(91) XXXXX XXXXX</p>
           <p>FEEL FREE TO CALL US</p>
         </div>

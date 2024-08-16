@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Heading from "../_animations/Heading";
 
@@ -22,10 +22,30 @@ const profiles = [
 
 export default function OurLawyers() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [profilesPerSlide, setProfilesPerSlide] = useState(1);
 
   const handleDotClick = (index: number) => {
     setCurrentIndex(index);
   };
+
+  useEffect(() => {
+    const updateProfilesPerSlide = () => {
+      if (window.innerWidth >= 1024) {
+        setProfilesPerSlide(3);
+      } else if (window.innerWidth >= 640) {
+        setProfilesPerSlide(2);
+      } else {
+        setProfilesPerSlide(1);
+      }
+    };
+
+    updateProfilesPerSlide();
+    window.addEventListener("resize", updateProfilesPerSlide);
+
+    return () => {
+      window.removeEventListener("resize", updateProfilesPerSlide);
+    };
+  }, []);
 
   return (
     <div className="flex flex-col justify-center items-center p-4">
@@ -62,10 +82,10 @@ export default function OurLawyers() {
                     xmlns="http://www.w3.org/2000/svg"
                     className="icon icon-tabler icon-tabler-brand-facebook size-8 stroke-white"
                     viewBox="0 0 24 24"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                     fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
@@ -76,10 +96,10 @@ export default function OurLawyers() {
                     xmlns="http://www.w3.org/2000/svg"
                     className="icon icon-tabler icon-tabler-brand-linkedin size-8 stroke-white"
                     viewBox="0 0 24 24"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                     fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
@@ -94,10 +114,10 @@ export default function OurLawyers() {
                     xmlns="http://www.w3.org/2000/svg"
                     className="icon icon-tabler icon-tabler-brand-instagram size-8 stroke-white"
                     viewBox="0 0 24 24"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                     fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
@@ -112,7 +132,7 @@ export default function OurLawyers() {
         </div>
         <div className="flex justify-center gap-2 mt-4">
           {Array.from(
-            { length: Math.ceil(profiles.length / 3) },
+            { length: Math.ceil(profiles.length / profilesPerSlide) },
             (_, index) => (
               <div
                 key={index}

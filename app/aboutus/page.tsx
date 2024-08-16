@@ -16,7 +16,7 @@ export default function AboutPage() {
     <>
       <Navbar />
       <div className="flex flex-col gap-5">
-        <Header title={"About Us"} photo={team} />
+        <Header header={"Aboutus"} title={"About Us"} photo={team} />
         <AboutUs />
       </div>
       <div className="relative">

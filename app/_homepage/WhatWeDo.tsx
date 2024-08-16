@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-
 import Heading from "../_animations/Heading";
 
 import img1 from "@/app/_assets/whatWeDo/1.png";
@@ -56,43 +55,30 @@ export default function WhatWeDo() {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [numberOfTestimonialsToShow, setNumberOfTestimonialsToShow] =
-    useState(1);
+  const [testimonialsPerSlide, setTestimonialsPerSlide] = useState(1);
+
+  const handleDotClick = (index: number) => {
+    setCurrentIndex(index);
+  };
 
   useEffect(() => {
-    const updateTestimonialsToShow = () => {
+    const updateTestimonialsPerSlide = () => {
       if (window.innerWidth >= 1024) {
-        setNumberOfTestimonialsToShow(3);
-      } else if (window.innerWidth >= 768) {
-        setNumberOfTestimonialsToShow(2);
+        setTestimonialsPerSlide(3);
+      } else if (window.innerWidth >= 640) {
+        setTestimonialsPerSlide(2);
       } else {
-        setNumberOfTestimonialsToShow(1);
+        setTestimonialsPerSlide(1);
       }
     };
 
-    updateTestimonialsToShow();
-    window.addEventListener("resize", updateTestimonialsToShow);
+    updateTestimonialsPerSlide();
+    window.addEventListener("resize", updateTestimonialsPerSlide);
 
     return () => {
-      window.removeEventListener("resize", updateTestimonialsToShow);
+      window.removeEventListener("resize", updateTestimonialsPerSlide);
     };
   }, []);
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex + numberOfTestimonialsToShow >= testimonials.length
-        ? 0
-        : prevIndex + numberOfTestimonialsToShow
-    );
-  };
-
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex - numberOfTestimonialsToShow < 0
-        ? testimonials.length - numberOfTestimonialsToShow
-        : prevIndex - numberOfTestimonialsToShow
-    );
-  };
 
   return (
     <div className="p-5 flex flex-col gap-5">
@@ -126,15 +112,17 @@ export default function WhatWeDo() {
           </div>
         </button>
       </div>
-      <div className="flex flex-col gap-5 md:flex-row justify-around transition-all duration-500 ease-in-out">
-        {testimonials
-          .slice(currentIndex, currentIndex + numberOfTestimonialsToShow)
-          .map((data) => (
+      <div className="relative mx-auto w-full md:w-4/5 overflow-hidden">
+        <div
+          className="flex transition-transform duration-500 ease-in-out"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          {testimonials.map((data, index) => (
             <div
-              className="flex flex-col gap-3 w-full sm:max-w-1/2  lg:max-w-1/3 group hover:shadow-xl transform transition-transform duration-500 ease-in-out"
+              className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-3 flex flex-col items-center gap-4 group transition-transform duration-500 ease-in-out transform"
               key={data.id}
             >
-              <div className="flex">
+              <div className="flex justify-between w-full">
                 <Image src={data.photo} alt="photo" className="w-1/4 h-20" />
                 <div className="h-20 w-8 rounded-bl-full ml-auto opacity-25 group-hover:opacity-55 bg-gradient-to-l from-secondary"></div>
               </div>
@@ -145,52 +133,23 @@ export default function WhatWeDo() {
               <Image src={data.figure} alt="card" className="w-full" />
             </div>
           ))}
-      </div>
-      <div className="flex gap-4 ml-auto">
-        <button
-          onClick={handlePrev}
-          className="px-3 py-1 bg-secondary rounded-tl-3xl rounded-br-3xl"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="icon icon-tabler icon-tabler-arrow-badge-left-filled size-10"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="#fff"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path
-              d="M17 6h-6a1 1 0 0 0 -.78 .375l-4 5a1 1 0 0 0 0 1.25l4 5a1 1 0 0 0 .78 .375h6l.112 -.006a1 1 0 0 0 .669 -1.619l-3.501 -4.375l3.5 -4.375a1 1 0 0 0 -.78 -1.625z"
-              stroke-width="0"
-              fill="#fff"
-            />
-          </svg>
-        </button>
-        <button
-          onClick={handleNext}
-          className="px-3 py-1 bg-secondary rounded-tl-3xl rounded-br-3xl"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="icon icon-tabler icon-tabler-arrow-badge-right-filled size-10"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="#fff"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path
-              d="M7 6l-.112 .006a1 1 0 0 0 -.669 1.619l3.501 4.375l-3.5 4.375a1 1 0 0 0 .78 1.625h6a1 1 0 0 0 .78 -.375l4 -5a1 1 0 0 0 0 -1.25l-4 -5a1 1 0 0 0 -.78 -.375h-6z"
-              stroke-width="0"
-              fill="#fff"
-            />
-          </svg>
-        </button>
+        </div>
+        <div className="flex justify-center gap-2 mt-4">
+          {Array.from(
+            { length: Math.ceil(testimonials.length / testimonialsPerSlide) },
+            (_, index) => (
+              <div
+                key={index}
+                className={`w-4 h-3 rounded-tl-md rounded-br-md cursor-pointer transition-all duration-300 ${
+                  currentIndex === index
+                    ? "bg-secondary transform scale-125"
+                    : "bg-gray-300"
+                }`}
+                onClick={() => handleDotClick(index)}
+              ></div>
+            )
+          )}
+        </div>
       </div>
     </div>
   );
