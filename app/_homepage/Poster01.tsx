@@ -47,8 +47,8 @@ export default function Poster01() {
           <div className="h-3 w-5 bg-gradient-to-l from-secondary rounded-tl-md rounded-br-md"></div>
         </h3>
         <p className="flex flex-col text-4xl font-bold mb-4">
-          <span>Start the App Few Steps,</span>
-          <span>Download Easily..</span>
+          <span>Get into Few Steps,</span>
+          <span>Start Easily..</span>
         </p>
         <div className="flex flex-col md:flex-row gap-3">
           <p>Trust Score 4.6 (Based on 1,200 reviews)</p>
@@ -80,7 +80,7 @@ export default function Poster01() {
         <div
           className="absolute w-[175%] h-full bg-center bg-cover"
           style={{
-            backgroundImage: "url('http://i.imgur.com/kreZqnx.jpg')",
+            backgroundImage: "url('/justice.jpg')",
             transformOrigin: "inherit",
             transform: "skewX(30deg)",
           }}

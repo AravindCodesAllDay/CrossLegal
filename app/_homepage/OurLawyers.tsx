@@ -48,7 +48,7 @@ export default function OurLawyers() {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center p-4">
+    <div className="flex flex-col gap-8 justify-center items-center p-4">
       <Heading
         title={"Our Lawyers"}
         line1={"A Passion For Justice, Our"}

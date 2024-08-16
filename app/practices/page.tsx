@@ -4,6 +4,7 @@ import Header from "../_components/Header";
 import Practice from "./Practice";
 
 import team from "@/app/_assets/abtHeader.jpg";
+import ToTop from "../_components/ToTop";
 
 export default function PracticePage() {
   return (
@@ -11,6 +12,7 @@ export default function PracticePage() {
       <Navbar />
       <Header title={"Practices"} photo={team} header={"Practices"} />
       <Practice />
+      <ToTop />
       <Footer />
     </>
   );
