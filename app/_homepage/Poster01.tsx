@@ -33,7 +33,7 @@ export default function Poster01() {
 
   return (
     <div
-      className={`w-4/5 bg-primary text-white h-96 flex justify-between items-center mx-auto overflow-hidden`}
+      className={`w-4/5 bg-primary text-white flex flex-col md:flex-row justify-between items-center mx-auto overflow-hidden`}
       ref={elementRef}
     >
       <div
@@ -50,13 +50,13 @@ export default function Poster01() {
           <span>Start the App Few Steps,</span>
           <span>Download Easily..</span>
         </p>
-        <div className="flex gap-3">
+        <div className="flex flex-col md:flex-row gap-3">
           <p>Trust Score 4.6 (Based on 1,200 reviews)</p>
           <StarRating rating={4.6} />
         </div>
       </div>
       <div
-        className="relative block w-1/6 pb-[25%] overflow-hidden"
+        className="hidden relative md:block w-full md:w-1/6 pb-[25%] overflow-hidden"
         style={{
           transformOrigin: "0 100%",
           transform: "skewX(-30deg) translateZ(1px)",
@@ -71,7 +71,7 @@ export default function Poster01() {
         ></div>
       </div>
       <div
-        className="relative block w-1/5 pb-[25%] overflow-hidden"
+        className="hidden relative md:block w-full md:w-1/5 pb-[25%] overflow-hidden"
         style={{
           transformOrigin: "0 100%",
           transform: "skewX(-30deg) translateZ(1px)",
@@ -87,14 +87,14 @@ export default function Poster01() {
         ></div>
       </div>
       <div
-        className="relative block w-1/6 pb-[25%] overflow-hidden"
+        className="hidden relative md:block w-full md:w-1/6 pb-[25%] overflow-hidden"
         style={{
           transformOrigin: "0 100%",
           transform: "skewX(-30deg) translateZ(1px)",
         }}
       >
         <div
-          className="absolute w-[85%] h-full bg-center bg-cover bg-gradient-to-t from-secondary"
+          className="absolute w-[100%] h-full bg-center bg-cover bg-gradient-to-t from-secondary"
           style={{
             transformOrigin: "inherit",
             transform: "skewX(30deg)",

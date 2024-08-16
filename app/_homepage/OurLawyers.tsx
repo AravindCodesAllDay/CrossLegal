@@ -1,65 +1,86 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-import profile from "@/app/_assets/statue.jpg";
 import Heading from "../_animations/Heading";
 
+import member1 from "@/app/_assets/team/1.jpg";
+import member2 from "@/app/_assets/team/2.jpg";
+import member3 from "@/app/_assets/team/3.jpg";
+import member4 from "@/app/_assets/team/4.jpg";
+import member5 from "@/app/_assets/team/5.jpg";
+import member6 from "@/app/_assets/team/6.jpg";
+
 const profiles = [
-  { name: "James Garcia", specialty: "Real Estate Law", image: profile },
-  { name: "Jane Doe", specialty: "Corporate Law", image: profile },
-  { name: "John Smith", specialty: "Criminal Law", image: profile },
-  { name: "Anna Taylor", specialty: "Family Law", image: profile },
-  { name: "Michael Brown", specialty: "Immigration Law", image: profile },
-  { name: "Emily White", specialty: "Intellectual Property", image: profile },
+  { name: "James Garcia", specialty: "Real Estate Law", image: member1 },
+  { name: "Jane Doe", specialty: "Corporate Law", image: member2 },
+  { name: "John Smith", specialty: "Criminal Law", image: member3 },
+  { name: "Anna Taylor", specialty: "Family Law", image: member4 },
+  { name: "Michael Brown", specialty: "Immigration Law", image: member5 },
+  { name: "Emily White", specialty: "Intellectual Property", image: member6 },
 ];
 
 export default function OurLawyers() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [profilesPerSlide, setProfilesPerSlide] = useState(1);
 
-  const handleNext = () => {
-    if (currentIndex < profiles.length - 3) {
-      setCurrentIndex(currentIndex + 3);
-    }
+  const handleDotClick = (index: number) => {
+    setCurrentIndex(index);
   };
 
-  const handlePrev = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 3);
-    }
-  };
+  useEffect(() => {
+    const updateProfilesPerSlide = () => {
+      if (window.innerWidth >= 1024) {
+        setProfilesPerSlide(3);
+      } else if (window.innerWidth >= 640) {
+        setProfilesPerSlide(2);
+      } else {
+        setProfilesPerSlide(1);
+      }
+    };
+
+    updateProfilesPerSlide();
+    window.addEventListener("resize", updateProfilesPerSlide);
+
+    return () => {
+      window.removeEventListener("resize", updateProfilesPerSlide);
+    };
+  }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center gap-3">
+    <div className="flex flex-col justify-center items-center p-4">
       <Heading
         title={"Our Lawyers"}
         line1={"A Passion For Justice, Our"}
         line2={"Practice Areas"}
       />
-
-      <div className="flex justify-around w-full">
-        {profiles
-          .slice(currentIndex, currentIndex + 3)
-          .map((profile, index) => (
+      <div className="relative w-full md:w-4/5 overflow-hidden">
+        <div
+          className="flex transition-transform duration-500 ease-in-out"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          {profiles.map((profile, index) => (
             <div
               key={index}
-              className="w-96 h-96 relative items-center flex flex-col justify-around"
+              className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-3 flex flex-col items-center gap-4 group transition-transform duration-500 ease-in-out transform"
             >
-              <div className="w-full h-1/2 rounded-b-full bg-secondary opacity-15 absolute top-0"></div>
+              <div className="w-11/12 h-1/2 rounded-b-full bg-secondary opacity-15 -z-20 absolute top-0"></div>
               <div className="flex flex-col items-center">
-                <h6 className="text-2xl">{profile.name}</h6>
-                <p className="text-secondary">{profile.specialty}</p>
+                <h6 className="text-xl md:text-2xl">{profile.name}</h6>
+                <p className="text-secondary text-sm md:text-base">
+                  {profile.specialty}
+                </p>
               </div>
               <Image
                 src={profile.image}
                 alt="profile"
-                className="size-56 rounded-full border-2 border-secondary p-2"
+                className="size-56 rounded-full border-2 border-dashed border-secondary p-2 group-hover:scale-95 transition-all ease-in-out duration-200"
               />
-              <ul className="flex gap-5">
+              <ul className="flex gap-5 mt-4">
                 <li className="rounded-full p-1 bg-secondary">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="icon icon-tabler icon-tabler-brand-facebook  size-8 stroke-white"
+                    className="icon icon-tabler icon-tabler-brand-facebook size-8 stroke-white"
                     viewBox="0 0 24 24"
                     strokeWidth="1.5"
                     fill="none"
@@ -73,10 +94,9 @@ export default function OurLawyers() {
                 <li className="rounded-full p-1 bg-secondary">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="icon icon-tabler icon-tabler-brand-linkedin size-8"
+                    className="icon icon-tabler icon-tabler-brand-linkedin size-8 stroke-white"
                     viewBox="0 0 24 24"
                     strokeWidth="1.5"
-                    stroke="#fff"
                     fill="none"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -92,10 +112,9 @@ export default function OurLawyers() {
                 <li className="rounded-full p-1 bg-secondary">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="icon icon-tabler icon-tabler-brand-instagram size-8"
+                    className="icon icon-tabler icon-tabler-brand-instagram size-8 stroke-white"
                     viewBox="0 0 24 24"
                     strokeWidth="1.5"
-                    stroke="#fff"
                     fill="none"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -107,56 +126,26 @@ export default function OurLawyers() {
                   </svg>
                 </li>
               </ul>
-              <div className="w-full h-1/2 rounded-t-full bg-secondary opacity-25 absolute bottom-0"></div>
+              <div className="w-11/12 h-1/2 rounded-t-full -z-20 bg-secondary opacity-25 absolute bottom-0"></div>
             </div>
           ))}
-      </div>
-
-      <div className="flex gap-5 mt-5">
-        <button
-          onClick={handlePrev}
-          className="px-3 py-1 bg-secondary rounded-tl-3xl rounded-br-3xl"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="icon icon-tabler icon-tabler-arrow-badge-left-filled size-10"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="#fff"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path
-              d="M17 6h-6a1 1 0 0 0 -.78 .375l-4 5a1 1 0 0 0 0 1.25l4 5a1 1 0 0 0 .78 .375h6l.112 -.006a1 1 0 0 0 .669 -1.619l-3.501 -4.375l3.5 -4.375a1 1 0 0 0 -.78 -1.625z"
-              strokeWidth="0"
-              fill="#fff"
-            />
-          </svg>
-        </button>
-        <button
-          onClick={handleNext}
-          className="px-3 py-1 bg-secondary rounded-tl-3xl rounded-br-3xl"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="icon icon-tabler icon-tabler-arrow-badge-right-filled size-10"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="#fff"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path
-              d="M7 6l-.112 .006a1 1 0 0 0 -.669 1.619l3.501 4.375l-3.5 4.375a1 1 0 0 0 .78 1.625h6a1 1 0 0 0 .78 -.375l4 -5a1 1 0 0 0 0 -1.25l-4 -5a1 1 0 0 0 -.78 -.375h-6z"
-              strokeWidth="0"
-              fill="#fff"
-            />
-          </svg>
-        </button>
+        </div>
+        <div className="flex justify-center gap-2 mt-4">
+          {Array.from(
+            { length: Math.ceil(profiles.length / profilesPerSlide) },
+            (_, index) => (
+              <div
+                key={index}
+                className={`w-4 h-3 rounded-tl-md rounded-br-md cursor-pointer transition-all duration-300 ${
+                  currentIndex === index
+                    ? "bg-secondary transform scale-125"
+                    : "bg-gray-300"
+                }`}
+                onClick={() => handleDotClick(index)}
+              ></div>
+            )
+          )}
+        </div>
       </div>
     </div>
   );

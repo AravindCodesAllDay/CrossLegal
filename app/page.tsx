@@ -37,7 +37,9 @@ export default function Home() {
           <OurResources />
           <WhatWeDo />
           <div className="w-full relative">
-            <div className="bg-[url('https://media.istockphoto.com/id/1405452812/photo/legal-and-law-concept-statue-of-lady-justice-on-blurred-background.jpg?s=612x612&w=0&k=20&c=COXXUKOHSpditerWU9r6qHVEn16Nz1O4kCI6XcWKTDc=')] bg-no-repeat bg-center bg-fixed bg-cover h-2/3 -z-20 w-full absolute"></div>
+            <div
+              className={`bg-[url("https://st3.depositphotos.com/1316534/32483/i/450/depositphotos_324832788-stock-photo-statue-of-justice-lady-justice.jpg")] bg-no-repeat bg-center bg-fixed bg-cover h-2/3 -z-20 w-full absolute`}
+            ></div>
             <OurTestimonials />
             <Poster01 />
           </div>

@@ -4,14 +4,14 @@ import Heading from "../_animations/Heading";
 
 export default function OurResources() {
   return (
-    <div className="bg-[#f9f9f9] w-full flex flex-col justify-center items-center gap-5 p-5">
+    <div className="bg-[#f9f9f9] w-full flex flex-col justify-center items-center gap-5 p-16">
       <Heading
         title={"Our Resources"}
         line1={"We Live & Work Globally"}
         line2={""}
       />
       <div className="w-full max-w-screen-lg">
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           <div className="flex flex-col items-center justify-center border-b p-3 h-full">
             <p className="text-6xl text-secondary font-bold">
               <Counter start={0} count={100} targetNumber={1000} />+
@@ -34,8 +34,6 @@ export default function OurResources() {
               LATHAM LAWYERS PARTICIPATE IN PRO BONO WORK
             </p>
           </div>
-        </div>
-        <div className="grid grid-cols-3 gap-4 mt-4">
           <div className="flex flex-col items-center justify-center p-3 h-full">
             <p className="text-6xl text-secondary font-bold">
               <Counter start={0} count={8} targetNumber={80} />+

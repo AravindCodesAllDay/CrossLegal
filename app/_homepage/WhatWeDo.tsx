@@ -1,66 +1,93 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
-
-import card from "@/app/_assets/card.jpg";
 import Heading from "../_animations/Heading";
+
+import img1 from "@/app/_assets/whatWeDo/1.png";
+import img2 from "@/app/_assets/whatWeDo/2.png";
+import img3 from "@/app/_assets/whatWeDo/3.png";
+import img4 from "@/app/_assets/whatWeDo/4.png";
+import img5 from "@/app/_assets/whatWeDo/5.png";
+
+import photo1 from "@/app/_assets/whatWeDo/1.jpg";
+import photo2 from "@/app/_assets/whatWeDo/2.jpg";
+import photo3 from "@/app/_assets/whatWeDo/3.jpg";
+import photo4 from "@/app/_assets/whatWeDo/4.jpg";
+import photo5 from "@/app/_assets/whatWeDo/5.jpg";
 
 export default function WhatWeDo() {
   const testimonials = [
     {
       id: 1,
-      header: "Insurance Law1",
+      photo: img1,
+      figure: photo1,
+      header: "Car Accidents",
       text: "Awesome Services Grow Your Business Value There are many variations..",
     },
     {
       id: 2,
-      header: "Insurance Law2",
+      photo: img4,
+      figure: photo2,
+      header: "Health Care Law",
       text: "Awesome Services Grow Your Business Value There are many variations..",
     },
     {
       id: 3,
-      header: "Insurance Law3",
+      photo: img3,
+      figure: photo3,
+      header: "Insurance Law",
       text: "Awesome Services Grow Your Business Value There are many variations..",
     },
     {
       id: 4,
-      header: "Insurance Law4",
+      photo: img2,
+      figure: photo4,
+      header: "Family Violence",
       text: "Awesome Services Grow Your Business Value There are many variations..",
     },
     {
       id: 5,
-      header: "Insurance Law5",
-      text: "Awesome Services Grow Your Business Value There are many variations..",
-    },
-    {
-      id: 6,
-      header: "Insurance Law6",
+      photo: img5,
+      figure: photo5,
+      header: "Domestic Violence",
       text: "Awesome Services Grow Your Business Value There are many variations..",
     },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [testimonialsPerSlide, setTestimonialsPerSlide] = useState(1);
 
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex + 3 >= testimonials.length ? 0 : prevIndex + 3
-    );
+  const handleDotClick = (index: number) => {
+    setCurrentIndex(index);
   };
 
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? testimonials.length - 3 : prevIndex - 3
-    );
-  };
+  useEffect(() => {
+    const updateTestimonialsPerSlide = () => {
+      if (window.innerWidth >= 1024) {
+        setTestimonialsPerSlide(3);
+      } else if (window.innerWidth >= 640) {
+        setTestimonialsPerSlide(2);
+      } else {
+        setTestimonialsPerSlide(1);
+      }
+    };
+
+    updateTestimonialsPerSlide();
+    window.addEventListener("resize", updateTestimonialsPerSlide);
+
+    return () => {
+      window.removeEventListener("resize", updateTestimonialsPerSlide);
+    };
+  }, []);
 
   return (
     <div className="p-5 flex flex-col gap-5">
-      <div className="flex items-center justify-center gap-10">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-10">
         <div className="flex flex-col gap-3">
           <Heading
-            title={"What We Do"}
-            line1={"A Passion For Justice,"}
-            line2={"Our Practice Areas"}
+            title="What We Do"
+            line1="A Passion For Justice,"
+            line2="Our Practice Areas"
           />
         </div>
         <button className="flex justify-center items-center group">
@@ -85,85 +112,44 @@ export default function WhatWeDo() {
           </div>
         </button>
       </div>
-      <div className="flex justify-around">
-        {testimonials.slice(currentIndex, currentIndex + 3).map((data) => (
-          <div
-            className="flex flex-col gap-3 max-w-96 group hover:shadow-xl"
-            key={data.id}
-          >
-            <div className="flex">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="icon icon-tabler icon-tabler-file-spreadsheet size-12 ml-3"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="#b9967e"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M14 3v4a1 1 0 0 0 1 1h4" />
-                <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
-                <path d="M8 11h8v7h-8z" />
-                <path d="M8 15h8" />
-                <path d="M11 11v7" />
-              </svg>
-              <div className="h-20 w-8 rounded-bl-full ml-auto opacity-25 group-hover:opacity-55 bg-gradient-to-l from-secondary"></div>
-            </div>
-            <div className="flex flex-col gap-3 p-3">
-              <h3 className="text-3xl">{data.header}</h3>
-              <p className="text-secondary line-clamp-2">{data.text}</p>
-            </div>
-            <Image src={card} alt="card" />
-          </div>
-        ))}
-      </div>
-      <div className="flex gap-4 ml-auto">
-        <button
-          onClick={handlePrev}
-          className="px-3 py-1 bg-secondary rounded-tl-3xl rounded-br-3xl"
+      <div className="relative mx-auto w-full md:w-4/5 overflow-hidden">
+        <div
+          className="flex transition-transform duration-500 ease-in-out"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="icon icon-tabler icon-tabler-arrow-badge-left-filled size-10"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="#fff"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path
-              d="M17 6h-6a1 1 0 0 0 -.78 .375l-4 5a1 1 0 0 0 0 1.25l4 5a1 1 0 0 0 .78 .375h6l.112 -.006a1 1 0 0 0 .669 -1.619l-3.501 -4.375l3.5 -4.375a1 1 0 0 0 -.78 -1.625z"
-              strokeWidth="0"
-              fill="#fff"
-            />
-          </svg>
-        </button>
-        <button
-          onClick={handleNext}
-          className="px-3 py-1 bg-secondary rounded-tl-3xl rounded-br-3xl"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="icon icon-tabler icon-tabler-arrow-badge-right-filled size-10"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="#fff"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path
-              d="M7 6l-.112 .006a1 1 0 0 0 -.669 1.619l3.501 4.375l-3.5 4.375a1 1 0 0 0 .78 1.625h6a1 1 0 0 0 .78 -.375l4 -5a1 1 0 0 0 0 -1.25l-4 -5a1 1 0 0 0 -.78 -.375h-6z"
-              strokeWidth="0"
-              fill="#fff"
-            />
-          </svg>
-        </button>
+          {testimonials.map((data, index) => (
+            <div
+              className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-3 flex flex-col items-center gap-4 group transition-transform duration-500 ease-in-out transform"
+              key={data.id}
+            >
+              <div className="flex justify-between w-full">
+                <Image src={data.photo} alt="photo" className="w-1/4 h-20" />
+                <div className="h-20 w-8 rounded-bl-full ml-auto opacity-25 group-hover:opacity-55 bg-gradient-to-l from-secondary"></div>
+              </div>
+              <div className="flex flex-col gap-3 p-3">
+                <h3 className="text-xl md:text-3xl">{data.header}</h3>
+                <p className="text-secondary line-clamp-2">{data.text}</p>
+              </div>
+              <Image src={data.figure} alt="card" className="w-full" />
+            </div>
+          ))}
+        </div>
+        <div className="flex justify-center gap-2 mt-4">
+          {Array.from(
+            { length: Math.ceil(testimonials.length / testimonialsPerSlide) },
+            (_, index) => (
+              <div
+                key={index}
+                className={`w-4 h-3 rounded-tl-md rounded-br-md cursor-pointer transition-all duration-300 ${
+                  currentIndex === index
+                    ? "bg-secondary transform scale-125"
+                    : "bg-gray-300"
+                }`}
+                onClick={() => handleDotClick(index)}
+              ></div>
+            )
+          )}
+        </div>
       </div>
     </div>
   );

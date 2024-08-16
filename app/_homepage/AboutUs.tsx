@@ -36,16 +36,19 @@ export default function AboutUs() {
   }, []);
 
   return (
-    <div className="relative w-full flex justify-around" ref={elementRef}>
+    <div
+      className="relative w-full flex flex-col md:flex-row items-center justify-around my-12"
+      ref={elementRef}
+    >
       <div className="h-1/2 w-full bg-[#f9f9f9] absolute -z-20"></div>
 
       <Image
         src={women}
         alt="women"
-        className="rounded-tl-3xl rounded-br-3xl"
+        className="rounded-tl-[100px] w-full p-6 md:w-2/5 rounded-br-[100px] "
       />
 
-      <div className={`w-2/5 flex flex-col gap-8 `}>
+      <div className={`w-full md:w-2/5 flex flex-col gap-8 p-6`}>
         <div className="h-1/2 flex flex-col justify-center gap-3">
           <Heading
             title={"About Us"}
@@ -66,7 +69,7 @@ export default function AboutUs() {
         </div>
 
         <div className="relative flex justify-center h-1/2">
-          <Image src={team} alt="team" className="-translate-y-20" />
+          <Image src={team} alt="team" />
           <div
             className={`absolute flex flex-col gap-3 bottom-0 bg-white p-5 rounded-tl-3xl rounded-br-3xl shadow-xl transform transition-transform duration-1000 ease-out ${
               isInView ? "translate-y-0" : "translate-y-32 opacity-0"
@@ -74,19 +77,19 @@ export default function AboutUs() {
           >
             <h3 className="flex items-center gap-3 text-2xl text-secondary">
               <div className="h-3 w-5 bg-gradient-to-r from-secondary rounded-tl-md rounded-br-md"></div>
-              About Us
+              Ask a Lawyer
               <div className="h-3 w-5 bg-gradient-to-l from-secondary rounded-tl-md rounded-br-md"></div>
             </h3>
             <p className="flex flex-col text-4xl font-bold">
-              <span>We’re Advocates for</span>
-              <span>Justice and Right</span>
+              <span>We Provide Solid Law</span>
+              <span>Practice</span>
             </p>
             <a href="contactus">
-              <button className="flex justify-center items-center">
-                <div className="p-4 bg-primary text-white rounded-tl-lg">
+              <button className="flex justify-center items-center group">
+                <div className="p-3 bg-[#00192c] text-white transform transition-transform duration-500 group-hover:bg-secondary rounded-tl-lg">
                   Call Us
                 </div>
-                <div className="bg-secondary rounded-br-lg p-4 text-white font-semibold">
+                <div className="bg-secondary transform transition-transform duration-500 group-hover:bg-[#00192c] rounded-br-lg p-3 text-white font-semibold">
                   +(91) XXXXX XXXXX
                 </div>
               </button>

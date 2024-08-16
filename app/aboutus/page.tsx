@@ -16,11 +16,12 @@ export default function AboutPage() {
     <>
       <Navbar />
       <div className="flex flex-col gap-5">
-        <Header title={"About Us"} photo={team} />
+        <Header header={"Aboutus"} title={"About Us"} photo={team} />
         <AboutUs />
-        <Looking4Lawyer />
       </div>
-      <div className="container mx-auto">
+      <div className="relative">
+        <div className="w-full h-5/6 -z-20 bg-primary bottom-0 absolute"></div>
+        <Looking4Lawyer />
         <Carousel />
       </div>
       <OurLawyers />

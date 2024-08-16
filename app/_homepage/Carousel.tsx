@@ -33,7 +33,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="relative w-screen h-[100vh] max-w-full mx-auto overflow-hidden">
+    <div className="relative w-full h-screen overflow-hidden">
       <div
         className={`flex transition-transform duration-700 ease-in-out h-full ${
           animate ? "animate-slide" : ""
@@ -52,7 +52,7 @@ const Carousel = () => {
               layout="fill"
             />
             <div
-              className={`absolute inset-0 flex flex-col gap-3 justify-center p-6 z-10 ml-24 ${
+              className={`absolute inset-0 flex flex-col gap-3 justify-center p-6 z-10 ${
                 animate ? "block" : "hidden"
               }`}
             >
@@ -122,7 +122,7 @@ const Carousel = () => {
         ))}
       </div>
 
-      <div className="absolute gap-3 bottom-4 left-0 right-0 flex justify-center p-8">
+      <div className="absolute gap-3 bottom-4 right-0 flex justify-center p-8">
         {slides.map((_, pointerIndex) => (
           <button
             key={pointerIndex}
@@ -134,7 +134,7 @@ const Carousel = () => {
         ))}
         <svg
           viewBox="0 0 1024 1024"
-          className="icon size-20 opacity-20 absolute bottom-0 right-8"
+          className="icon size-20 opacity-20 absolute bottom-0 right-12 -z-10"
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
         >

@@ -32,11 +32,11 @@ export default function Poster02() {
 
   return (
     <div
-      className={`w-4/5 bg-primary text-white h-96 flex justify-between items-center mx-auto overflow-hidden`}
+      className={`w-4/5 bg-primary text-white flex justify-between items-center mx-auto overflow-hidden`}
       ref={elementRef}
     >
       <div
-        className="relative block w-1/6 pb-[25%] overflow-hidden"
+        className="hidden relative md:block w-1/6 pb-[25%] overflow-hidden"
         style={{
           transformOrigin: "0 100%",
           transform: "skewX(30deg) translateZ(1px)",
@@ -51,7 +51,7 @@ export default function Poster02() {
         ></div>
       </div>
       <div
-        className="relative block w-1/5 pb-[25%] overflow-hidden"
+        className="hidden relative md:block w-1/5 pb-[25%] overflow-hidden"
         style={{
           transformOrigin: "0 100%",
           transform: "skewX(30deg) translateZ(1px)",
@@ -67,7 +67,7 @@ export default function Poster02() {
         ></div>
       </div>
       <div
-        className="relative block w-1/6 pb-[25%] overflow-hidden"
+        className="hidden relative md:block w-1/6 pb-[25%] overflow-hidden"
         style={{
           transformOrigin: "0 100%",
           transform: "skewX(30deg) translateZ(1px)",

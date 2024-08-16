@@ -26,7 +26,7 @@ export default function ContactPage() {
       {loading && <Loader />}
       <Navbar />
       <div className="flex flex-col gap-5">
-        <Header title={"Contact"} photo={team} />
+        <Header header={"Contact"} title={"Contact"} photo={team} />
         <Contact />
         <Maps />
       </div>
