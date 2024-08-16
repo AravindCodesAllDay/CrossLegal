@@ -13,7 +13,7 @@ export default function Header({ title, header, photo }: HeaderProps) {
       <Image
         src={photo}
         alt="Team Image"
-        className="w-full h-[60vh] opacity-10"
+        className="w-full h-[40vh] sm:h-[50vh] md:h-[60vh] opacity-10 object-cover"
       />
       <div className="absolute translate-y-12">
         <div className="flex flex-col p-6 md:p-12 items-center">
@@ -24,8 +24,8 @@ export default function Header({ title, header, photo }: HeaderProps) {
             <li className="px-2 hover:text-secondary">
               <a href="/">Home</a>
             </li>
-            <span>
-              <div className="h-3 w-3 bg-[#65554d] mt-0.5 rounded-tl-md rounded-br-md"></div>
+            <span className="mx-1 sm:mx-2">
+              <div className="h-2 w-2 sm:h-3 sm:w-3 bg-[#65554d] rounded-tl-md rounded-br-md"></div>
             </span>
             <li className="px-2 text-secondary">{header}</li>
           </div>
