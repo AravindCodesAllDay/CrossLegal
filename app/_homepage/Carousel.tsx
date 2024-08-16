@@ -81,7 +81,7 @@ const Carousel = () => {
                     <p
                       className={`${animate ? "slide-in delay-800" : "hidden"}`}
                     >
-                      Don't Take any
+                      Don&apos;t Take any
                     </p>
                     <p
                       className={`${animate ? "slide-in delay-800" : "hidden"}`}
