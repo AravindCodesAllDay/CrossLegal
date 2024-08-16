@@ -182,7 +182,7 @@ export default function Practice() {
     },
     {
       id: 6,
-      photo: img2,
+      photo: img4,
       figure: photo2,
       header: "ARBITRATION SERVICES FOR NON-RESIDENT INDIANS (NRIS)",
       text: "Arbitration is a preferred method of dispute resolution for Non-Resident Indians (NRIs) seeking efficient and impartial resolution to their legal conflicts. Our firm specializes in providing comprehensive arbitration services tailored to the unique needs of NRIs involved in cross-border disputes. Whether you're facing commercial disagreements, investment disputes, or family conflicts, our team of experienced lawyers is dedicated to delivering effective solutions through arbitration",
@@ -291,7 +291,7 @@ export default function Practice() {
     <div className="relative mx-auto w-full md:w-4/5 overflow-hidden">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {practices.map((data) => (
-          <a href={`/practices/${data.id}`}>
+          <a key={data.id} href={`/practices/${data.id}`}>
             <div
               className="flex-shrink-0 w-full p-3 flex flex-col items-center gap-4 group transition-transform duration-500 ease-in-out transform"
               key={data.id}

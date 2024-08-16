@@ -190,7 +190,7 @@ export default function BlogPractice({ params }: { params: { slug: string } }) {
     },
     {
       id: 6,
-      photo: img2,
+      photo: img4,
       figure: photo2,
       header: "ARBITRATION SERVICES FOR NON-RESIDENT INDIANS (NRIS)",
       text: "Arbitration is a preferred method of dispute resolution for Non-Resident Indians (NRIs) seeking efficient and impartial resolution to their legal conflicts. Our firm specializes in providing comprehensive arbitration services tailored to the unique needs of NRIs involved in cross-border disputes. Whether you're facing commercial disagreements, investment disputes, or family conflicts, our team of experienced lawyers is dedicated to delivering effective solutions through arbitration",
