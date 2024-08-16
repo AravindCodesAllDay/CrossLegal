@@ -10,42 +10,25 @@ import Heading from "../_animations/Heading";
 export default function GetInTouch() {
   return (
     <>
-      <div className="flex flex-col md:flex-row m-12 bg-secondary bg-opacity-15 p-6 md:p-10">
-        <div className="md:w-1/2 flex flex-col gap-3">
+      <div className="flex flex-col lg:flex-row m-3 md:m-10 bg-secondary bg-opacity-10 p-3">
+        <div className="lg:w-1/2 flex flex-col gap-3">
           <div className="w-full flex flex-col md:flex-row gap-3">
-            <Image
-              src={getOne}
-              alt="image1"
-              className="w-full h-auto object-cover"
-            />
-            <Image
-              src={getTwo}
-              alt="image2"
-              className="w-full h-auto object-cover"
-            />
+            <Image src={getOne} alt="image1" className="w-full" />
+            <Image src={getTwo} alt="image2" className="w-full" />
           </div>
           <div className="w-full flex flex-col md:flex-row gap-3">
-            <Image
-              src={getThree}
-              alt="image3"
-              className="w-full h-auto object-cover"
-            />
-            <Image
-              src={getFour}
-              alt="image4"
-              className="w-full h-auto object-cover"
-            />
+            <Image src={getThree} alt="image3" className="w-full" />
+            <Image src={getFour} alt="image4" className="w-full" />
           </div>
         </div>
-        <div className="md:w-1/2 flex flex-col justify-center p-6 md:p-10">
+        <div className="lg:w-1/2 flex flex-col justify-center items-center p-3">
           <Heading
             title="GET IN TOUCH"
             line1="Work With Us. Lets Make Great"
             line2="Together."
           />
-
           <h1 className="text-4xl font-marcellus text-[#1e1e1e] mb-4"></h1>
-          <div className="text-lg flex items-center gap-3 text-secondary mb-6">
+          <div className="text-base md:text-lg flex flex-col sm:flex-row gap-3 text-secondary mb-6">
             Our Best Skilled Attorneys, Trust Score 4.6
             <StarRating rating={4.6} />
           </div>
