@@ -32,7 +32,7 @@ export default function Poster02() {
 
   return (
     <div
-      className={`w-4/5 bg-primary text-white flex justify-between items-center mx-auto overflow-hidden`}
+      className={`w-4/5 bg-primary text-white -z-20 flex justify-between items-center mx-auto overflow-hidden`}
       ref={elementRef}
     >
       <div
@@ -43,38 +43,30 @@ export default function Poster02() {
         }}
       >
         <div
-          className="absolute w-[100%] h-full bg-center bg-cover bg-gradient-to-t from-secondary"
+          className="absolute w-[100%] h-full bg-center bg-cover bg-gradient-to-b from-secondary"
           style={{
             transformOrigin: "inherit",
             transform: "skewX(-30deg)",
           }}
         ></div>
       </div>
-      <div
-        className="hidden relative md:block w-1/5 pb-[25%] overflow-hidden"
-        style={{
-          transformOrigin: "0 100%",
-          transform: "skewX(30deg) translateZ(1px)",
-        }}
-      >
+      <div className="hidden relative md:block w-1/5 pb-[25%] overflow-hidden">
         <div
-          className="absolute w-[190%] h-full bg-center bg-cover"
+          className="absolute w-[100%] h-full bg-center bg-cover"
           style={{
-            backgroundImage: "url('http://i.imgur.com/kreZqnx.jpg')",
-            transformOrigin: "inherit",
-            transform: "skewX(30deg)",
+            backgroundImage: "url('/poster.webp')",
           }}
         ></div>
       </div>
       <div
-        className="hidden relative md:block w-1/6 pb-[25%] overflow-hidden"
+        className="hidden relative md:block -z-10 w-1/6 pb-[25%] overflow-hidden"
         style={{
           transformOrigin: "0 100%",
           transform: "skewX(30deg) translateZ(1px)",
         }}
       >
         <div
-          className="absolute w-[190%] h-full bg-center bg-cover bg-gradient-to-b from-secondary"
+          className="absolute w-[190%] h-full bg-center bg-cover bg-gradient-to-t  from-secondary"
           style={{
             transformOrigin: "inherit",
             transform: "skewX(30deg)",

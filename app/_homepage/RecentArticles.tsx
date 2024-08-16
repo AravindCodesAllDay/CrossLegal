@@ -68,7 +68,7 @@ export default function RecentArticles() {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center gap-3 p-5">
+    <div className="flex flex-col justify-center items-center gap-8 p-5">
       <Heading
         title={"Recent Articles"}
         line1={"What News Do We Have"}

@@ -81,15 +81,13 @@ export default function WhatWeDo() {
   }, []);
 
   return (
-    <div className="p-5 flex flex-col gap-5">
+    <div className="p-5 flex flex-col gap-8">
       <div className="flex flex-col md:flex-row items-center justify-center gap-10">
-        <div className="flex flex-col gap-3">
-          <Heading
-            title="What We Do"
-            line1="A Passion For Justice,"
-            line2="Our Practice Areas"
-          />
-        </div>
+        <Heading
+          title="What We Do"
+          line1="A Passion For Justice,"
+          line2="Our Practice Areas"
+        />
         <button className="flex justify-center items-center group">
           <div className="p-2 bg-[#00192c] transform transition-transform duration-500 group-hover:bg-secondary rounded-tl-lg">
             <svg
@@ -112,12 +110,12 @@ export default function WhatWeDo() {
           </div>
         </button>
       </div>
-      <div className="relative mx-auto w-full md:w-4/5 overflow-hidden">
+      <div className="relative mx-auto w-full md:w-11/12 overflow-hidden">
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
-          {testimonials.map((data, index) => (
+          {testimonials.map((data) => (
             <div
               className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-3 flex flex-col items-center gap-4 group transition-transform duration-500 ease-in-out transform"
               key={data.id}

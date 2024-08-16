@@ -2,6 +2,8 @@
 import { useEffect, useState, useCallback, useRef } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+
+import contact from "@/app/_assets/phone.gif";
 import logo from "@/app/_assets/logo.svg";
 
 export default function Navbar() {
@@ -56,9 +58,9 @@ export default function Navbar() {
 
   return (
     <div
-      className={`fixed z-30 w-screen transition-transform duration-300 ${
+      className={`fixed z-30 w-screen transition-transform duration-300 bg-white text-black ${
         navbarVisible ? "translate-y-0" : "-translate-y-full"
-      } ${scrolled ? "bg-white text-black" : "bg-transparent text-white"}`}
+      } ${scrolled ? "" : "md:bg-transparent md:text-white"}`}
     >
       <ul className="w-full flex justify-around items-center border-y border-secondary">
         <li>
@@ -78,7 +80,7 @@ export default function Navbar() {
             />
           </svg>
         </li>
-        <li className="py-4 md:pr-20 md:border-r border-secondary">
+        <li className="py-2 md:py-4 md:pr-20 md:border-r border-secondary">
           <a href="/">
             <Image src={logo} alt="logo" className="size-12" />
           </a>
@@ -127,20 +129,7 @@ export default function Navbar() {
         </li>
         <li className="md:hidden">
           <a href="/contactus">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="size-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M8.625 9.75a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 0 1 .778-.332 48.294 48.294 0 0 0 5.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z"
-              />
-            </svg>
+            <Image src={contact} alt="contact" className="size-8" />
           </a>
         </li>
       </ul>

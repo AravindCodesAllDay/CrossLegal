@@ -51,7 +51,7 @@ export default function AboutUs() {
       <div className={`w-full md:w-2/5 flex flex-col gap-8 p-6`}>
         <div className="h-1/2 flex flex-col justify-center gap-3">
           <Heading
-            title={"About Us"}
+            title={"About Firm"}
             line1={"We're Advocates for"}
             line2={"Justice and Right"}
           />
@@ -61,9 +61,9 @@ export default function AboutUs() {
             }`}
           >
             <p>
-              All the Lorem Ipsum generators on the Internet tend to predefined
-              chunks as necessary, making this the first true generator on net.
-              Uses a dictionary of over always true latin words.
+              With a deep understanding of both Indian law and the legal
+              frameworks of other jurisdictions, our NRI lawyers offer a unique
+              perspective that transcends borders.
             </p>
           </div>
         </div>
@@ -71,21 +71,21 @@ export default function AboutUs() {
         <div className="relative flex justify-center h-1/2">
           <Image src={team} alt="team" />
           <div
-            className={`absolute flex flex-col gap-3 bottom-0 bg-white p-5 rounded-tl-3xl rounded-br-3xl shadow-xl transform transition-transform duration-1000 ease-out ${
+            className={`absolute flex flex-col gap-3 bottom-0 bg-white p-3 rounded-tl-3xl rounded-br-3xl shadow-xl transform transition-transform duration-1000 ease-out ${
               isInView ? "translate-y-0" : "translate-y-32 opacity-0"
             }`}
           >
-            <h3 className="flex items-center gap-3 text-2xl text-secondary">
+            <h3 className="flex items-center gap-3 text-lg md:text-2xl text-secondary">
               <div className="h-3 w-5 bg-gradient-to-r from-secondary rounded-tl-md rounded-br-md"></div>
               Ask a Lawyer
               <div className="h-3 w-5 bg-gradient-to-l from-secondary rounded-tl-md rounded-br-md"></div>
             </h3>
-            <p className="flex flex-col text-4xl font-bold">
+            <p className="flex flex-col text-2xl md:text-3xl font-bold">
               <span>We Provide Solid Law</span>
               <span>Practice</span>
             </p>
             <a href="contactus">
-              <button className="flex justify-center items-center group">
+              <button className="flex justify-center items-center group text-sm md:text-lg">
                 <div className="p-3 bg-[#00192c] text-white transform transition-transform duration-500 group-hover:bg-secondary rounded-tl-lg">
                   Call Us
                 </div>
