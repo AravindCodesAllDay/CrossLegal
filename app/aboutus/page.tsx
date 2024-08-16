@@ -18,8 +18,8 @@ export default function AboutPage() {
       <div className="flex flex-col gap-5">
         <Header title={"About Us"} photo={team} />
         <AboutUs />
+        <Looking4Lawyer />
       </div>
-      <Looking4Lawyer />
       <div className="container mx-auto">
         <Carousel />
       </div>

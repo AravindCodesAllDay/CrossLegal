@@ -37,7 +37,7 @@ export default function Carousel() {
             index === currentSlide ? "opacity-100" : "opacity-0"
           }`}
         >
-          <div className="flex items-center gap-4">
+          <div className="flex flex-col md:flex-row items-center gap-4 p-4 md:p-8">
             <div className="flex-shrink-0">
               <div className="rounded-full border-4 border-dotted border-gray-300 overflow-hidden">
                 <Image
@@ -49,8 +49,10 @@ export default function Carousel() {
                 />
               </div>
             </div>
-            <div className="max-w-md">
-              <p className="text-gray-800">{slide.text}</p>
+            <div className="max-w-md text-center md:text-left">
+              <p className="text-gray-800 text-sm md:text-base lg:text-lg">
+                {slide.text}
+              </p>
             </div>
           </div>
         </div>
