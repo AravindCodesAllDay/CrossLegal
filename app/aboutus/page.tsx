@@ -24,7 +24,7 @@ export default function AboutPage() {
         <Looking4Lawyer />
         <Carousel />
       </div>
-      <OurLawyers />
+      {/* <OurLawyers /> */}
       <GetInTouch />
       <Footer />
     </>

@@ -72,13 +72,15 @@ export default function OurTestimonials() {
               className="size-24 sm:size-44 rounded-full border-dashed border p-1"
             />
             <div className="flex flex-col">
-              <p className="text-sm sm:text-lg line-clamp-3 mb-2">
+              <p className="text-sm sm:text-lg text-[#1e1e1e] line-clamp-3 mb-2">
                 {testimonial.text}
               </p>
               <p className="text-lg sm:text-xl text-secondary">
                 {testimonial.name}
               </p>
-              <p className="text-sm sm:text-base">{testimonial.role}</p>
+              <p className="text-sm text-[#1e1e1e] sm:text-base">
+                {testimonial.role}
+              </p>
             </div>
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -78,12 +78,12 @@ export default function Poster02() {
           isInView ? "translate-y-0" : "translate-y-32 opacity-0"
         }`}
       >
-        <h3 className="flex items-center gap-2 text-2xl text-secondary">
+        <h3 className="flex items-center gap-2 text-xl text-secondary">
           <div className="h-3 w-5 bg-gradient-to-r from-secondary rounded-tl-md rounded-br-md"></div>
           Contact
           <div className="h-3 w-5 bg-gradient-to-l from-secondary rounded-tl-md rounded-br-md"></div>
         </h3>
-        <p className="flex flex-col text-4xl font-bold">
+        <p className="flex flex-col text-4xl font-marcellus">
           <span>Are You Looking for Help</span>
           <span>From a Lawyer?</span>
         </p>

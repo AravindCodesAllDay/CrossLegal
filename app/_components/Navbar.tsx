@@ -102,7 +102,7 @@ export default function Navbar() {
             </a>
           </li>
         ))}
-        <li className="text-secondary hidden md:block">+91 XXXXX XXXXX</li>
+        <li className="text-secondary hidden md:block">+91 9003232007</li>
         <li className="hidden md:block">
           <a href="/contactus">
             <button className="flex justify-center items-center group">

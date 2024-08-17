@@ -43,7 +43,7 @@ export default function Home() {
             <OurTestimonials />
             <Poster01 />
           </div>
-          <OurLawyers />
+          {/* <OurLawyers /> */}
           <Poster02 />
           <RecentArticles />
         </div>

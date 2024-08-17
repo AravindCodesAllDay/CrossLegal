@@ -41,12 +41,12 @@ export default function Poster01() {
           isInView ? "translate-y-0" : "translate-y-32 opacity-0"
         }`}
       >
-        <h3 className="flex items-center gap-3 text-2xl text-secondary mb-2">
+        <h3 className="flex items-center gap-3 text-xl text-secondary mb-2">
           <div className="h-3 w-5 bg-gradient-to-r from-secondary rounded-tl-md rounded-br-md"></div>
           Any Property Issues?
           <div className="h-3 w-5 bg-gradient-to-l from-secondary rounded-tl-md rounded-br-md"></div>
         </h3>
-        <p className="flex flex-col text-4xl font-bold mb-4">
+        <p className="flex flex-col text-4xl font-marcellus mb-4">
           <span>Get into Few Steps,</span>
           <span>Start Easily..</span>
         </p>

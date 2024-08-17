@@ -5,12 +5,12 @@ export default function Contact() {
   return (
     <div className="flex flex-col md:flex-row justify-between p-5 gap-5">
       <div className="flex flex-col gap-5 p-5 md:w-1/2 rounded-lg">
-        <h3 className="flex items-center gap-3 text-2xl text-secondary">
+        <h3 className="flex items-center gap-3 text-xl text-secondary">
           <div className="h-3 w-5 bg-gradient-to-r from-secondary rounded-tl-md rounded-br-md"></div>
           Get In Touch
           <div className="h-3 w-5 bg-gradient-to-l from-secondary rounded-tl-md rounded-br-md"></div>
         </h3>
-        <p className="flex text-4xl">Contact Information</p>
+        <p className="flex font-marcellus text-4xl">Contact Information</p>
         <div className="flex flex-col sm:flex-row gap-5 justify-around w-full">
           <div className="flex flex-col items-center gap-5 group w-full sm:w-1/2 border p-4 rounded-tl-3xl rounded-br-3xl">
             <svg
@@ -34,8 +34,11 @@ export default function Contact() {
             </svg>
             <h2 className="text-3xl">Location</h2>
             <p className="flex flex-col items-center text-secondary">
-              <span>4821 Ridge Top Cir, Anchorage</span>
-              <span>Street, Alaska 99508, USA.</span>
+              <span>
+                4th Floor , Old No.127, New No.261, Rohith Towers, Angappa
+                Naicken St,{" "}
+              </span>
+              <span>George Town, Chennai, Tamil Nadu 600 001</span>
             </p>
           </div>
 
@@ -57,8 +60,8 @@ export default function Contact() {
 
             <h2 className="text-3xl">24/7 Support</h2>
             <p className="flex flex-col items-center text-secondary">
-              <span>+(91) XXXXX XXXXX</span>
-              <span>contact@halt-o.com</span>
+              <span>+(91) 9003232007</span>
+              <span>contact@example.com</span>
             </p>
           </div>
         </div>
@@ -69,12 +72,12 @@ export default function Contact() {
       </div>
 
       <div className="flex flex-col gap-5 md:w-1/2 p-5 bg-white rounded-lg shadow-md">
-        <h3 className="flex items-center gap-3 text-2xl text-secondary">
+        <h3 className="flex items-center gap-3 text-xl text-secondary">
           <div className="h-3 w-5 bg-gradient-to-r from-secondary rounded-tl-md rounded-br-md"></div>
           Have Any Questions?
           <div className="h-3 w-5 bg-gradient-to-l from-secondary rounded-tl-md rounded-br-md"></div>
         </h3>
-        <p className="flex flex-col text-4xl">Drop Us a Line</p>
+        <p className="flex flex-col font-marcellus text-4xl">Drop Us a Line</p>
         <form className="flex flex-col gap-3 items-center">
           <div className="w-full">
             <label htmlFor="name">Name:</label>

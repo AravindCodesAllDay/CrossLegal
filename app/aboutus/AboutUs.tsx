@@ -80,10 +80,11 @@ export default function AboutUs() {
             <div className="w-[40%] sm:w-[18%] mt-2 sm:mt-3 md:mt-4 h-0.5 bg-gradient-to-r from-secondary to-white mx-auto md:mx-0"></div>
           </div>
           <p className="text-[14px] sm:text-[15px] md:text-[16px] py-4 sm:py-5 md:py-6 leading-loose text-gray-500 text-center md:text-left">
-            All the Lorem Ipsum generators on the Internet tend to predefined
-            chunks as necessary, making this the first true generator on net
-            utperspiciatis unde omniste natus error sit volupta accusantium
-            doloremquelatin words.
+            Welcome to Cross Legal, where we understand the unique legal needs
+            of Non-Resident Indians (NRIs) across the globe. Our team of skilled
+            NRI lawyers specializes in providing comprehensive legal solutions
+            tailored to the specific challenges faced by individuals, families,
+            and businesses with ties to India but residing abroad.
           </p>
           <div className="relative flex flex-col items-center md:items-start gap-3 sm:gap-4 md:gap-5">
             <div className="flex items-center">
@@ -97,10 +98,10 @@ export default function AboutUs() {
                 legal services and helping people.
               </p>
             </div>
-            <p className="text-[14px] sm:text-[15px] md:text-[16px] py-6 sm:py-7 md:py-8 leading-loose text-gray-500 text-center md:text-left">
+            {/* <p className="text-[14px] sm:text-[15px] md:text-[16px] py-6 sm:py-7 md:py-8 leading-loose text-gray-500 text-center md:text-left">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
               tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-            </p>
+            </p> */}
             <a href="contactus" className="group">
               <button className="flex justify-center items-center mx-auto md:mx-0">
                 <div className="p-2 bg-[#00192c] transform transition-transform duration-500 group-hover:bg-secondary rounded-tl-lg">
