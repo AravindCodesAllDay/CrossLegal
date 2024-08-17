@@ -44,7 +44,7 @@ export default function Home() {
             <Poster01 />
           </div>
           {/* <OurLawyers /> */}
-          <Poster02 />
+          {/* <Poster02 /> */}
           <RecentArticles />
         </div>
         <ToTop />
