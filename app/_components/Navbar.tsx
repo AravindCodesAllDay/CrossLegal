@@ -1,7 +1,9 @@
 "use client";
 import { useEffect, useState, useCallback, useRef } from "react";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
+
+import { phoneNo } from "@/lib/phoneNo";
 
 import contact from "@/app/_assets/phone.gif";
 import logo from "@/app/_assets/logo.svg";
@@ -102,7 +104,7 @@ export default function Navbar() {
             </a>
           </li>
         ))}
-        <li className="text-secondary hidden md:block">+91 XXXXX XXXXX</li>
+        <li className="text-secondary hidden md:block">+91 {`${phoneNo()}`}</li>
         <li className="hidden md:block">
           <a href="/contactus">
             <button className="flex justify-center items-center group">
@@ -160,7 +162,7 @@ export default function Navbar() {
               </a>
             </li>
           ))}
-          <li className="text-secondary">+91 XXXXX XXXXX</li>
+          <li className="text-secondary">+91 {phoneNo()}</li>
         </ul>
       </div>
     </div>

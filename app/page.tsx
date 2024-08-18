@@ -5,14 +5,13 @@ import Navbar from "@/app/_components/Navbar";
 import OurResources from "./_homepage/OurResources";
 import WhatWeDo from "./_homepage/WhatWeDo";
 import Carousel from "./_homepage/Carousel";
-import OurTestimonials from "./_homepage/OurTestimonials";
-import OurLawyers from "./_homepage/OurLawyers";
+import OurTestimonials from "./_components/OurTestimonials";
+import OurLawyers from "./_components/OurLawyers";
 import RecentArticles from "./_homepage/RecentArticles";
 import Footer from "@/app/_components/Footer";
 import AboutUs from "./_homepage/AboutUs";
 import ToTop from "./_components/ToTop";
 import Poster01 from "./_homepage/Poster01";
-import Poster02 from "./_homepage/Poster02";
 import Loader from "./_components/Loader";
 
 export default function Home() {
@@ -44,7 +43,6 @@ export default function Home() {
             <Poster01 />
           </div>
           <OurLawyers />
-          <Poster02 />
           <RecentArticles />
         </div>
         <ToTop />

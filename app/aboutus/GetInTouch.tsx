@@ -6,6 +6,7 @@ import getThree from "@/app/_assets/getThree.jpg";
 import getFour from "@/app/_assets/getFour.jpg";
 import StarRating from "../_animations/StarRating";
 import Heading from "../_animations/Heading";
+import { phoneNo } from "@/lib/phoneNo";
 
 export default function GetInTouch() {
   return (
@@ -32,24 +33,27 @@ export default function GetInTouch() {
             Our Best Skilled Attorneys, Trust Score 4.6
             <StarRating rating={4.6} />
           </div>
-          <a href="contactus" className="group flex items-center">
-            <button className="flex items-center p-2 bg-[#00192c] transform transition-transform duration-500 group-hover:bg-secondary rounded-tl-lg">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="icon icon-tabler icon-tabler-plus size-6 transform transition-transform duration-300 group-hover:rotate-90 stroke-white"
-                viewBox="0 0 24 24"
-                strokeWidth="2"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M12 5l0 14" />
-                <path d="M5 12l14 0" />
-              </svg>
-              <span className="bg-secondary transform transition-transform duration-500 group-hover:bg-[#00192c] rounded-br-lg p-2 text-white font-semibold ml-2">
-                (528) 456-7592
-              </span>
+          <a href="contactus" className="group">
+            <button className="flex justify-center items-center mx-auto md:mx-0">
+              <div className="p-2 bg-[#00192c] transform transition-transform duration-500 group-hover:bg-secondary rounded-tl-lg">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="icon icon-tabler icon-tabler-plus size-6 transform transition-transform duration-300 group-hover:rotate-90"
+                  viewBox="0 0 24 24"
+                  strokeWidth="2"
+                  stroke="#ffffff"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M12 5l0 14" />
+                  <path d="M5 12l14 0" />
+                </svg>
+              </div>
+              <div className="bg-secondary transform transition-transform duration-500 group-hover:bg-[#00192c] rounded-br-lg p-2 text-white font-semibold text-sm sm:text-base">
+                {phoneNo()}
+              </div>
             </button>
           </a>
         </div>

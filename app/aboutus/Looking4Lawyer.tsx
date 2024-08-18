@@ -25,9 +25,27 @@ export default function Looking4Lawyer() {
               If you need someone on your side who knows your rights and has the
               training to help you navigate the law, contact us today.
             </p>
-            <a href="contactus">
-              <button className="p-3 w-[170px] rounded-br-[15px] rounded-tr-[15px] bg-secondary hover:bg-[#00192c] transform transition-colors duration-300 text-white">
-                Contact Us
+            <a href="contactus" className="group">
+              <button className="flex justify-center items-center mx-auto md:mx-0">
+                <div className="p-2 bg-[#00192c] transform transition-transform duration-500 group-hover:bg-secondary rounded-tl-lg">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="icon icon-tabler icon-tabler-plus size-6 transform transition-transform duration-300 group-hover:rotate-90"
+                    viewBox="0 0 24 24"
+                    strokeWidth="2"
+                    stroke="#ffffff"
+                    fill="none"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M12 5l0 14" />
+                    <path d="M5 12l14 0" />
+                  </svg>
+                </div>
+                <div className="bg-secondary transform transition-transform duration-500 group-hover:bg-[#00192c] rounded-br-lg p-2 text-white font-semibold text-sm sm:text-base">
+                  Contact Us
+                </div>
               </button>
             </a>
           </div>

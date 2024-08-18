@@ -50,18 +50,17 @@ export default function OurTestimonials() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center gap-3 p-5">
+    <div className="flex flex-col items-center gap-3 p-5">
       <Heading
         title={"Our Testimonials"}
         line1={"What They Are Talking"}
         line2={"About Igual"}
       />
-
       <div className="relative w-full max-w-[900px]">
         {testimonials.map((testimonial, index) => (
           <div
             key={testimonial.id}
-            className={`flex gap-5 items-center transition-transform duration-500 ease-in-out transform ${
+            className={`flex gap-5 items-center cursor-pointer transition-transform duration-500 ease-in-out transform ${
               index === currentIndex ? "translate-x-0" : "translate-x-full"
             }`}
             style={{ display: index === currentIndex ? "flex" : "none" }}
@@ -71,6 +70,7 @@ export default function OurTestimonials() {
               alt="profile"
               className="size-24 sm:size-44 rounded-full border-dashed border p-1"
             />
+
             <div className="flex flex-col">
               <p className="text-sm sm:text-lg line-clamp-3 mb-2">
                 {testimonial.text}

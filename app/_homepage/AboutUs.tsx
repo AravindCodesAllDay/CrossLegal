@@ -5,6 +5,7 @@ import React, { useState, useEffect, useRef } from "react";
 import women from "@/app/_assets/women.jpg";
 import team from "@/app/_assets/team.jpg";
 import Heading from "../_animations/Heading";
+import { phoneNo } from "@/lib/phoneNo";
 
 export default function AboutUs() {
   const [isInView, setIsInView] = useState(false);
@@ -90,7 +91,7 @@ export default function AboutUs() {
                   Call Us
                 </div>
                 <div className="bg-secondary transform transition-transform duration-500 group-hover:bg-[#00192c] rounded-br-lg p-3 text-white font-semibold">
-                  +(91) XXXXX XXXXX
+                  +(91) {phoneNo()}
                 </div>
               </button>
             </a>

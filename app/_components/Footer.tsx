@@ -1,5 +1,7 @@
 import React from "react";
 
+import { phoneNo } from "@/lib/phoneNo";
+
 export default function Footer() {
   return (
     <>
@@ -16,7 +18,7 @@ export default function Footer() {
           </p>
         </div>
         <div className="bg-gradient-to-r from-secondary rounded-tl-3xl rounded-br-3xl p-4 flex flex-col items-center justify-center md:my-8">
-          <p className="text-lg md:text-3xl">+(91) XXXXX XXXXX</p>
+          <p className="text-lg md:text-3xl">+(91) {phoneNo()}</p>
           <p>FEEL FREE TO CALL US</p>
         </div>
       </div>
