@@ -62,10 +62,11 @@ export default function AboutUs() {
             <p>
               With a deep understanding of both Indian law and the legal
               frameworks of other jurisdictions, our NRI lawyers offer a unique
-              perspective that transcends borders. Whether you're navigating
-              property disputes, inheritance issues, family matters, or business
-              transactions, we are committed to providing you with effective
-              legal representation and strategic guidance every step of the way.
+              perspective that transcends borders. Whether you&apos;re
+              navigating property disputes, inheritance issues, family matters,
+              or business transactions, we are committed to providing you with
+              effective legal representation and strategic guidance every step
+              of the way.
             </p>
           </div>
         </div>

@@ -98,7 +98,7 @@ export default function AboutUs() {
                 legal services and helping people.
               </p>
             </div>
-            <a href="contactus" className="group">
+            <a href="/practices" className="group">
               <button className="flex justify-center items-center mx-auto md:mx-0">
                 <div className="p-2 bg-[#00192c] transform transition-transform duration-500 group-hover:bg-secondary rounded-tl-lg">
                   <svg

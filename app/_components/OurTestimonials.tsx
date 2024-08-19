@@ -12,23 +12,23 @@ const testimonials = [
   {
     id: 1,
     photo: profile1,
-    text: "Rem ipsum dolor sit amet consectetur adipisicing elit. Tempora veritatis magnam et ex laudantium nihil adipisci delectus quis, atque pariatur voluptatem magni dolorum iure quaerat soluta eum placeat saepe deserunt!",
+    text: "I had an exceptional experience working with this firm. They handled my case with professionalism and attention to detail. Their legal expertise and client-focused approach made all the difference.",
     name: "Jackin Martinez",
-    role: "Business Law Service",
+    role: "Business Law Client",
   },
   {
     id: 2,
     photo: profile2,
-    text: "Orem ipsum dolor sit amet consectetur adipisicing elit. Tempora veritatis magnam et ex laudantium nihil adipisci delectus quis, atque pariatur voluptatem magni dolorum iure quaerat soluta eum placeat saepe deserunt!",
+    text: "The support I received was beyond my expectations. The team was compassionate and knowledgeable, guiding me through every step of the process with confidence and care.",
     name: "Karla Clinton",
-    role: "Family Law Service",
+    role: "Family Law Client",
   },
   {
     id: 3,
     photo: profile3,
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora veritatis magnam et ex laudantium nihil adipisci delectus quis, atque pariatur voluptatem magni dolorum iure quaerat soluta eum placeat saepe deserunt!",
+    text: "Their expertise in real estate law helped me navigate a complex situation seamlessly. I highly recommend their services to anyone in need of reliable legal counsel.",
     name: "Kourtney Holland",
-    role: "Real Estate Service",
+    role: "Real Estate Client",
   },
 ];
 

@@ -2,17 +2,19 @@
 import React, { useRef, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 
-interface button {
+interface ButtonProps {
   left: string;
   right: string;
   linkTo: string;
 }
 
-export default function Button({ left, right, linkTo }: button) {
+export default function Button({ left, right, linkTo }: ButtonProps) {
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const controls = useAnimation();
 
   useEffect(() => {
+    const currentButtonRef = buttonRef.current;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -24,13 +26,13 @@ export default function Button({ left, right, linkTo }: button) {
       { threshold: 0.5 }
     );
 
-    if (buttonRef.current) {
-      observer.observe(buttonRef.current);
+    if (currentButtonRef) {
+      observer.observe(currentButtonRef);
     }
 
     return () => {
-      if (buttonRef.current) {
-        observer.unobserve(buttonRef.current);
+      if (currentButtonRef) {
+        observer.unobserve(currentButtonRef);
       }
     };
   }, [controls]);
