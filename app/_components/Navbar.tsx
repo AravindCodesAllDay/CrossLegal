@@ -65,14 +65,14 @@ export default function Navbar() {
       } ${scrolled ? "" : "md:bg-transparent md:text-white"}`}
     >
       <ul className="w-full flex justify-around items-center border-y border-secondary">
-        <li>
+        <li className=" md:hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="size-6 md:hidden"
+            className="size-6"
             onClick={() => setMenuOpen(!menuOpen)}
           >
             <path
@@ -82,7 +82,7 @@ export default function Navbar() {
             />
           </svg>
         </li>
-        <li className="py-2 md:py-4 md:pr-20 md:border-r border-secondary">
+        <li className="py-2 md:py-4 border-secondary">
           <a href="/">
             <Image src={logo} alt="logo" className="size-12" />
           </a>

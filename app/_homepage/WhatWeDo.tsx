@@ -14,6 +14,7 @@ import photo2 from "@/app/_assets/whatWeDo/2.jpg";
 import photo3 from "@/app/_assets/whatWeDo/3.jpg";
 import photo4 from "@/app/_assets/whatWeDo/4.jpg";
 import photo5 from "@/app/_assets/whatWeDo/5.jpg";
+import Button from "../_animations/Button";
 
 export default function WhatWeDo() {
   const testimonials = [
@@ -324,27 +325,8 @@ export default function WhatWeDo() {
           line1="A Passion For Justice,"
           line2="Our Practice Areas"
         />
-        <button className="flex justify-center items-center group">
-          <div className="p-2 bg-[#00192c] transform transition-transform duration-500 group-hover:bg-secondary rounded-tl-lg">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="icon icon-tabler icon-tabler-plus size-6 transform transition-transform duration-300 group-hover:rotate-90"
-              viewBox="0 0 24 24"
-              strokeWidth="2"
-              stroke="#ffffff"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M12 5l0 14" />
-              <path d="M5 12l14 0" />
-            </svg>
-          </div>
-          <div className="bg-secondary transform transition-transform duration-500 group-hover:bg-[#00192c] rounded-br-lg p-2 text-white font-semibold">
-            Learn More
-          </div>
-        </button>
+
+        <Button left="" right="Learn More" linkTo="#" />
       </div>
       <div className="relative mx-auto w-full md:w-11/12 overflow-hidden">
         <div
@@ -356,17 +338,19 @@ export default function WhatWeDo() {
               className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-3 flex flex-col items-center gap-4 group transition-transform duration-500 ease-in-out transform"
               key={data.id}
             >
-              <div className="flex justify-between w-full">
-                <Image src={data.photo} alt="photo" className="w-1/4 h-20" />
-                <div className="h-20 w-8 rounded-bl-full ml-auto opacity-25 group-hover:opacity-55 bg-gradient-to-l from-secondary"></div>
-              </div>
-              <div className="flex flex-col gap-3 p-3">
-                <h3 className="text-xl md:text-3xl line-clamp-1">
-                  {data.header}
-                </h3>
-                <p className="text-secondary line-clamp-2">{data.text}</p>
-              </div>
-              <Image src={data.figure} alt="card" className="w-full" />
+              <a href={`/practices/${data.id}`}>
+                <div className="flex justify-between w-full">
+                  <Image src={data.photo} alt="photo" className="w-1/4 h-20" />
+                  <div className="h-20 w-8 rounded-bl-full ml-auto opacity-25 group-hover:opacity-55 bg-gradient-to-l from-secondary"></div>
+                </div>
+                <div className="flex flex-col gap-3 p-3">
+                  <h3 className="text-xl md:text-3xl line-clamp-1">
+                    {data.header}
+                  </h3>
+                  <p className="text-secondary line-clamp-2">{data.text}</p>
+                </div>
+                <Image src={data.figure} alt="card" className="w-full" />
+              </a>
             </div>
           ))}
         </div>

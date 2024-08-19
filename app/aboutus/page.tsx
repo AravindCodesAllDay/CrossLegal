@@ -10,6 +10,7 @@ import team from "@/app/_assets/abtHeader.jpg";
 import OurTestimonials from "../_components/OurTestimonials";
 import GetInTouch from "./GetInTouch";
 import OurLawyers from "../_components/OurLawyers";
+import ToTop from "../_components/ToTop";
 
 export default function AboutPage() {
   return (
@@ -26,6 +27,7 @@ export default function AboutPage() {
       </div>
       <OurLawyers />
       <GetInTouch />
+      <ToTop />
       <Footer />
     </>
   );

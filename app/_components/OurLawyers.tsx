@@ -64,7 +64,7 @@ export default function OurLawyers() {
               key={index}
               className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-3 flex flex-col items-center gap-4 group transition-transform duration-500 ease-in-out transform"
             >
-              <div className="w-11/12 h-1/2 rounded-b-full bg-secondary opacity-15 -z-20 absolute top-0"></div>
+              <div className="w-11/12 h-1/2 rounded-b-full bg-gradient-to-t from-secondary opacity-25 -z-20 absolute top-0"></div>
               <div className="flex flex-col items-center">
                 <h6 className="text-xl md:text-2xl">{profile.name}</h6>
                 <p className="text-secondary text-sm md:text-base">
@@ -147,7 +147,7 @@ export default function OurLawyers() {
                   </a>
                 </li>
               </ul>
-              <div className="w-11/12 h-1/2 rounded-t-full -z-20 bg-secondary opacity-25 absolute bottom-0"></div>
+              <div className="w-11/12 h-1/2 rounded-t-full -z-20 bg-gradient-to-b from-secondary opacity-25 absolute bottom-0"></div>
             </div>
           ))}
         </div>

@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import Heading from "../_animations/Heading";
 
@@ -43,9 +43,14 @@ const articles = [
 export default function RecentArticles() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [articlesPerSlide, setArticlesPerSlide] = useState(1);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [translateX, setTranslateX] = useState(0);
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
   const handleDotClick = (index: number) => {
     setCurrentIndex(index);
+    setTranslateX(-index * 100);
   };
 
   useEffect(() => {
@@ -67,6 +72,60 @@ export default function RecentArticles() {
     };
   }, []);
 
+  const handleDragStart = (e: React.MouseEvent | React.TouchEvent) => {
+    setIsDragging(true);
+    setStartX(
+      e.type === "touchstart"
+        ? (e as React.TouchEvent).touches[0].clientX
+        : (e as React.MouseEvent).clientX
+    );
+  };
+
+  const handleDragMove = (e: React.MouseEvent | React.TouchEvent) => {
+    if (!isDragging) return;
+    const currentX =
+      e.type === "touchmove"
+        ? (e as React.TouchEvent).touches[0].clientX
+        : (e as React.MouseEvent).clientX;
+    const diff = currentX - startX;
+
+    // Limit translateX to the first and last slides
+    const maxTranslateX = 0;
+    const minTranslateX =
+      -(Math.ceil(articles.length / articlesPerSlide) - 1) * 100;
+
+    setTranslateX((prevTranslateX) =>
+      Math.max(
+        Math.min(
+          -currentIndex * 100 +
+            (diff / containerRef.current!.offsetWidth) * 100,
+          maxTranslateX
+        ),
+        minTranslateX
+      )
+    );
+  };
+
+  const handleDragEnd = (e: React.MouseEvent | React.TouchEvent) => {
+    if (!isDragging) return;
+    setIsDragging(false);
+    const currentX =
+      e.type === "touchend"
+        ? (e as React.TouchEvent).changedTouches[0].clientX
+        : (e as React.MouseEvent).clientX;
+    const diff = currentX - startX;
+
+    if (diff > 50 && currentIndex > 0) {
+      setCurrentIndex((prevIndex) => prevIndex - 1);
+    } else if (
+      diff < -50 &&
+      currentIndex < Math.ceil(articles.length / articlesPerSlide) - 1
+    ) {
+      setCurrentIndex((prevIndex) => prevIndex + 1);
+    }
+    setTranslateX(-currentIndex * 100);
+  };
+
   return (
     <div className="flex flex-col justify-center items-center gap-8 p-5">
       <Heading
@@ -74,17 +133,27 @@ export default function RecentArticles() {
         line1={"What News Do We Have"}
         line2={"Today, Latest Blog"}
       />
-      <div className="relative w-full overflow-hidden">
+      <div
+        className="relative w-full overflow-hidden cursor-grab"
+        ref={containerRef}
+        onMouseDown={handleDragStart}
+        onMouseMove={handleDragMove}
+        onMouseUp={handleDragEnd}
+        onTouchStart={handleDragStart}
+        onTouchMove={handleDragMove}
+        onTouchEnd={handleDragEnd}
+        onMouseLeave={() => isDragging && setIsDragging(false)}
+      >
         <div
-          className="flex transition-transform duration-500 ease-in-out"
-          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          className={`flex transition-transform duration-500 ease-in-out`}
+          style={{ transform: `translateX(${translateX}%)` }}
         >
-          {articles.map((article, index) => (
+          {articles.map((article) => (
             <div
               key={article.id}
               className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-4 flex flex-col items-center group transition-transform duration-500 ease-in-out transform"
             >
-              <div className="relative max-w-full">
+              <div className="relative max-w-full select-none">
                 <Image
                   src={article.image}
                   alt="blog"

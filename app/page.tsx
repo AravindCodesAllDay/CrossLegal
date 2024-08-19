@@ -32,7 +32,10 @@ export default function Home() {
         <Navbar />
         <div className="flex flex-col gap-8">
           <Carousel />
-          <AboutUs />
+          <div className="flex relative">
+            <div className="w-full h-4/5 top-0 bg-[#f9f9f9] absolute -z-20"></div>
+            <AboutUs />
+          </div>
           <OurResources />
           <WhatWeDo />
           <div className="w-full relative">
@@ -43,7 +46,9 @@ export default function Home() {
             <Poster01 />
           </div>
           <OurLawyers />
-          <RecentArticles />
+          <div className="bg-[#f9f9f9]">
+            <RecentArticles />
+          </div>
         </div>
         <ToTop />
         <Footer />
