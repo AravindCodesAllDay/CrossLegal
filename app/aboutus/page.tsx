@@ -11,21 +11,20 @@ import OurTestimonials from "../_components/OurTestimonials";
 import GetInTouch from "./GetInTouch";
 import OurLawyers from "../_components/OurLawyers";
 import ToTop from "../_components/ToTop";
+import Clientele from "../_components/Clientele";
 
 export default function AboutPage() {
   return (
     <>
       <Navbar />
-      <div className="flex flex-col gap-12">
-        <Header header={"Aboutus"} title={"About Us"} photo={team} />
+      <Header header={"Aboutus"} title={"About Us"} photo={team} />
+      <div className="flex flex-col gap-12 my-8">
         <AboutUs />
-        <div className="relative text-white ">
-          <div className="w-full h-5/6 -z-20 bg-primary bottom-0 absolute"></div>
-          <Looking4Lawyer />
-          <OurTestimonials />
-        </div>
+        <Looking4Lawyer />
+        <OurTestimonials />
         <OurLawyers />
         <GetInTouch />
+        <Clientele />
       </div>
       <ToTop />
       <Footer />

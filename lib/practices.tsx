@@ -32,8 +32,8 @@ export function practices() {
       figure: photo6,
       header: "Land Acquistion",
       text: [
-        "Acquiring land in India can be a complex and challenging process particularly for NRI's. At Cross Legal, our team of experienced NRI lawyers specializes in providing comprehensive legal assistance and guidance for land acquisition projects across India.",
-        "With a deep understanding of Indian land acquisition laws, regulations, and procedures, our NRI lawyers are well-equipped to navigate the intricacies of the land acquisition process on behalf of our clients. Whether you're purchasing agricultural land, residential plots, commercial properties, or industrial sites, we have the knowledge and expertise to help you achieve your objectives efficiently and effectively.",
+        "Acquiring land in India can be a complex and challenging process particularly for NRI's. At Cross Legal, our team of experienced lawyers specializes in providing comprehensive legal assistance and guidance for land acquisition projects across India.",
+        "With a deep understanding of Indian land acquisition laws, regulations, and procedures, our Experienced  lawyers are well-equipped to navigate the intricacies of the land acquisition process on behalf of our clients. Whether you're purchasing agricultural land, residential plots, commercial properties, or industrial sites, we have the knowledge and expertise to help you achieve your objectives efficiently and effectively.",
       ],
       subHeader: "",
       subTopics: [
@@ -50,7 +50,7 @@ export function practices() {
         {
           header: "Trusted Advisors, Reliable Partners",
           passage:
-            "With a reputation for excellence and a commitment to client satisfaction, our NRI lawyers are trusted advisors and reliable partners for clients around the world. We are dedicated to providing personalized attention, responsive communication, and high-quality legal services that meet the unique needs of each client.",
+            "With a reputation for excellence and a commitment to client satisfaction, our experienced lawyers are trusted advisors and reliable partners for clients around the world. We are dedicated to providing personalized attention, responsive communication, and high-quality legal services that meet the unique needs of each client.",
         },
       ],
     },
@@ -60,7 +60,7 @@ export function practices() {
       figure: photo3,
       header: "TITLE CLEARANCE",
       text: [
-        "Acquiring property in India as a Non-Resident Indian (NRI) can be a rewarding investment opportunity. However, ensuring clear and marketable title is essential to protect your interests and avoid potential legal complications. At Cross Legal, our team of experienced NRI lawyers specializes in providing comprehensive title clearance services to help you navigate the complexities of property ownership in India with confidence.",
+        "Acquiring property in India as a Non-Resident Indian (NRI) can be a rewarding investment opportunity. However, ensuring clear and marketable title is essential to protect your interests and avoid potential legal complications. At Cross Legal, our team of experienced lawyers specializes in providing comprehensive title clearance services to help you navigate the complexities of property ownership in India with confidence.",
       ],
 
       subHeader: "",
@@ -68,7 +68,7 @@ export function practices() {
         {
           header: "Title Examination",
           passage:
-            "Our NRI lawyers conduct thorough title examinations to verify the ownership history and legal status of the property you intend to purchase. We review relevant documents, including deeds, encumbrances, liens, and easements, to identify any potential title defects or irregularities that may affect your ownership rights",
+            "Our Experienced  lawyers conduct thorough title examinations to verify the ownership history and legal status of the property you intend to purchase. We review relevant documents, including deeds, encumbrances, liens, and easements, to identify any potential title defects or irregularities that may affect your ownership rights",
         },
         {
           header: "Resolving Title Issues",
@@ -166,7 +166,7 @@ export function practices() {
       figure: photo9,
       header: "MERGERS AND ACQUISITION",
       text: [
-        "As a Non-Resident Indian, navigating the complexities of mergers and acquisitions (M&A) can be daunting. Our firm specializes in providing comprehensive legal assistance tailored to the unique needs of NRIs engaging in M&A transactions. Whether you're looking to expand your business, acquire new assets, or merge with another entity, our team of experienced lawyers is here to guide you through every step of the process.",
+        "Navigating the complexities of mergers and acquisitions (M&A) can be daunting. Our firm specializes in providing comprehensive legal assistance tailored to the engaging in M&A transactions. Whether you're looking to expand your business, acquire new assets, or merge with another entity, our team of experienced lawyers is here to guide you through every step of the process.",
       ],
 
       subHeader: "subHeader:",

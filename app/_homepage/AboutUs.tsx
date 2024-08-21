@@ -5,7 +5,8 @@ import React, { useState, useEffect, useRef } from "react";
 import women from "@/app/_assets/women.jpg";
 import team from "@/app/_assets/team.jpg";
 import Heading from "../_animations/Heading";
-import { phoneNo } from "@/lib/phoneNo";
+import { phoneNo } from "@/lib/contacts";
+import Button from "../_animations/Button";
 
 export default function AboutUs() {
   const [isInView, setIsInView] = useState(false);
@@ -41,13 +42,17 @@ export default function AboutUs() {
       className="relative w-full flex flex-col lg:flex-row items-center justify-around my-12"
       ref={elementRef}
     >
-      <Image
-        src={women}
-        alt="women"
-        className="rounded-tl-[100px] w-full sm:w-4/5 p-6  lg:w-2/5 rounded-br-[100px] "
-      />
-
-      <div className={`w-full lg:w-1/2 flex flex-col gap-8 p-6`}>
+      <div className="relative w-full sm:w-4/5 lg:w-2/5 p-6">
+        <Image
+          src={women}
+          alt="women"
+          className="relative rounded-tl-[100px] w-full rounded-br-[100px]"
+        />
+        <div className="absolute inset-0 flex items-end p-12 justify-center">
+          <Button left="" right="Learn More" linkTo="/aboutus" />
+        </div>
+      </div>
+      <div className="w-full lg:w-1/2 flex flex-col gap-8 p-6">
         <div className="lg:h-1/2 flex flex-col justify-center gap-5">
           <Heading
             title={"About Firm"}

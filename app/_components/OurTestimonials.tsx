@@ -50,7 +50,9 @@ export default function OurTestimonials() {
   };
 
   return (
-    <div className="flex flex-col items-center gap-3 p-5">
+    <div
+      className={`bg-[url("/statue.jpg")] bg-no-repeat bg-center bg-fixed bg-cover h-full w-full flex flex-col items-center gap-3 p-5`}
+    >
       <Heading
         title={"Our Testimonials"}
         line1={"What They Are Talking"}

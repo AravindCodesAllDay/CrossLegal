@@ -47,7 +47,7 @@ export default function Counter({ start, targetNumber, count }: CounterProps) {
             return prevNumber;
           }
         });
-      }, 60);
+      }, 30);
 
       return () => clearInterval(interval);
     }

@@ -49,7 +49,6 @@ const Carousel = () => {
               src={slide.image}
               alt={`Slide ${index + 1}`}
               className="w-full h-full object-cover"
-              layout="fill"
             />
             <div
               className={`absolute inset-0 flex flex-col gap-5 justify-center p-3 md:p-16 z-10 ${

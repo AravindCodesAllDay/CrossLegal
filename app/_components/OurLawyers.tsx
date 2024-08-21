@@ -3,22 +3,7 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
 import Heading from "../_animations/Heading";
-
-import member1 from "@/app/_assets/team/1.jpg";
-import member2 from "@/app/_assets/team/2.jpg";
-import member3 from "@/app/_assets/team/3.jpg";
-import member4 from "@/app/_assets/team/4.jpg";
-import member5 from "@/app/_assets/team/5.jpg";
-import member6 from "@/app/_assets/team/6.jpg";
-
-const profiles = [
-  { name: "James Garcia", specialty: "Real Estate Law", image: member1 },
-  { name: "Jane Doe", specialty: "Corporate Law", image: member2 },
-  { name: "John Smith", specialty: "Criminal Law", image: member3 },
-  { name: "Anna Taylor", specialty: "Family Law", image: member4 },
-  { name: "Michael Brown", specialty: "Immigration Law", image: member5 },
-  { name: "Emily White", specialty: "Intellectual Property", image: member6 },
-];
+import { profile } from "@/lib/profile";
 
 export default function OurLawyers() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -47,6 +32,8 @@ export default function OurLawyers() {
     };
   }, []);
 
+  const totalSlides = Math.ceil(profile().length / profilesPerSlide);
+
   return (
     <div className="flex flex-col gap-8 justify-center items-center p-4">
       <Heading
@@ -59,38 +46,27 @@ export default function OurLawyers() {
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
-          {profiles.map((profile, index) => (
+          {profile().map((bio, index) => (
             <div
               key={index}
               className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-3 flex flex-col items-center gap-4 group transition-transform duration-500 ease-in-out transform"
             >
               <div className="w-11/12 h-1/2 rounded-b-full bg-gradient-to-t from-secondary opacity-25 -z-20 absolute top-0"></div>
-              <div className="flex flex-col items-center">
-                <h6 className="text-xl md:text-2xl">{profile.name}</h6>
-                <p className="text-secondary text-sm md:text-base">
-                  {profile.specialty}
-                </p>
-              </div>
-              {/* <Image
-                src={profile.image}
-                alt="profile"
-                className="size-56 rounded-full border-2 border-dashed border-secondary p-2 group-hover:scale-95 transition-all ease-in-out duration-200"
-              /> */}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1}
-                stroke="currentColor"
-                className="size-56 bg-white rounded-full border-2 border-dashed border-secondary p-2 group-hover:scale-95 transition-all ease-in-out duration-200"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+              <a href={`/${bio.id}`}>
+                <div className="flex flex-col items-center">
+                  <h6 className="text-xl md:text-2xl">{bio.name}</h6>
+                  <p className="text-secondary text-sm md:text-base">
+                    {bio.position}
+                  </p>
+                </div>
+              </a>
+              <a href={`/${bio.id}`}>
+                <Image
+                  src={bio.photo}
+                  alt="profile"
+                  className="size-56 rounded-full border-2 border-dashed border-secondary p-2 group-hover:scale-95 transition-all ease-in-out duration-200"
                 />
-              </svg>
-
+              </a>
               <ul className="flex gap-5 mt-4">
                 <li className="rounded-full p-1 bg-secondary">
                   <a href="https://www.facebook.com/" target="_blank">
@@ -152,20 +128,17 @@ export default function OurLawyers() {
           ))}
         </div>
         <div className="flex justify-center gap-2 mt-4">
-          {Array.from(
-            { length: Math.ceil(profiles.length / profilesPerSlide) },
-            (_, index) => (
-              <div
-                key={index}
-                className={`w-4 h-3 rounded-tl-md rounded-br-md cursor-pointer transition-all duration-300 ${
-                  currentIndex === index
-                    ? "bg-secondary transform scale-125"
-                    : "bg-gray-300"
-                }`}
-                onClick={() => handleDotClick(index)}
-              ></div>
-            )
-          )}
+          {Array.from({ length: totalSlides }, (_, index) => (
+            <div
+              key={index}
+              className={`w-4 h-3 rounded-tl-md rounded-br-md cursor-pointer transition-all duration-300 ${
+                currentIndex === index
+                  ? "bg-secondary transform scale-125"
+                  : "bg-gray-300"
+              }`}
+              onClick={() => handleDotClick(index)}
+            ></div>
+          ))}
         </div>
       </div>
     </div>

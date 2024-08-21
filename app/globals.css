@@ -4,6 +4,12 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+}
+
 body {
   font-family: "Marcellus", serif;
 }
@@ -15,6 +21,26 @@ body {
   .font-outline-4 {
     -webkit-text-stroke: 4px #b9967e;
   }
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+}
+
+.wiggle {
+  animation: wiggle 1s ease-in-out infinite;
 }
 
 @keyframes slideIn {

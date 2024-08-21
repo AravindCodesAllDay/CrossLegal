@@ -6,7 +6,7 @@ import getThree from "@/app/_assets/getThree.jpg";
 import getFour from "@/app/_assets/getFour.jpg";
 import StarRating from "../_animations/StarRating";
 import Heading from "../_animations/Heading";
-import { phoneNo } from "@/lib/phoneNo";
+import { phoneNo } from "@/lib/contacts";
 
 export default function GetInTouch() {
   return (

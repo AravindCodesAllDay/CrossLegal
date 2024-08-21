@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import Navbar from "@/app/_components/Navbar";
 import OurResources from "./_homepage/OurResources";
@@ -7,48 +7,27 @@ import WhatWeDo from "./_homepage/WhatWeDo";
 import Carousel from "./_homepage/Carousel";
 import OurTestimonials from "./_components/OurTestimonials";
 import OurLawyers from "./_components/OurLawyers";
-import RecentArticles from "./_homepage/RecentArticles";
 import Footer from "@/app/_components/Footer";
 import AboutUs from "./_homepage/AboutUs";
 import ToTop from "./_components/ToTop";
-import Poster01 from "./_homepage/Poster01";
-import Loader from "./_components/Loader";
+import Clientele from "./_components/Clientele";
 
 export default function Home() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1500);
-
-    return () => clearTimeout(timer);
-  }, [loading]);
-
   return (
     <>
-      {loading && <Loader />}
       <div className="relative">
         <Navbar />
         <Carousel />
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col gap-12 mb-8">
           <div className="flex relative">
-            <div className="w-full h-4/5 top-0 bg-[#f9f9f9] absolute -z-20"></div>
+            <div className="w-full h-3/5 top-0 bg-[#f9f9f9] absolute -z-20"></div>
             <AboutUs />
           </div>
           <OurResources />
           <WhatWeDo />
-          <div className="w-full relative">
-            <div
-              className={`bg-[url("/statue.jpg")] bg-no-repeat bg-center bg-fixed bg-cover h-2/3 -z-20 w-full absolute`}
-            ></div>
-            <OurTestimonials />
-            <Poster01 />
-          </div>
+          <OurTestimonials />
           <OurLawyers />
-          <div className="bg-[#f9f9f9]">
-            <RecentArticles />
-          </div>
+          <Clientele />
         </div>
         <ToTop />
         <Footer />

@@ -1,6 +1,6 @@
 import React from "react";
 import StarRating from "../_animations/StarRating";
-import { address, phoneNo } from "@/lib/phoneNo";
+import { address, phoneNo, emailId } from "@/lib/contacts";
 
 export default function Contact() {
   return (
@@ -58,7 +58,7 @@ export default function Contact() {
             <h2 className="text-3xl">24/7 Support</h2>
             <p className="flex flex-col items-center text-secondary">
               <span>+(91) {phoneNo()}</span>
-              <span>contact@halt-o.com</span>
+              <span>{emailId()}</span>
             </p>
           </div>
         </div>
