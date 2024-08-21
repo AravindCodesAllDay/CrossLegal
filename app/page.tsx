@@ -5,14 +5,13 @@ import Navbar from "@/app/_components/Navbar";
 import OurResources from "./_homepage/OurResources";
 import WhatWeDo from "./_homepage/WhatWeDo";
 import Carousel from "./_homepage/Carousel";
-import OurTestimonials from "./_homepage/OurTestimonials";
-import OurLawyers from "./_homepage/OurLawyers";
+import OurTestimonials from "./_components/OurTestimonials";
+import OurLawyers from "./_components/OurLawyers";
 import RecentArticles from "./_homepage/RecentArticles";
 import Footer from "@/app/_components/Footer";
 import AboutUs from "./_homepage/AboutUs";
 import ToTop from "./_components/ToTop";
 import Poster01 from "./_homepage/Poster01";
-import Poster02 from "./_homepage/Poster02";
 import Loader from "./_components/Loader";
 
 export default function Home() {
@@ -31,9 +30,12 @@ export default function Home() {
       {loading && <Loader />}
       <div className="relative">
         <Navbar />
-        <div className="flex flex-col gap-8">
-          <Carousel />
-          <AboutUs />
+        <Carousel />
+        <div className="flex flex-col gap-12">
+          <div className="flex relative">
+            <div className="w-full h-4/5 top-0 bg-[#f9f9f9] absolute -z-20"></div>
+            <AboutUs />
+          </div>
           <OurResources />
           <WhatWeDo />
           <div className="w-full relative">
@@ -43,9 +45,10 @@ export default function Home() {
             <OurTestimonials />
             <Poster01 />
           </div>
-          {/* <OurLawyers /> */}
-          {/* <Poster02 /> */}
-          <RecentArticles />
+          <OurLawyers />
+          <div className="bg-[#f9f9f9]">
+            <RecentArticles />
+          </div>
         </div>
         <ToTop />
         <Footer />

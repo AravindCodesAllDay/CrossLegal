@@ -1,5 +1,6 @@
 import React from "react";
 import StarRating from "../_animations/StarRating";
+import { address, phoneNo } from "@/lib/phoneNo";
 
 export default function Contact() {
   return (
@@ -12,7 +13,7 @@ export default function Contact() {
         </h3>
         <p className="flex font-marcellus text-4xl">Contact Information</p>
         <div className="flex flex-col sm:flex-row gap-5 justify-around w-full">
-          <div className="flex flex-col items-center gap-5 group w-full sm:w-1/2 border p-4 rounded-tl-3xl rounded-br-3xl">
+          <div className="flex flex-col items-center gap-5 group w-full sm:w-1/2 border p-4 cursor-pointer rounded-tl-3xl rounded-br-3xl">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -33,16 +34,12 @@ export default function Contact() {
               />
             </svg>
             <h2 className="text-3xl">Location</h2>
-            <p className="flex flex-col items-center text-secondary">
-              <span>
-                4th Floor , Old No.127, New No.261, Rohith Towers, Angappa
-                Naicken St,{" "}
-              </span>
-              <span>George Town, Chennai, Tamil Nadu 600 001</span>
+            <p className="flex flex-col items-center text-center text-secondary">
+              {address()}
             </p>
           </div>
 
-          <div className="flex flex-col items-center gap-5 group w-full sm:w-1/2 border p-4 rounded-tl-3xl rounded-br-3xl">
+          <div className="flex flex-col items-center gap-5 group w-full sm:w-1/2 border p-4 cursor-pointer rounded-tl-3xl rounded-br-3xl">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -60,8 +57,8 @@ export default function Contact() {
 
             <h2 className="text-3xl">24/7 Support</h2>
             <p className="flex flex-col items-center text-secondary">
-              <span>+(91) 9003232007</span>
-              <span>contact@example.com</span>
+              <span>+(91) {phoneNo()}</span>
+              <span>contact@halt-o.com</span>
             </p>
           </div>
         </div>

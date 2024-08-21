@@ -7,25 +7,27 @@ import Header from "../_components/Header";
 import Looking4Lawyer from "./Looking4Lawyer";
 import AboutUs from "./AboutUs";
 import team from "@/app/_assets/abtHeader.jpg";
-import Carousel from "./Carousel";
+import OurTestimonials from "../_components/OurTestimonials";
 import GetInTouch from "./GetInTouch";
-import OurLawyers from "./OurLawyers";
+import OurLawyers from "../_components/OurLawyers";
+import ToTop from "../_components/ToTop";
 
 export default function AboutPage() {
   return (
     <>
       <Navbar />
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-12">
         <Header header={"Aboutus"} title={"About Us"} photo={team} />
         <AboutUs />
+        <div className="relative text-white ">
+          <div className="w-full h-5/6 -z-20 bg-primary bottom-0 absolute"></div>
+          <Looking4Lawyer />
+          <OurTestimonials />
+        </div>
+        <OurLawyers />
+        <GetInTouch />
       </div>
-      <div className="relative">
-        <div className="w-full h-5/6 -z-20 bg-primary bottom-0 absolute"></div>
-        <Looking4Lawyer />
-        <Carousel />
-      </div>
-      {/* <OurLawyers /> */}
-      <GetInTouch />
+      <ToTop />
       <Footer />
     </>
   );
