@@ -48,7 +48,7 @@ export default function AboutUs() {
       />
 
       <div className={`w-full lg:w-1/2 flex flex-col gap-8 p-6`}>
-        <div className="lg:h-1/2 flex flex-col justify-center gap-3">
+        <div className="lg:h-1/2 flex flex-col justify-center gap-5">
           <Heading
             title={"About Firm"}
             line1={"We're Advocates for"}
@@ -59,14 +59,12 @@ export default function AboutUs() {
               isInView ? "translate-y-0" : "translate-y-32 opacity-0"
             }`}
           >
-            <p>
-              With a deep understanding of both Indian law and the legal
-              frameworks of other jurisdictions, our NRI lawyers offer a unique
-              perspective that transcends borders. Whether you&apos;re
-              navigating property disputes, inheritance issues, family matters,
-              or business transactions, we are committed to providing you with
-              effective legal representation and strategic guidance every step
-              of the way.
+            <p className="text-base">
+              With a reputation for excellence and a track record of success,
+              our lawyers are trusted advocates and reliable partners for
+              clients around the world. We pride ourselves on delivering
+              high-quality legal services with integrity, professionalism, and a
+              commitment to achieving results.
             </p>
           </div>
         </div>

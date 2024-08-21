@@ -30,8 +30,8 @@ export default function Home() {
       {loading && <Loader />}
       <div className="relative">
         <Navbar />
-        <div className="flex flex-col gap-8">
-          <Carousel />
+        <Carousel />
+        <div className="flex flex-col gap-12">
           <div className="flex relative">
             <div className="w-full h-4/5 top-0 bg-[#f9f9f9] absolute -z-20"></div>
             <AboutUs />

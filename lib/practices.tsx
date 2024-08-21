@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 import img1 from "@/app/_assets/whatWeDo/1.png";
 import img2 from "@/app/_assets/whatWeDo/2.png";
 import img3 from "@/app/_assets/whatWeDo/3.png";
@@ -12,8 +14,18 @@ import photo7 from "@/app/_assets/whatWeDo/7.jpg";
 import photo8 from "@/app/_assets/whatWeDo/8.jpg";
 import photo9 from "@/app/_assets/whatWeDo/9.jpg";
 
+interface practice {
+  id: number;
+  photo: StaticImageData;
+  figure: StaticImageData;
+  header: string;
+  text: string[];
+  subHeader: string;
+  subTopics: { header: string; passage: string }[];
+}
+
 export function practices() {
-  const practices = [
+  const practices: practice[] = [
     {
       id: 1,
       photo: img1,
@@ -35,7 +47,6 @@ export function practices() {
           passage:
             "At Cross Legal, we understand the importance of mitigating risks and maximizing opportunities in land acquisition projects. Whether you're an individual investor, a corporate entity, or a developer, we leverage our legal expertise and industry knowledge to help you make informed decisions and achieve your goals while minimizing potential liabilities.",
         },
-        ,
         {
           header: "Trusted Advisors, Reliable Partners",
           passage:
