@@ -9,8 +9,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      keyframes: {},
-      animation: {},
+      keyframes: {
+        slide: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+      },
+      animation: {
+        'slide-left': 'slide 60s linear infinite',
+        'slide-right': 'slide 60s linear infinite reverse',
+      },
       colors: {
         primary: "#181a22",
         secondary: "#b9967e",

@@ -7,12 +7,12 @@ import WhatWeDo from "./_homepage/WhatWeDo";
 import Carousel from "./_homepage/Carousel";
 import OurTestimonials from "./_components/OurTestimonials";
 import OurLawyers from "./_components/OurLawyers";
-import RecentArticles from "./_homepage/RecentArticles";
 import Footer from "@/app/_components/Footer";
 import AboutUs from "./_homepage/AboutUs";
 import ToTop from "./_components/ToTop";
 import Poster01 from "./_homepage/Poster01";
 import Loader from "./_components/Loader";
+import SlidingImages from "./_homepage/SlidingImages";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -47,7 +47,7 @@ export default function Home() {
           </div>
           <OurLawyers />
           <div className="bg-[#f9f9f9]">
-            <RecentArticles />
+            <SlidingImages />
           </div>
         </div>
         <ToTop />
