@@ -16,17 +16,17 @@ export default function AboutPage() {
   return (
     <>
       <Navbar />
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-12">
         <Header header={"Aboutus"} title={"About Us"} photo={team} />
         <AboutUs />
+        <div className="relative text-white ">
+          <div className="w-full h-5/6 -z-20 bg-primary bottom-0 absolute"></div>
+          <Looking4Lawyer />
+          <OurTestimonials />
+        </div>
+        <OurLawyers />
+        <GetInTouch />
       </div>
-      <div className="relative text-white ">
-        <div className="w-full h-5/6 -z-20 bg-primary bottom-0 absolute"></div>
-        <Looking4Lawyer />
-        <OurTestimonials />
-      </div>
-      <OurLawyers />
-      <GetInTouch />
       <ToTop />
       <Footer />
     </>

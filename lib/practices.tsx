@@ -20,7 +20,7 @@ export function practices() {
       figure: photo6,
       header: "Land Acquistion",
       text: [
-        "Acquiring land in India as a Non-Resident Indian (NRI) can be a complex and challenging process. At “Company Name”, our team of experienced NRI lawyers specializes in providing comprehensive legal assistance and guidance for land acquisition projects across India.",
+        "Acquiring land in India can be a complex and challenging process particularly for NRI's. At Cross Legal, our team of experienced NRI lawyers specializes in providing comprehensive legal assistance and guidance for land acquisition projects across India.",
         "With a deep understanding of Indian land acquisition laws, regulations, and procedures, our NRI lawyers are well-equipped to navigate the intricacies of the land acquisition process on behalf of our clients. Whether you're purchasing agricultural land, residential plots, commercial properties, or industrial sites, we have the knowledge and expertise to help you achieve your objectives efficiently and effectively.",
       ],
       subHeader: "",
@@ -33,7 +33,7 @@ export function practices() {
         {
           header: "Mitigating Risks, Maximizing Opportunities",
           passage:
-            "At “Company Name”, we understand the importance of mitigating risks and maximizing opportunities in land acquisition projects. Whether you're an individual investor, a corporate entity, or a developer, we leverage our legal expertise and industry knowledge to help you make informed decisions and achieve your goals while minimizing potential liabilities.",
+            "At Cross Legal, we understand the importance of mitigating risks and maximizing opportunities in land acquisition projects. Whether you're an individual investor, a corporate entity, or a developer, we leverage our legal expertise and industry knowledge to help you make informed decisions and achieve your goals while minimizing potential liabilities.",
         },
         ,
         {
@@ -49,7 +49,7 @@ export function practices() {
       figure: photo3,
       header: "TITLE CLEARANCE",
       text: [
-        "Acquiring property in India as a Non-Resident Indian (NRI) can be a rewarding investment opportunity. However, ensuring clear and marketable title is essential to protect your interests and avoid potential legal complications. At “Company Name”, our team of experienced NRI lawyers specializes in providing comprehensive title clearance services to help you navigate the complexities of property ownership in India with confidence.",
+        "Acquiring property in India as a Non-Resident Indian (NRI) can be a rewarding investment opportunity. However, ensuring clear and marketable title is essential to protect your interests and avoid potential legal complications. At Cross Legal, our team of experienced NRI lawyers specializes in providing comprehensive title clearance services to help you navigate the complexities of property ownership in India with confidence.",
       ],
 
       subHeader: "",
@@ -201,7 +201,7 @@ export function practices() {
         {
           header: "Arbitration Representation",
           passage:
-            "We represent NRIs in arbitration proceedings, advocating for their interests before arbitral tribunals with expertise and diligence",
+            "We represent clients in arbitration proceedings, advocating for their interests before arbitral tribunals with expertise and diligence",
         },
         {
           header: "Arbitration Agreement Drafting",
@@ -266,7 +266,7 @@ export function practices() {
       header:
         "INTELLECTUAL PROPERTY RIGHTS (IPR) SERVICES FOR NON-RESIDENT INDIANS (NRIS)",
       text: [
-        "Protecting intellectual property rights (IPR) is essential for Non-Resident Indians (NRIs) seeking to safeguard their innovative ideas, creative works, and business assets on a global scale. Our firm specializes in providing comprehensive legal assistance tailored to the unique needs of NRIs in protecting, managing, and enforcing their intellectual property rights",
+        "Protecting intellectual property rights (IPR) is essential for innovaters and business men seeking to safeguard their innovative ideas, creative works, and business assets on a global scale. Our firm specializes in providing comprehensive legal assistance tailored to the unique needs of NRIs in protecting, managing, and enforcing their intellectual property rights",
         "Whether you're an inventor, artist, entrepreneur, or corporate entity, our team of experienced lawyers is dedicated to ensuring that your intellectual property is safeguarded and maximized for commercial success",
       ],
 
@@ -275,12 +275,12 @@ export function practices() {
         {
           header: "Trademark Registration",
           passage:
-            "We assist NRIs in registering trademarks for their brands, logos, and slogans in multiple jurisdictions, ensuring exclusive rights to use and protect their distinctive marks in the global marketplace",
+            "We assist individuals/corporates in registering trademarks for their brands, logos, and slogans in multiple jurisdictions, ensuring exclusive rights to use and protect their distinctive marks in the global marketplace",
         },
         {
           header: "Patent Protection",
           passage:
-            "Our firm provides expert guidance and support to NRIs in securing patents for their inventions, innovations, and technological advancements, leveraging our knowledge of patent laws and procedures worldwide",
+            "Our firm provides expert guidance and support to individuals/corporates in securing patents for their inventions, innovations, and technological advancements, leveraging our knowledge of patent laws and procedures worldwide",
         },
         {
           header: "Copyright Registration",
@@ -290,7 +290,7 @@ export function practices() {
         {
           header: "Trade Secret Protection",
           passage:
-            "Our team advises NRIs on strategies to protect trade secrets and confidential information, including drafting nondisclosure agreements (NDAs) and implementing security measures to safeguard proprietary business assets",
+            "Our team advises individuals/corporates on strategies to protect trade secrets and confidential information, including drafting nondisclosure agreements (NDAs) and implementing security measures to safeguard proprietary business assets",
         },
         {
           header: "IP Licensing and Commercialization",
