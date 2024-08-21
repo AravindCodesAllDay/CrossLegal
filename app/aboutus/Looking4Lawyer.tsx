@@ -25,11 +25,11 @@ export default function Looking4Lawyer() {
               <p>
                 With a deep understanding of both Indian law and the legal
                 frameworks of other jurisdictions, our lawyers offer a unique
-                perspective that transcends borders. Whether you're navigating
-                property disputes, inheritance issues, family matters, or
-                business transactions, we are committed to providing you with
-                effective legal representation and strategic guidance every step
-                of the way.
+                perspective that transcends borders. Whether you&apos;re
+                navigating property disputes, inheritance issues, family
+                matters, or business transactions, we are committed to providing
+                you with effective legal representation and strategic guidance
+                every step of the way.
               </p>
               <ul className="font-semibold list-disc">
                 <li>Legal Advice </li>
