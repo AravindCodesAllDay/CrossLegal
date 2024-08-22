@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 
 import Heading from "../_animations/Heading";
 import Button from "../_animations/Button";

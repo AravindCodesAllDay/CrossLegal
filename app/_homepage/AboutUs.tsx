@@ -56,7 +56,7 @@ export default function AboutUs() {
       <div className="w-full lg:w-1/2 flex flex-col gap-8 p-6">
         <div className="lg:h-1/2 flex flex-col justify-center gap-5">
           <Heading
-            title={"About Firm"}
+            title={"About Us"}
             line1={"We're Advocates for"}
             line2={"Justice and Right"}
           />

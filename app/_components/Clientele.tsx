@@ -28,40 +28,21 @@ import img25 from "@/app/_assets/clients/img25.png";
 import img26 from "@/app/_assets/clients/img26.png";
 import img27 from "@/app/_assets/clients/img27.png";
 import img28 from "@/app/_assets/clients/img28.png";
-import Heading from "../_animations/Heading";
 
-const leftImages = [
-  img1,
-  img2,
-  img3,
-  img4,
-  img5,
-  img6,
-  img7,
-  img8,
-  img9,
+const row1 = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
+const row2 = [
   img10,
   img11,
   img12,
   img13,
   img14,
-];
-const rightImages = [
   img15,
   img16,
   img17,
   img18,
-  img19,
-  img20,
-  img21,
-  img22,
-  img23,
-  img24,
-  img25,
-  img26,
-  img27,
   img28,
 ];
+const row3 = [img19, img20, img21, img22, img23, img24, img25, img26, img27];
 
 export default function Clientele() {
   return (
@@ -74,17 +55,24 @@ export default function Clientele() {
             <div className="h-3 w-5 bg-gradient-to-l from-secondary rounded-tl-md rounded-br-md"></div>
           </h3>
         </div>
-        <div className="flex items-center animate-slide-left space-x-4">
-          {[...leftImages, ...leftImages].map((src, index) => (
+        <div className="flex items-center animate-slide-left-fast md:animate-slide-left space-x-6">
+          {[...row1, ...row1].map((src, index) => (
             <div key={index} className="flex-shrink-0">
               <Image src={src} alt={`Slide ${index + 1}`} placeholder="blur" />
             </div>
           ))}
         </div>
-        <div className="flex items-center animate-slide-right space-x-4 mt-4">
-          {[...rightImages, ...rightImages].map((src, index) => (
+        <div className="flex items-center animate-slide-right-fast md:animate-slide-right space-x-6 mt-4">
+          {[...row2, ...row2].map((src, index) => (
             <div key={index} className="flex-shrink-0">
-              <Image src={src} alt={`Slide ${index + 15}`} placeholder="blur" />
+              <Image src={src} alt={`Slide ${index + 10}`} placeholder="blur" />
+            </div>
+          ))}
+        </div>
+        <div className="flex items-center animate-slide-left-fast md:animate-slide-left space-x-6 mt-4">
+          {[...row3, ...row3].map((src, index) => (
+            <div key={index} className="flex-shrink-0">
+              <Image src={src} alt={`Slide ${index + 1}`} placeholder="blur" />
             </div>
           ))}
         </div>

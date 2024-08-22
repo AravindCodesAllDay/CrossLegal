@@ -80,12 +80,12 @@ export default function Navbar() {
             />
           </svg>
         </li>
-        <li className="py-2 md:py-4 border-secondary">
+        <li className="py-2 md:py-0 border-secondary">
           <Link href="/">
             <Image
               src={logo}
               alt="logo"
-              className="h-12 w-36"
+              className="h-12 w-36 md:h-20 md:w-48"
               placeholder="blur"
             />
           </Link>
