@@ -1,8 +1,30 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import StarRating from "../_animations/StarRating";
 import { address, phoneNo, emailId } from "@/lib/contacts";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleChange = (e: any) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    const { name, email, phone, message } = formData;
+    const mailtoLink = `mailto:${emailId()}?subject=Contact%20from%20${name}&body=Name:%20${name}%0AEmail:%20${email}%0APhone:%20${phone}%0AMessage:%20${message}`;
+    window.location.href = mailtoLink;
+  };
+
   return (
     <div className="flex flex-col md:flex-row justify-between p-5 gap-5">
       <div className="flex flex-col gap-5 p-5 md:w-1/2 rounded-lg">
@@ -20,7 +42,7 @@ export default function Contact() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="size-20 p-3 border-2 text-secondary group-hover:bg-primary  group-hover:text-white border-secondary rounded-full transition-colors duration-150 ease-in-out"
+              className="size-20 p-3 border-2 text-secondary group-hover:bg-primary group-hover:text-white border-secondary rounded-full transition-colors duration-150 ease-in-out"
             >
               <path
                 strokeLinecap="round"
@@ -75,13 +97,18 @@ export default function Contact() {
           <div className="h-3 w-5 bg-gradient-to-l from-secondary rounded-tl-md rounded-br-md"></div>
         </h3>
         <p className="flex flex-col text-4xl">Drop Us a Line</p>
-        <form className="flex flex-col gap-3 items-center">
+        <form
+          className="flex flex-col gap-3 items-center"
+          onSubmit={handleSubmit}
+        >
           <div className="w-full">
             <label htmlFor="name">Name:</label>
             <input
               type="text"
               id="name"
               name="name"
+              value={formData.name}
+              onChange={handleChange}
               required
               className="w-full p-2 mt-1 border-b-2 border-gray-300 rounded-md"
             />
@@ -93,6 +120,8 @@ export default function Contact() {
                 type="email"
                 id="email"
                 name="email"
+                value={formData.email}
+                onChange={handleChange}
                 required
                 className="w-full p-2 mt-1 border-b-2 border-gray-300 rounded-md"
               />
@@ -103,6 +132,8 @@ export default function Contact() {
                 type="text"
                 id="phone"
                 name="phone"
+                value={formData.phone}
+                onChange={handleChange}
                 required
                 className="w-full p-2 mt-1 border-b-2 border-gray-300 rounded-md"
               />
@@ -113,6 +144,8 @@ export default function Contact() {
             <textarea
               id="message"
               name="message"
+              value={formData.message}
+              onChange={handleChange}
               required
               className="w-full p-2 mt-1 border-b-2 border-gray-300 rounded-md"
             />

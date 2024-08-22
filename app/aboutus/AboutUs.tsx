@@ -66,9 +66,9 @@ export default function AboutUs() {
           </div>
         </div>
         <div className="w-full md:w-2/3 flex flex-col gap-4 md:gap-5 p-4 sm:p-6 md:p-10">
-          <div className="flex justify-center md:justify-start">
+          <div className="flex items-center justify-center md:justify-start">
             <div className="h-3 w-4 bg-gradient-to-r from-secondary to-white rounded-tr-md rounded-bl-md"></div>
-            <p className="text-secondary text-xs sm:text-sm px-2 font-[550]">
+            <p className="text-lg md:text-2xl text-secondary px-2 font-[550]">
               ABOUT US
             </p>
             <div className="h-3 w-4 bg-gradient-to-r from-white to-secondary rounded-tr-md rounded-bl-md"></div>

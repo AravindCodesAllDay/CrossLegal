@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 
 import Heading from "../_animations/Heading";
 import { profile } from "@/lib/profile";
+import globe from "@/app/_assets/map.png";
 
 export default function OurLawyers() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -51,10 +52,10 @@ export default function OurLawyers() {
               key={index}
               className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-3 flex flex-col items-center gap-4 group transition-transform duration-500 ease-in-out transform"
             >
-              <div className="w-11/12 h-1/2 rounded-b-full bg-gradient-to-t from-secondary opacity-25 -z-20 absolute top-0"></div>
+              <div className="w-11/12 h-1/2 rounded-b-full bg-gradient-to-t from-secondary opacity-40 -z-20 absolute top-0"></div>
               <a href={`/${bio.id}`}>
                 <div className="flex flex-col items-center">
-                  <h6 className="text-xl md:text-2xl">{bio.name}</h6>
+                  <h6 className="text-lg md:text-xl">{bio.name}</h6>
                   <p className="text-secondary text-sm md:text-base">
                     {bio.position}
                   </p>
@@ -64,7 +65,7 @@ export default function OurLawyers() {
                 <Image
                   src={bio.photo}
                   alt="profile"
-                  className="size-56 rounded-full border-2 border-dashed border-secondary p-2 group-hover:scale-95 transition-all ease-in-out duration-200"
+                  className="size-44 sm:size-48 md:size-56 rounded-full border-2 border-dashed border-secondary p-2 group-hover:scale-95 transition-all ease-in-out duration-200"
                 />
               </a>
               <ul className="flex gap-5 mt-4">
@@ -123,7 +124,7 @@ export default function OurLawyers() {
                   </a>
                 </li>
               </ul>
-              <div className="w-11/12 h-1/2 rounded-t-full -z-20 bg-gradient-to-b from-secondary opacity-25 absolute bottom-0"></div>
+              <div className="w-11/12 h-1/2 rounded-t-full -z-20 bg-gradient-to-b from-secondary opacity-40 absolute bottom-0"></div>
             </div>
           ))}
         </div>
@@ -141,6 +142,7 @@ export default function OurLawyers() {
           ))}
         </div>
       </div>
+      <Image src={globe} alt="bg-globe" className="absolute -z-20 opacity-10" />
     </div>
   );
 }

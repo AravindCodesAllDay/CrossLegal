@@ -51,7 +51,7 @@ export default function OurTestimonials() {
 
   return (
     <div
-      className={`bg-[url("/statue.jpg")] bg-no-repeat bg-center bg-fixed bg-cover h-full w-full flex flex-col items-center gap-3 p-5`}
+      className={`bg-[url("/2.jpg")] bg-no-repeat bg-center bg-fixed bg-cover h-full w-full flex flex-col items-center gap-3 p-5`}
     >
       <Heading
         title={"Our Testimonials"}

@@ -15,7 +15,7 @@ export default function Practice() {
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, ease: "easeOut" }}
-              viewport={{ once: true, amount: 0.5 }}
+              viewport={{ once: true, amount: 0.2 }}
             >
               <div className="flex justify-between w-full">
                 <Image src={data.photo} alt="photo" className="w-1/4 h-20" />

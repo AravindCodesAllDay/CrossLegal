@@ -10,15 +10,31 @@ import { phoneNo } from "@/lib/contacts";
 
 export default function GetInTouch() {
   return (
-    <div className="flex flex-col w-fit lg:flex-row m-3 md:m-10 bg-secondary bg-opacity-10 p-3">
+    <div className="flex flex-col w-fit lg:flex-row m-3 md:m-10 bg-secondary bg-opacity-10 p-5">
       <div className="w-full xl:w-1/2 flex flex-col gap-3">
         <div className="w-full flex flex-col sm:flex-row gap-3">
-          <Image src={getOne} alt="image1" />
-          <Image src={getTwo} alt="image2" />
+          <Image
+            src={getOne}
+            alt="image1"
+            className="hover:scale-105 transition-all duration-150 ease-in-out hover:rounded-lg"
+          />
+          <Image
+            src={getTwo}
+            alt="image2"
+            className="hover:scale-105 transition-all duration-150 ease-in-out hover:rounded-lg"
+          />
         </div>
         <div className="w-full flex flex-col sm:flex-row gap-3">
-          <Image src={getThree} alt="image3" />
-          <Image src={getFour} alt="image4" />
+          <Image
+            src={getThree}
+            alt="image3"
+            className="hover:scale-105 transition-all duration-150 ease-in-out hover:rounded-lg"
+          />
+          <Image
+            src={getFour}
+            alt="image4"
+            className="hover:scale-105 transition-all duration-150 ease-in-out hover:rounded-lg"
+          />
         </div>
       </div>
       <div className="w-full lg:w-1/2 flex flex-col gap-5 justify-center items-center p-3 mt-6 lg:mt-0">

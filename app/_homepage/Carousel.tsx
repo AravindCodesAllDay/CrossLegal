@@ -2,13 +2,15 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-import ladyJustice from "@/app/_assets/ladyJustice.jpeg";
-import officeTable from "@/app/_assets/justice.jpeg";
+import image1 from "@/app/_assets/carousel/1.jpeg";
+import image2 from "@/app/_assets/carousel/2.webp";
+import image3 from "@/app/_assets/carousel/3.jpg";
 
 const Carousel = () => {
   const slides = [
-    { image: ladyJustice, text: "LEAVE COURT TO US" },
-    { image: officeTable, text: "WELCOME TO CROSS LEGAL" },
+    { image: image2, text: "WELCOME TO CROZZ LEGAL" },
+    { image: image1, text: "LEAVE COURT TO US" },
+    { image: image3, text: "Right to Start Now" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -51,24 +53,24 @@ const Carousel = () => {
               className="w-full h-full object-cover"
             />
             <div
-              className={`absolute inset-0 flex flex-col gap-5 justify-center p-3 md:p-16 z-10 ${
+              className={`absolute inset-0 flex flex-col bg-primary bg-opacity-15 gap-5 justify-center p-3 md:p-16 z-10 ${
                 animate ? "block" : "hidden"
               }`}
             >
               <h2
-                className={`text-secondary text-xs md:text-lg font-bold text-shadow-md ${
+                className={`text-secondary text-sm md:text-lg font-bold text-shadow-md ${
                   animate ? "slide-in delay-300" : "hidden"
                 }`}
               >
                 {slide.text}
               </h2>
-              <div className="text-white text-2xl md:text-7xl">
+              <div className="text-white text-3xl md:text-7xl">
                 <p className={`${animate ? "slide-in delay-500" : "hidden"}`}>
                   The Legal Advice is
                 </p>
                 <p className={`${animate ? "slide-in delay-500" : "hidden"}`}>
                   Just{" "}
-                  <span className="text-transparent font-bold font-outline-2">
+                  <span className="text-transparent font-bold font-outline-2 md:font-outline-4">
                     ONE CALL
                   </span>
                 </p>

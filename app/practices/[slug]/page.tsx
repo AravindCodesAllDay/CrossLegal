@@ -7,7 +7,7 @@ import Image from "next/image";
 import Navbar from "@/app/_components/Navbar";
 import Footer from "@/app/_components/Footer";
 import Header from "@/app/_components/Header";
-import team from "@/app/_assets/abtHeader.jpg";
+import team from "@/app/_assets/header/1.jpg";
 import ToTop from "@/app/_components/ToTop";
 
 export default function BlogPractice({ params }: { params: { slug: string } }) {

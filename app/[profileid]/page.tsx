@@ -5,7 +5,7 @@ import { profile } from "@/lib/profile";
 import Navbar from "../_components/Navbar";
 import Footer from "../_components/Footer";
 import Header from "../_components/Header";
-import team from "@/app/_assets/abtHeader.jpg";
+import team from "@/app/_assets/header/2.jpg";
 import Image from "next/image";
 import ToTop from "../_components/ToTop";
 

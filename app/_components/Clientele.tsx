@@ -67,9 +67,16 @@ export default function Clientele() {
   return (
     <>
       <div className="flex flex-col overflow-hidden" id="clientele">
-        <div className="w-full flex flex-col justify-center items-center">
-          <h3></h3>
-          <p></p>
+        <div className="w-full sm:w-4/5 mx-auto flex flex-col justify-center items-center p-3">
+          <h3 className="flex items-center gap-3 text-lg md:text-2xl text-secondary">
+            <div className="h-3 w-5 bg-gradient-to-r from-secondary rounded-tl-md rounded-br-md"></div>
+            Clientele
+            <div className="h-3 w-5 bg-gradient-to-l from-secondary rounded-tl-md rounded-br-md"></div>
+          </h3>
+          <p className="text-lg md:text-2xl text-primary font-bold text-center">
+            SPAB & Co serves clients from diversified industries ranging from
+            Information Technology Industry to Gaming Industry to Insurance etc:
+          </p>
         </div>
         <div className="flex items-center animate-slide-left space-x-4">
           {[...leftImages, ...leftImages].map((src, index) => (

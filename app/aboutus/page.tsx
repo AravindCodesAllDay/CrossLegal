@@ -6,12 +6,12 @@ import Footer from "../_components/Footer";
 import Header from "../_components/Header";
 import Looking4Lawyer from "./Looking4Lawyer";
 import AboutUs from "./AboutUs";
-import team from "@/app/_assets/abtHeader.jpg";
 import OurTestimonials from "../_components/OurTestimonials";
 import GetInTouch from "./GetInTouch";
 import OurLawyers from "../_components/OurLawyers";
 import ToTop from "../_components/ToTop";
 import Clientele from "../_components/Clientele";
+import team from "@/app/_assets/header/4.jpg";
 
 export default function AboutPage() {
   return (

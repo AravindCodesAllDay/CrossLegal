@@ -1,27 +1,28 @@
 import React from "react";
 import Image from "next/image";
 
-import lookingFor from "@/app/_assets/lookingFor.jpg";
+import lookingFor from "@/app/_assets/3.jpg";
 
 export default function Looking4Lawyer() {
   return (
     <div className="flex flex-col">
       <div className="flex w-full justify-center p-2">
-        <div className="h-auto flex flex-col md:flex-row bg-white p-5 shadow-xl">
+        <div className="flex flex-col md:flex-row bg-white p-5 shadow-xl">
           <Image
             src={lookingFor}
             className="w-full md:w-1/3"
             alt="lookingFor"
+            placeholder="blur"
           />
           <div className="flex flex-col items-center justify-center  w-full md:w-2/3 gap-3 sm:gap-5 mt-5 md:mt-0 p-4">
             <div className="flex items-center">
               <div className="h-2 w-4 sm:h-3.5 sm:w-6 bg-gradient-to-r from-secondary to-white rounded-tr-md rounded-bl-md"></div>
-              <p className="text-secondary text-base sm:text-xl px-2 font-[550]">
+              <p className="text-lg md:text-2xl text-secondary px-2 font-[550]">
                 About Firm
               </p>
               <div className="h-2 w-4 sm:h-3.5 sm:w-6 bg-gradient-to-r from-white to-secondary rounded-tr-md rounded-bl-md"></div>
             </div>
-            <div className="flex flex-col gap-3 text-xs sm:text-sm font-[350] leading-5 sm:leading-7 p-2 sm:p-3 text-black">
+            <div className="flex flex-col gap-3 text-xs sm:text-base font-[350] leading-5 sm:leading-7 p-2 sm:p-3 text-black">
               <p>
                 With a deep understanding of both Indian law and the legal
                 frameworks of other jurisdictions, our lawyers offer a unique
