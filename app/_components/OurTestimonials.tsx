@@ -72,13 +72,13 @@ export default function OurTestimonials() {
             />
 
             <div className="flex flex-col">
-              <p className="text-sm sm:text-lg text-[#1e1e1e] line-clamp-3 mb-2">
+              <p className="text-sm sm:text-lg text-[#f8f8f8] line-clamp-3 mb-2">
                 {testimonial.text}
               </p>
               <p className="text-lg sm:text-xl text-secondary">
                 {testimonial.name}
               </p>
-              <p className="text-sm text-[#1e1e1e] sm:text-base">
+              <p className="text-sm text-[#f8f8f8] sm:text-base">
                 {testimonial.role}
               </p>
             </div>
