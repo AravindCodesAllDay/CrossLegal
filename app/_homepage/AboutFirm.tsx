@@ -23,7 +23,7 @@ export default function AboutFIrm() {
           achieving results
         </p>
       </div>
-      <Button left="" right="More" linkTo="/#aboutfirm" />
+      <Button left="" right="Learn More" linkTo="/aboutus/#aboutfirm" />
     </div>
   );
 }
