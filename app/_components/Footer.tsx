@@ -1,6 +1,6 @@
 import React from "react";
 
-import { phoneNo } from "@/lib/phoneNo";
+import { phoneNo } from "@/lib/contacts";
 
 export default function Footer() {
   return (
@@ -22,13 +22,10 @@ export default function Footer() {
           <p>FEEL FREE TO CALL US</p>
         </div>
       </div>
-      <div className="flex flex-col items-center md:flex-row w-full justify-around bg-primary text-white p-4">
-        <p className="text-xs md:text-base text-center">
-          ©Copyright 2024. All rights reserved-CrossLegal. Designed by Halt-O
+      <div className="flex w-full justify-center bg-primary text-xs md:text-base text-white p-4">
+        <p>
+          ©Copyright 2024. All rights reserved-CrossLegal. Designed by TACSS
         </p>
-        <ul className="hidden md:block">
-          <li>facebook</li>
-        </ul>
       </div>
     </>
   );

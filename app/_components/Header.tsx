@@ -13,6 +13,7 @@ export default function Header({ title, header, photo }: HeaderProps) {
       <Image
         src={photo}
         alt="Team Image"
+        placeholder="blur"
         className="w-full h-[40vh] sm:h-[50vh] md:h-[60vh] opacity-10 object-cover"
       />
       <div className="absolute translate-y-12">

@@ -49,15 +49,16 @@ export default function AboutUs() {
           <Image
             src={lawyer}
             alt="Lawyer"
+            placeholder="blur"
             className="w-full rounded-tr-[20px] sm:rounded-tr-[40px] md:rounded-tr-[50px] rounded-bl-[20px] sm:rounded-bl-[40px] md:rounded-bl-[50px] ml-0"
           />
           <div className="absolute bottom-0 left-0 flex items-center justify-center">
             <div className="w-[220px] sm:w-[280px] md:w-[320px] bg-secondary p-5 sm:p-6 md:p-8 text-center text-zinc-50 rounded-bl-[20px] sm:rounded-bl-[40px] md:rounded-bl-[50px]">
               <p className="text-[24px] sm:text-[46px] md:text-[56px] font-marcellus">
-                <Counter start={1000} count={200} targetNumber={3200} />+
+                <Counter start={0} count={5} targetNumber={500} />+
               </p>
               <p className="text-[12px] sm:text-[13.5px] md:text-[14.5px] font-semibold">
-                LAWYERS ACROSS OUR GLOBAL PLATFORM
+                Clients Across our Global Platform
               </p>
             </div>
             <div className="absolute z-10 w-[18%] sm:w-[25%] md:w-[30%] h-[18%] sm:h-[25%] md:h-[30%] opacity-25 top-1/2 left-3/4 transform -translate-x-1/2 -translate-y-1/2">
@@ -66,9 +67,9 @@ export default function AboutUs() {
           </div>
         </div>
         <div className="w-full md:w-2/3 flex flex-col gap-4 md:gap-5 p-4 sm:p-6 md:p-10">
-          <div className="flex justify-center md:justify-start">
+          <div className="flex items-center justify-center md:justify-start">
             <div className="h-3 w-4 bg-gradient-to-r from-secondary to-white rounded-tr-md rounded-bl-md"></div>
-            <p className="text-secondary text-xs sm:text-sm px-2 font-[550]">
+            <p className="text-lg md:text-2xl text-secondary px-2 font-[550]">
               ABOUT US
             </p>
             <div className="h-3 w-4 bg-gradient-to-r from-white to-secondary rounded-tr-md rounded-bl-md"></div>
@@ -93,6 +94,7 @@ export default function AboutUs() {
               <Image
                 className="w-[30px] sm:w-[45px] md:w-[55px] h-[30px] sm:h-[45px] md:h-[55px]"
                 src={quote}
+                placeholder="blur"
                 alt="Left Quote"
               />
               <p className="leading-loose italic font-marcellus font-[500] text-sm sm:text-lg md:text-xl text-[#1e1e1e] ml-2">

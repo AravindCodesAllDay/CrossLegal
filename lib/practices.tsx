@@ -1,13 +1,19 @@
 import { StaticImageData } from "next/image";
 
-import img1 from "@/app/_assets/whatWeDo/1.png";
-import img2 from "@/app/_assets/whatWeDo/2.png";
-import img3 from "@/app/_assets/whatWeDo/3.png";
-import img4 from "@/app/_assets/whatWeDo/4.png";
-import img5 from "@/app/_assets/whatWeDo/5.png";
+import img1 from "@/app/_assets/whatWeDo/1.svg";
+import img2 from "@/app/_assets/whatWeDo/2.svg";
+import img3 from "@/app/_assets/whatWeDo/3.svg";
+import img4 from "@/app/_assets/whatWeDo/4.svg";
+import img5 from "@/app/_assets/whatWeDo/5.svg";
+import img6 from "@/app/_assets/whatWeDo/6.svg";
+import img7 from "@/app/_assets/whatWeDo/7.svg";
+import img8 from "@/app/_assets/whatWeDo/8.svg";
+import img9 from "@/app/_assets/whatWeDo/9.svg";
 
+import photo1 from "@/app/_assets/whatWeDo/1.jpg";
 import photo2 from "@/app/_assets/whatWeDo/2.jpg";
 import photo3 from "@/app/_assets/whatWeDo/3.jpg";
+import photo4 from "@/app/_assets/whatWeDo/4.jpg";
 import photo5 from "@/app/_assets/whatWeDo/5.jpg";
 import photo6 from "@/app/_assets/whatWeDo/6.jpg";
 import photo7 from "@/app/_assets/whatWeDo/7.jpg";
@@ -29,11 +35,11 @@ export function practices() {
     {
       id: 1,
       photo: img1,
-      figure: photo6,
+      figure: photo1,
       header: "Land Acquistion",
       text: [
-        "Acquiring land in India can be a complex and challenging process particularly for NRI's. At Cross Legal, our team of experienced NRI lawyers specializes in providing comprehensive legal assistance and guidance for land acquisition projects across India.",
-        "With a deep understanding of Indian land acquisition laws, regulations, and procedures, our NRI lawyers are well-equipped to navigate the intricacies of the land acquisition process on behalf of our clients. Whether you're purchasing agricultural land, residential plots, commercial properties, or industrial sites, we have the knowledge and expertise to help you achieve your objectives efficiently and effectively.",
+        "Acquiring land in India can be a complex and challenging process particularly for NRI's. At Crozz Legal, our team of experienced lawyers specializes in providing comprehensive legal assistance and guidance for land acquisition projects across India.",
+        "With a deep understanding of Indian land acquisition laws, regulations, and procedures, our Experienced  lawyers are well-equipped to navigate the intricacies of the land acquisition process on behalf of our clients. Whether you're purchasing agricultural land, residential plots, commercial properties, or industrial sites, we have the knowledge and expertise to help you achieve your objectives efficiently and effectively.",
       ],
       subHeader: "",
       subTopics: [
@@ -45,22 +51,22 @@ export function practices() {
         {
           header: "Mitigating Risks, Maximizing Opportunities",
           passage:
-            "At Cross Legal, we understand the importance of mitigating risks and maximizing opportunities in land acquisition projects. Whether you're an individual investor, a corporate entity, or a developer, we leverage our legal expertise and industry knowledge to help you make informed decisions and achieve your goals while minimizing potential liabilities.",
+            "At Crozz Legal, we understand the importance of mitigating risks and maximizing opportunities in land acquisition projects. Whether you're an individual investor, a corporate entity, or a developer, we leverage our legal expertise and industry knowledge to help you make informed decisions and achieve your goals while minimizing potential liabilities.",
         },
         {
           header: "Trusted Advisors, Reliable Partners",
           passage:
-            "With a reputation for excellence and a commitment to client satisfaction, our NRI lawyers are trusted advisors and reliable partners for clients around the world. We are dedicated to providing personalized attention, responsive communication, and high-quality legal services that meet the unique needs of each client.",
+            "With a reputation for excellence and a commitment to client satisfaction, our experienced lawyers are trusted advisors and reliable partners for clients around the world. We are dedicated to providing personalized attention, responsive communication, and high-quality legal services that meet the unique needs of each client.",
         },
       ],
     },
     {
       id: 2,
-      photo: img5,
-      figure: photo3,
+      photo: img2,
+      figure: photo2,
       header: "TITLE CLEARANCE",
       text: [
-        "Acquiring property in India as a Non-Resident Indian (NRI) can be a rewarding investment opportunity. However, ensuring clear and marketable title is essential to protect your interests and avoid potential legal complications. At Cross Legal, our team of experienced NRI lawyers specializes in providing comprehensive title clearance services to help you navigate the complexities of property ownership in India with confidence.",
+        "Acquiring property in India as a Non-Resident Indian (NRI) can be a rewarding investment opportunity. However, ensuring clear and marketable title is essential to protect your interests and avoid potential legal complications. At Crozz Legal, our team of experienced lawyers specializes in providing comprehensive title clearance services to help you navigate the complexities of property ownership in India with confidence.",
       ],
 
       subHeader: "",
@@ -68,7 +74,7 @@ export function practices() {
         {
           header: "Title Examination",
           passage:
-            "Our NRI lawyers conduct thorough title examinations to verify the ownership history and legal status of the property you intend to purchase. We review relevant documents, including deeds, encumbrances, liens, and easements, to identify any potential title defects or irregularities that may affect your ownership rights",
+            "Our Experienced  lawyers conduct thorough title examinations to verify the ownership history and legal status of the property you intend to purchase. We review relevant documents, including deeds, encumbrances, liens, and easements, to identify any potential title defects or irregularities that may affect your ownership rights",
         },
         {
           header: "Resolving Title Issues",
@@ -84,8 +90,8 @@ export function practices() {
     },
     {
       id: 3,
-      photo: img2,
-      figure: photo2,
+      photo: img3,
+      figure: photo3,
       header:
         "FAMILY LAW AND DISPUTE RESOLUTION SERVICES FOR NON-RESIDENT INDIANS (NRIS)",
       text: [
@@ -124,8 +130,8 @@ export function practices() {
     },
     {
       id: 4,
-      photo: img2,
-      figure: photo8,
+      photo: img4,
+      figure: photo4,
       header:
         "SUCCESSION PLANNING AND ESTATE ADMINISTRATION FOR NON-RESIDENT INDIANS (NRIS)",
       text: [
@@ -163,10 +169,10 @@ export function practices() {
     {
       id: 5,
       photo: img5,
-      figure: photo9,
+      figure: photo5,
       header: "MERGERS AND ACQUISITION",
       text: [
-        "As a Non-Resident Indian, navigating the complexities of mergers and acquisitions (M&A) can be daunting. Our firm specializes in providing comprehensive legal assistance tailored to the unique needs of NRIs engaging in M&A transactions. Whether you're looking to expand your business, acquire new assets, or merge with another entity, our team of experienced lawyers is here to guide you through every step of the process.",
+        "Navigating the complexities of mergers and acquisitions (M&A) can be daunting. Our firm specializes in providing comprehensive legal assistance tailored to the engaging in M&A transactions. Whether you're looking to expand your business, acquire new assets, or merge with another entity, our team of experienced lawyers is here to guide you through every step of the process.",
       ],
 
       subHeader: "subHeader:",
@@ -200,11 +206,11 @@ export function practices() {
     },
     {
       id: 6,
-      photo: img4,
-      figure: photo2,
-      header: "ARBITRATION SERVICES FOR NON-RESIDENT INDIANS (NRIS)",
+      photo: img6,
+      figure: photo6,
+      header: "ARBITRATION SERVICES",
       text: [
-        "Arbitration is a preferred method of dispute resolution for Non-Resident Indians (NRIs) seeking efficient and impartial resolution to their legal conflicts. Our firm specializes in providing comprehensive arbitration services tailored to the unique needs of NRIs involved in cross-border disputes. Whether you're facing commercial disagreements, investment disputes, or family conflicts, our team of experienced lawyers is dedicated to delivering effective solutions through arbitration",
+        "Arbitration is a preferred method of dispute resolution for efficient and impartial resolution to their legal conflicts. Our firm specializes in providing comprehensive arbitration services tailored to the unique needs involved in cross-border disputes. Whether you're facing commercial disagreements, investment disputes, or family conflicts, our team of experienced lawyers is dedicated to delivering effective solutions through arbitration",
       ],
 
       subHeader: "OUR ARBITRATION SERVICES",
@@ -233,10 +239,9 @@ export function practices() {
     },
     {
       id: 7,
-      photo: img5,
-      figure: photo5,
-      header:
-        "CROSS-BORDER TRANSACTION SERVICES FOR NON-RESIDENT INDIANS (NRIS)",
+      photo: img7,
+      figure: photo7,
+      header: "CROSS-BORDER TRANSACTION SERVICES",
       text: [
         "Cross-border transactions present unique opportunities and challenges for Non-Resident Indians (NRIs) seeking to engage in international business activities.  Whether you're investing in foreign markets, acquiring overseas assets, or establishing global business ventures, our team of experienced lawyers is dedicated to facilitating smooth and successful transactions across borders",
       ],
@@ -272,12 +277,12 @@ export function practices() {
     },
     {
       id: 8,
-      photo: img3,
-      figure: photo3,
+      photo: img8,
+      figure: photo8,
       header:
         "INTELLECTUAL PROPERTY RIGHTS (IPR) SERVICES FOR NON-RESIDENT INDIANS (NRIS)",
       text: [
-        "Protecting intellectual property rights (IPR) is essential for innovaters and business men seeking to safeguard their innovative ideas, creative works, and business assets on a global scale. Our firm specializes in providing comprehensive legal assistance tailored to the unique needs of NRIs in protecting, managing, and enforcing their intellectual property rights",
+        "Protecting intellectual property rights (IPR) is essential for innovaters and business men seeking to safeguard their innovative ideas, creative works, and business assets on a global scale. Our firm specializes in providing comprehensive legal assistance tailored to the unique needs protecting, managing, and enforcing their intellectual property rights",
         "Whether you're an inventor, artist, entrepreneur, or corporate entity, our team of experienced lawyers is dedicated to ensuring that your intellectual property is safeguarded and maximized for commercial success",
       ],
 
@@ -296,7 +301,7 @@ export function practices() {
         {
           header: "Copyright Registration",
           passage:
-            "We help NRIs register copyrights for their original works of authorship, including literary, artistic, musical, and audiovisual creations, to establish ownership and prevent unauthorized use or reproduction",
+            "We help Authors to register copyrights for their original works of authorship, including literary, artistic, musical, and audiovisual creations, to establish ownership and prevent unauthorized use or reproduction",
         },
         {
           header: "Trade Secret Protection",
@@ -306,14 +311,14 @@ export function practices() {
         {
           header: "IP Licensing and Commercialization",
           passage:
-            "We assist NRIs in negotiating and drafting license agreements, distribution agreements, and other commercial contracts to monetize their intellectual property assets and maximize revenue streams",
+            "We assist in negotiating and drafting license agreements, distribution agreements, and other commercial contracts to monetize their intellectual property assets and maximize revenue streams",
         },
       ],
     },
     {
       id: 9,
-      photo: img3,
-      figure: photo7,
+      photo: img9,
+      figure: photo9,
       header: "Mines and Minerals",
       text: [
         "•	The firm have considerable expertise in mining laws both in India and abroad",

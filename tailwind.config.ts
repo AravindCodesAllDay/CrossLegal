@@ -1,4 +1,3 @@
-// tailwind.config.js
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -11,13 +10,19 @@ const config: Config = {
     extend: {
       keyframes: {
         slide: {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-100%)' },
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-150%)" },
+        },
+        slidefast: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-700%)" },
         },
       },
       animation: {
-        'slide-left': 'slide 60s linear infinite',
-        'slide-right': 'slide 60s linear infinite reverse',
+        "slide-left": "slide 50s linear infinite",
+        "slide-left-fast": "slidefast 50s linear infinite",
+        "slide-right": "slide 50s linear infinite reverse",
+        "slide-right-fast": "slidefast 50s linear infinite reverse",
       },
       colors: {
         primary: "#181a22",
