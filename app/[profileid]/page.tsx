@@ -28,7 +28,7 @@ export default function ProfilePage({
       <Header header={bio.name} title={"Profile"} photo={team} />
       <div className="flex flex-col gap-5 w-full md:w-4/5 mx-auto my-12">
         <div className="flex flex-col md:flex-row items-center gap-5 w-4/5 bg-secondary bg-opacity-15 p-3 mx-auto">
-          <Image src={bio.photo} alt={bio.name} />
+          <Image src={bio.photo} alt={bio.name} placeholder="blur" />
           <div className="flex flex-col gap-8 mx-auto">
             <div>
               <h2 className="font-bold text-2xl">{bio.name}</h2>

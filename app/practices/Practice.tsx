@@ -27,7 +27,12 @@ export default function Practice() {
                 </h3>
                 <p className="text-secondary line-clamp-2">{data.text}</p>
               </div>
-              <Image src={data.figure} alt="card" className="w-full" />
+              <Image
+                src={data.figure}
+                alt="card"
+                className="w-full"
+                placeholder="blur"
+              />
             </motion.div>
           </a>
         ))}

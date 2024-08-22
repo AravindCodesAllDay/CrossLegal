@@ -33,6 +33,7 @@ export default function BlogPractice({ params }: { params: { slug: string } }) {
         <Image
           src={practice.figure}
           alt={practice.header}
+          placeholder="blur"
           className="w-4/5 mx-auto"
         />
         {practice.subHeader && (

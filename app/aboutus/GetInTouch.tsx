@@ -16,11 +16,13 @@ export default function GetInTouch() {
           <Image
             src={getOne}
             alt="image1"
+            placeholder="blur"
             className="hover:scale-105 transition-all duration-150 ease-in-out hover:rounded-lg"
           />
           <Image
             src={getTwo}
             alt="image2"
+            placeholder="blur"
             className="hover:scale-105 transition-all duration-150 ease-in-out hover:rounded-lg"
           />
         </div>
@@ -28,11 +30,13 @@ export default function GetInTouch() {
           <Image
             src={getThree}
             alt="image3"
+            placeholder="blur"
             className="hover:scale-105 transition-all duration-150 ease-in-out hover:rounded-lg"
           />
           <Image
             src={getFour}
             alt="image4"
+            placeholder="blur"
             className="hover:scale-105 transition-all duration-150 ease-in-out hover:rounded-lg"
           />
         </div>

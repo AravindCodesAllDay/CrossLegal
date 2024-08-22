@@ -49,6 +49,7 @@ export default function AboutUs() {
           <Image
             src={lawyer}
             alt="Lawyer"
+            placeholder="blur"
             className="w-full rounded-tr-[20px] sm:rounded-tr-[40px] md:rounded-tr-[50px] rounded-bl-[20px] sm:rounded-bl-[40px] md:rounded-bl-[50px] ml-0"
           />
           <div className="absolute bottom-0 left-0 flex items-center justify-center">
@@ -61,7 +62,7 @@ export default function AboutUs() {
               </p>
             </div>
             <div className="absolute z-10 w-[18%] sm:w-[25%] md:w-[30%] h-[18%] sm:h-[25%] md:h-[30%] opacity-25 top-1/2 left-3/4 transform -translate-x-1/2 -translate-y-1/2">
-              <Image src={justice} alt="Justice Icon" />
+              <Image src={justice} alt="Justice Icon" placeholder="blur" />
             </div>
           </div>
         </div>
@@ -93,6 +94,7 @@ export default function AboutUs() {
               <Image
                 className="w-[30px] sm:w-[45px] md:w-[55px] h-[30px] sm:h-[45px] md:h-[55px]"
                 src={quote}
+                placeholder="blur"
                 alt="Left Quote"
               />
               <p className="leading-loose italic font-marcellus font-[500] text-sm sm:text-lg md:text-xl text-[#1e1e1e] ml-2">

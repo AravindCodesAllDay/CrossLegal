@@ -56,7 +56,12 @@ export default function WhatWeDo() {
             >
               <a href={`/practices/${data.id}`}>
                 <div className="flex justify-between w-full">
-                  <Image src={data.photo} alt="photo" className="w-1/4 h-20" />
+                  <Image
+                    src={data.photo}
+                    alt="photo"
+                    className="w-1/4 h-20"
+                    placeholder="blur"
+                  />
                   <div className="h-20 w-8 rounded-bl-full ml-auto opacity-25 group-hover:opacity-55 bg-gradient-to-l from-secondary"></div>
                 </div>
                 <div className="flex flex-col gap-3 p-3">
@@ -65,7 +70,12 @@ export default function WhatWeDo() {
                   </h3>
                   <p className="text-secondary line-clamp-2">{data.text}</p>
                 </div>
-                <Image src={data.figure} alt="card" className="w-full" />
+                <Image
+                  src={data.figure}
+                  alt="card"
+                  className="w-full"
+                  placeholder="blur"
+                />
               </a>
             </div>
           ))}

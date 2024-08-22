@@ -50,6 +50,7 @@ const Carousel = () => {
             <Image
               src={slide.image}
               alt={`Slide ${index + 1}`}
+              placeholder="blur"
               className="w-full h-full object-cover"
             />
             <div
