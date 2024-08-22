@@ -19,11 +19,8 @@ export default function OurLawyers() {
       />
       <div className="flex flex-wrap justify-center w-full gap-5">
         {profiles.slice(0, 5).map((bio, index) => (
-          <Link href={`/${bio.id}`} className="w-full max-w-96">
-            <div
-              key={index}
-              className="flex-shrink-0 w-full max-w-96 p-3 flex flex-col items-center gap-4 group transition-transform duration-500 ease-in-out transform"
-            >
+          <Link href={`/${bio.id}`} className="w-full max-w-96" key={index}>
+            <div className="flex-shrink-0 w-full max-w-96 p-3 flex flex-col items-center gap-4 group transition-transform duration-500 ease-in-out transform">
               <div className="w-11/12 h-1/2 rounded-b-full bg-gradient-to-b from-secondary opacity-40 -z-20 absolute top-0"></div>
 
               <div className="flex flex-col items-center">
