@@ -63,8 +63,7 @@ export default function Contact() {
           </div>
         </div>
         <div className="flex flex-col sm:flex-row bg-secondary text-white text-lg p-3 rounded items-center justify-center gap-3">
-          <p>Our Best Skilled Attorneys, Trust Score 4.6</p>
-          <StarRating rating={4.6} />
+          Get in Touch - Your Answers Await !
         </div>
       </div>
 
