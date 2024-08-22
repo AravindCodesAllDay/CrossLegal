@@ -70,12 +70,17 @@ export default function WhatWeDo() {
                   </h3>
                   <p className="text-secondary line-clamp-2">{data.text}</p>
                 </div>
-                <Image
-                  src={data.figure}
-                  alt="card"
-                  className="w-full"
-                  placeholder="blur"
-                />
+                <div className="relative">
+                  <Image
+                    src={data.figure}
+                    alt="card"
+                    className="w-full"
+                    placeholder="blur"
+                  />
+                  <p className="bg-secondary rounded-lg absolute m-2 p-1 text-white bottom-0 right-0 group-hover:animate-pulse">
+                    to learn more
+                  </p>
+                </div>
               </a>
             </div>
           ))}

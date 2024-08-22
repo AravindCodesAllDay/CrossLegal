@@ -65,6 +65,7 @@ export default function OurLawyers() {
                 <Image
                   src={bio.photo}
                   alt="profile"
+                  placeholder="blur"
                   className="size-44 sm:size-48 md:size-56 rounded-full border-2 border-dashed border-secondary p-2 group-hover:scale-95 transition-all ease-in-out duration-200"
                 />
               </a>
@@ -142,7 +143,12 @@ export default function OurLawyers() {
           ))}
         </div>
       </div>
-      <Image src={globe} alt="bg-globe" className="absolute -z-20 opacity-10" />
+      <Image
+        src={globe}
+        alt="bg-globe"
+        className="absolute -z-20 opacity-10"
+        placeholder="blur"
+      />
     </div>
   );
 }

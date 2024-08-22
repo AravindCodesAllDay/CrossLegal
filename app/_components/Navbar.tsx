@@ -84,7 +84,12 @@ export default function Navbar() {
         </li>
         <li className="py-2 md:py-4 border-secondary">
           <Link href="/">
-            <Image src={logo} alt="logo" className="h-12 w-36" />
+            <Image
+              src={logo}
+              alt="logo"
+              className="h-12 w-36"
+              placeholder="blur"
+            />
           </Link>
         </li>
         {navItems.map((item) => (

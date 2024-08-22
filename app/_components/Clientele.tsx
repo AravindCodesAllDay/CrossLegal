@@ -81,14 +81,14 @@ export default function Clientele() {
         <div className="flex items-center animate-slide-left space-x-4">
           {[...leftImages, ...leftImages].map((src, index) => (
             <div key={index} className="flex-shrink-0">
-              <Image src={src} alt={`Slide ${index + 1}`} />
+              <Image src={src} alt={`Slide ${index + 1}`} placeholder="blur" />
             </div>
           ))}
         </div>
         <div className="flex items-center animate-slide-right space-x-4 mt-4">
           {[...rightImages, ...rightImages].map((src, index) => (
             <div key={index} className="flex-shrink-0">
-              <Image src={src} alt={`Slide ${index + 15}`} />
+              <Image src={src} alt={`Slide ${index + 15}`} placeholder="blur" />
             </div>
           ))}
         </div>

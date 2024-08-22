@@ -62,7 +62,7 @@ export default function AboutUs() {
               </p>
             </div>
             <div className="absolute z-10 w-[18%] sm:w-[25%] md:w-[30%] h-[18%] sm:h-[25%] md:h-[30%] opacity-25 top-1/2 left-3/4 transform -translate-x-1/2 -translate-y-1/2">
-              <Image src={justice} alt="Justice Icon" placeholder="blur" />
+              <Image src={justice} alt="Justice Icon" />
             </div>
           </div>
         </div>

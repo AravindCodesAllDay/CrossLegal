@@ -70,6 +70,7 @@ export default function OurTestimonials() {
             <Image
               src={testimonial.photo}
               alt="profile"
+              placeholder="blur"
               className="size-24 sm:size-44 rounded-full border-dashed border p-1"
             />
 
