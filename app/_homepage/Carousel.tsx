@@ -63,13 +63,13 @@ const Carousel = () => {
               >
                 {slide.text}
               </h2>
-              <div className="text-white text-3xl md:text-7xl">
+              <div className="text-white text-3xl font-marcellus md:text-7xl">
                 <p className={`${animate ? "slide-in delay-500" : "hidden"}`}>
                   The Legal Advice is
                 </p>
                 <p className={`${animate ? "slide-in delay-500" : "hidden"}`}>
                   Just{" "}
-                  <span className="text-transparent font-bold font-outline-2 md:font-outline-4">
+                  <span className="text-transparent font-outline-2 md:font-outline-2">
                     ONE CALL
                   </span>
                 </p>

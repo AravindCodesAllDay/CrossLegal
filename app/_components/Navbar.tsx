@@ -94,7 +94,7 @@ export default function Navbar() {
           <li key={item.path} className="hidden md:block">
             <Link
               href={item.path}
-              className={`relative flex items-center py-2 px-4 transition-all duration-300 ${
+              className={`relative flex items-center font-semibold py-2 px-4 transition-all duration-300 ${
                 pathname === item.path
                   ? "text-secondary"
                   : "hover:text-secondary"
@@ -164,7 +164,7 @@ export default function Navbar() {
             >
               <a
                 href={item.path}
-                className={`relative flex items-center py-2 px-4 transition-all duration-300 ${
+                className={`relative flex items-center font-semibold py-2 px-4 transition-all duration-300 ${
                   pathname === item.path
                     ? "text-secondary"
                     : "hover:text-secondary"
