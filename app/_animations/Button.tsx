@@ -49,7 +49,7 @@ export default function Button({ left, right, linkTo }: ButtonProps) {
           {left === "" ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="icon icon-tabler icon-tabler-plus size-6 md:size-8 transform transition-transform duration-300 group-hover:rotate-90"
+              className="icon icon-tabler icon-tabler-plus size-6 md:size-7 transform transition-transform duration-300 group-hover:rotate-90"
               viewBox="0 0 24 24"
               strokeWidth="2"
               stroke="#ffffff"
@@ -65,7 +65,7 @@ export default function Button({ left, right, linkTo }: ButtonProps) {
             left
           )}
         </div>
-        <div className="bg-secondary transform transition-transform duration-500 group-hover:bg-[#00192c] rounded-br-lg p-2 text-base md:text-2xl text-white font-semibold">
+        <div className="bg-secondary transform transition-transform duration-500 group-hover:bg-[#00192c] rounded-br-lg p-2 text-base md:text-xl text-white font-semibold">
           {right}
         </div>
       </a>

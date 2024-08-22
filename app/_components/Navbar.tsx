@@ -2,9 +2,9 @@
 import { useEffect, useState, useCallback, useRef } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 
 import logo from "@/app/_assets/logo.png";
-import Link from "next/link";
 
 export default function Navbar() {
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -22,8 +22,6 @@ export default function Navbar() {
       } else if (scrollY < lastScrollY || scrollY <= 100) {
         setNavbarVisible(true);
       }
-
-      // Close the menu when scrolling
       if (menuOpen) {
         setMenuOpen(false);
       }
@@ -94,7 +92,7 @@ export default function Navbar() {
         </li>
         {navItems.map((item) => (
           <li key={item.path} className="hidden md:block">
-            <a
+            <Link
               href={item.path}
               className={`relative flex items-center py-2 px-4 transition-all duration-300 ${
                 pathname === item.path
@@ -106,7 +104,7 @@ export default function Navbar() {
                 <div className="absolute w-6 h-4 -translate-x-4 rounded-tl-lg rounded-br-lg bg-gradient-to-r from-secondary"></div>
               )}
               {item.name}
-            </a>
+            </Link>
           </li>
         ))}
         <li className="hidden md:block">

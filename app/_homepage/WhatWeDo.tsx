@@ -5,6 +5,7 @@ import Heading from "../_animations/Heading";
 
 import Button from "../_animations/Button";
 import { practices } from "@/lib/practices";
+import Link from "next/link";
 
 export default function WhatWeDo() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -54,15 +55,14 @@ export default function WhatWeDo() {
               className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-3 flex flex-col items-center gap-4 group transition-transform duration-500 ease-in-out transform"
               key={data.id}
             >
-              <a href={`/practices/${data.id}`}>
+              <Link href={`/practices/${data.id}`}>
                 <div className="flex justify-between w-full">
                   <Image
                     src={data.photo}
                     alt="photo"
-                    className="w-1/4 h-20"
-                    placeholder="blur"
+                    className="size-14 group-hover:animate-pulse"
                   />
-                  <div className="h-20 w-8 rounded-bl-full ml-auto opacity-25 group-hover:opacity-55 bg-gradient-to-l from-secondary"></div>
+                  <div className="h-20 w-8 rounded-bl-full ml-auto opacity-25 transition-all duration-150 ease-in-out group-hover:opacity-55 bg-gradient-to-l from-secondary"></div>
                 </div>
                 <div className="flex flex-col gap-3 p-3">
                   <h3 className="text-xl md:text-3xl line-clamp-1">
@@ -77,11 +77,11 @@ export default function WhatWeDo() {
                     className="w-full"
                     placeholder="blur"
                   />
-                  <p className="bg-secondary rounded-lg absolute m-2 p-1 text-white bottom-0 right-0 group-hover:animate-pulse">
+                  <p className="bg-secondary rounded-lg absolute m-2 p-1 text-xs text-white bottom-0 right-0 transition-all duration-150 ease-in-out group-hover:scale-110">
                     to learn more
                   </p>
                 </div>
-              </a>
+              </Link>
             </div>
           ))}
         </div>

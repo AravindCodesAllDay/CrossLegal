@@ -2,15 +2,13 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-import image1 from "@/app/_assets/carousel/1.jpeg";
-import image2 from "@/app/_assets/carousel/2.webp";
-import image3 from "@/app/_assets/carousel/3.jpg";
+import image1 from "@/app/_assets/carousel/1.jpg";
+import image2 from "@/app/_assets/carousel/2.jpg";
 
 const Carousel = () => {
   const slides = [
-    { image: image2, text: "WELCOME TO CROZZ LEGAL" },
     { image: image1, text: "LEAVE COURT TO US" },
-    { image: image3, text: "Right to Start Now" },
+    { image: image2, text: "WELCOME TO CROZZ LEGAL" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState<number>(0);

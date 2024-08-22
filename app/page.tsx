@@ -5,8 +5,8 @@ import Navbar from "@/app/_components/Navbar";
 import OurResources from "./_homepage/OurResources";
 import WhatWeDo from "./_homepage/WhatWeDo";
 import Carousel from "./_homepage/Carousel";
-import OurTestimonials from "./_components/OurTestimonials";
-import OurLawyers from "./_components/OurLawyers";
+import AboutFIrm from "./_homepage/AboutFirm";
+import OurLawyers from "./_homepage/OurLawyers";
 import Footer from "@/app/_components/Footer";
 import AboutUs from "./_homepage/AboutUs";
 import ToTop from "./_components/ToTop";
@@ -25,7 +25,7 @@ export default function Home() {
           </div>
           <OurResources />
           <WhatWeDo />
-          <OurTestimonials />
+          <AboutFIrm />
           <OurLawyers />
           <Clientele />
         </div>

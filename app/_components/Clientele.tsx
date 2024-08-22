@@ -73,10 +73,6 @@ export default function Clientele() {
             Clientele
             <div className="h-3 w-5 bg-gradient-to-l from-secondary rounded-tl-md rounded-br-md"></div>
           </h3>
-          <p className="text-lg md:text-2xl text-primary font-bold text-center">
-            SPAB & Co serves clients from diversified industries ranging from
-            Information Technology Industry to Gaming Industry to Insurance etc:
-          </p>
         </div>
         <div className="flex items-center animate-slide-left space-x-4">
           {[...leftImages, ...leftImages].map((src, index) => (
