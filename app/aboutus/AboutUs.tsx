@@ -55,10 +55,10 @@ export default function AboutUs() {
           <div className="absolute bottom-0 left-0 flex items-center justify-center">
             <div className="w-[220px] sm:w-[280px] md:w-[320px] bg-secondary p-5 sm:p-6 md:p-8 text-center text-zinc-50 rounded-bl-[20px] sm:rounded-bl-[40px] md:rounded-bl-[50px]">
               <p className="text-[24px] sm:text-[46px] md:text-[56px] font-marcellus">
-                <Counter start={1000} count={200} targetNumber={3200} />+
+                <Counter start={0} count={5} targetNumber={500} />+
               </p>
               <p className="text-[12px] sm:text-[13.5px] md:text-[14.5px] font-semibold">
-                LAWYERS ACROSS OUR GLOBAL PLATFORM
+                Clients Across our Global Platform
               </p>
             </div>
             <div className="absolute z-10 w-[18%] sm:w-[25%] md:w-[30%] h-[18%] sm:h-[25%] md:h-[30%] opacity-25 top-1/2 left-3/4 transform -translate-x-1/2 -translate-y-1/2">
