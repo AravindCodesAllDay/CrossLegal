@@ -15,7 +15,7 @@ export default function OurResources() {
           <p className="text-6xl text-secondary font-marcellus">
             <Counter start={0} count={5} targetNumber={500} />+
           </p>
-          <p className="text-center">Clients Across our Global Platform</p>
+          <p className="text-center">Clients Across the Globe</p>
         </div>
         <div className="flex flex-col items-center justify-center p-3 h-full">
           <p className="text-6xl text-secondary font-marcellus">
