@@ -44,12 +44,12 @@ const Heading: React.FC<HeadingProps> = ({ title, line1, line2 }) => {
           : "transform translate-y-32 opacity-0"
       }`}
     >
-      <h3 className="flex items-center gap-3 text-lg md:text-2xl text-secondary">
+      <h3 className="flex items-center gap-3 text-xl md:text-xl text-secondary">
         <div className="h-3 w-5 bg-gradient-to-r from-secondary rounded-tl-md rounded-br-md"></div>
         {title}
         <div className="h-3 w-5 bg-gradient-to-l from-secondary rounded-tl-md rounded-br-md"></div>
       </h3>
-      <p className="flex flex-col text-xl md:text-4xl font-bold text-primary">
+      <p className="flex flex-col text-xl md:text-4xl font-marcellus text-[#1e1e1e]">
         <span>{line1}</span>
         <span>{line2}</span>
       </p>

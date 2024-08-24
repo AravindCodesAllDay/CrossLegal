@@ -80,12 +80,12 @@ export default function Navbar() {
             />
           </svg>
         </li>
-        <li className="py-1 md:py-0 border-secondary">
+        <li className="py-1 md:py-7 border-secondary">
           <Link href="/">
             <Image
               src={logo}
               alt="logo"
-              className="h-16 w-44 md:h-20 md:w-52"
+              className="h-12 w-44 md:h-12 md:w-52"
               placeholder="blur"
             />
           </Link>
@@ -94,7 +94,7 @@ export default function Navbar() {
           <li key={item.path} className="hidden md:block">
             <Link
               href={item.path}
-              className={`relative flex items-center py-2 px-4 transition-all duration-300 ${
+              className={`relative flex items-center font-semibold py-2 px-4 transition-all duration-300 ${
                 pathname === item.path
                   ? "text-secondary"
                   : "hover:text-secondary"
@@ -164,7 +164,7 @@ export default function Navbar() {
             >
               <a
                 href={item.path}
-                className={`relative flex items-center py-2 px-4 transition-all duration-300 ${
+                className={`relative flex items-center font-semibold py-2 px-4 transition-all duration-300 ${
                   pathname === item.path
                     ? "text-secondary"
                     : "hover:text-secondary"

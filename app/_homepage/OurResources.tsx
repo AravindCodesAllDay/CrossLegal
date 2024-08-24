@@ -12,19 +12,19 @@ export default function OurResources() {
       />
       <div className="w-full max-w-screen-lg grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <div className="flex flex-col items-center justify-center p-3 h-full">
-          <p className="text-6xl text-secondary font-bold">
+          <p className="text-6xl text-secondary font-marcellus">
             <Counter start={0} count={5} targetNumber={500} />+
           </p>
-          <p className="text-center">Clients Across our Global Platform</p>
+          <p className="text-center">Clients Across the Globe</p>
         </div>
         <div className="flex flex-col items-center justify-center p-3 h-full">
-          <p className="text-6xl text-secondary font-bold">
+          <p className="text-6xl text-secondary font-marcellus">
             <Counter start={0} count={1} targetNumber={100} />%
           </p>
           <p className="text-center">Committed towards Work Ethics</p>
         </div>
         <div className="flex flex-col items-center justify-center p-3 h-full">
-          <p className="text-6xl text-secondary font-bold">
+          <p className="text-6xl text-secondary font-marcellus">
             <Counter start={0} count={1} targetNumber={100} />%
           </p>
           <p className="text-center">
@@ -32,7 +32,7 @@ export default function OurResources() {
           </p>
         </div>
         <div className="flex flex-col items-center justify-center p-3 h-full">
-          <p className="text-6xl text-secondary font-bold">
+          <p className="text-6xl text-secondary font-marcellus">
             <Counter start={0} count={1} targetNumber={10} />+
           </p>
           <p className="text-center">
