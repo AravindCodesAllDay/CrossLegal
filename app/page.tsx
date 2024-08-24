@@ -15,7 +15,7 @@ import Clientele from "./_components/Clientele";
 export default function Home() {
   return (
     <>
-      <div className="relative font-marcellus">
+      <div className="relative">
         <Navbar />
         <Carousel />
         <div className="flex flex-col gap-12 mb-8">

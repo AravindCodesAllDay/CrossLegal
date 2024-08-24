@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 import lookingFor from "@/public/assets/3.jpg";
+import Link from "next/link";
 
 export default function AboutFirm() {
   return (
@@ -44,7 +45,7 @@ export default function AboutFirm() {
                 a commitment to achieving results.
               </p>
             </div>
-            <a href="contactus" className="group">
+            <Link href="contactus" className="group">
               <button className="flex justify-center items-center mx-auto md:mx-0">
                 <div className="p-2 bg-[#00192c] transform transition-transform duration-500 group-hover:bg-secondary rounded-tl-lg">
                   <svg
@@ -66,7 +67,7 @@ export default function AboutFirm() {
                   Contact Us
                 </div>
               </button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

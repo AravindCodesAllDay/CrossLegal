@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import StarRating from "../_animations/StarRating";
 import { address, phoneNo, emailId } from "@/lib/contacts";
-import Counter from "../_animations/Counter";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -85,11 +84,8 @@ export default function Contact() {
             </p>
           </div>
         </div>
-        <div className="flex flex-col sm:flex-row bg-secondary text-white text-lg p-3 cursor-pointer rounded-lg group items-center justify-center gap-3">
-          <p className="group-hover:scale-125 transition-all duration-150 ease-in-out">
-            <Counter start={0} count={5} targetNumber={500} />+
-          </p>
-          <p>Clients Across the Globe</p>
+        <div className="flex flex-col sm:flex-row bg-secondary text-white text-lg p-3 rounded items-center justify-center gap-3">
+          <p>Get in Touch - Your Answers Await !</p>
         </div>
       </div>
 

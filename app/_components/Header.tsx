@@ -1,5 +1,6 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 
 interface HeaderProps {
   title: string;
@@ -23,7 +24,7 @@ export default function Header({ title, header, photo }: HeaderProps) {
           </h1>
           <div className="flex text-zinc-50 text-sm py-5 items-center list-none">
             <li className="px-2 hover:text-secondary">
-              <a href="/">Home</a>
+              <Link href="/">Home</Link>
             </li>
             <span className="mx-1 sm:mx-2">
               <div className="h-2 w-2 sm:h-3 sm:w-3 bg-[#65554d] rounded-tl-md rounded-br-md"></div>

@@ -89,7 +89,7 @@ export default function AboutUs() {
                 Ask a Lawyer
                 <div className="h-3 w-5 bg-gradient-to-l from-secondary rounded-tl-md rounded-br-md"></div>
               </h3>
-              <p className="flex flex-col text-primary text-xl md:text-2xl font-bold">
+              <p className="flex flex-col text-primary text-xl md:text-2xl font-marcellus">
                 <span>We Provide Solid Law</span>
                 <span>Practice</span>
               </p>

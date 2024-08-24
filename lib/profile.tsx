@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
 
-import image1 from "@/public/assets/team/1.jpg";
+import image1 from "@/public/assets/team/1.png";
 import image2 from "@/public/assets/team/2.png";
 import image3 from "@/public/assets/team/3.png";
 import image4 from "@/public/assets/team/4.png";

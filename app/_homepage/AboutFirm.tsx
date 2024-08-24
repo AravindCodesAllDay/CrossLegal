@@ -6,7 +6,7 @@ import Button from "../_animations/Button";
 export default function AboutFIrm() {
   return (
     <div
-      className={`bg-[url("/assets/2.jpg")]  bg-no-repeat bg-center bg-fixed bg-cover h-full w-full flex flex-col items-center justify-center gap-3 p-5`}
+      className={`bg-[url("/2.jpg")]  bg-no-repeat bg-center bg-fixed bg-cover h-full w-full flex flex-col items-center justify-center gap-3 p-5`}
     >
       <Heading
         title={"About Firm"}

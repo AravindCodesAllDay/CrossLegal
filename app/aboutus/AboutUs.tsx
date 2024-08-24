@@ -6,6 +6,7 @@ import lawyer from "@/public/assets/lawyerAbt.jpg";
 import justice from "@/public/assets/justice.svg";
 import quote from "@/public/assets/leftQuote.png";
 import Counter from "../_animations/Counter";
+import Link from "next/link";
 
 export default function AboutUs() {
   const [isInView, setIsInView] = useState(false);
@@ -58,7 +59,7 @@ export default function AboutUs() {
                 <Counter start={0} count={5} targetNumber={500} />+
               </p>
               <p className="text-[12px] sm:text-[13.5px] md:text-[14.5px] font-semibold">
-                Clients Across the Globe
+                Clients Across our Global Platform
               </p>
             </div>
             <div className="absolute z-10 w-[18%] sm:w-[25%] md:w-[30%] h-[18%] sm:h-[25%] md:h-[30%] opacity-25 top-1/2 left-3/4 transform -translate-x-1/2 -translate-y-1/2">
@@ -102,7 +103,7 @@ export default function AboutUs() {
                 legal services and helping people.
               </p>
             </div>
-            <a href="/practices" className="group">
+            <Link href="/practices" className="group">
               <button className="flex justify-center items-center mx-auto md:mx-0">
                 <div className="p-2 bg-[#00192c] transform transition-transform duration-500 group-hover:bg-secondary rounded-tl-lg">
                   <svg
@@ -124,7 +125,7 @@ export default function AboutUs() {
                   Learn More
                 </div>
               </button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

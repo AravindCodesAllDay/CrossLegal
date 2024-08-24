@@ -29,39 +29,37 @@ export default function BlogPractice({ params }: { params: { slug: string } }) {
 
   return (
     <>
-      <div className="font-marcellus">
-        <Navbar />
-        <Header photo={team} title={"Practices"} header={practice.header} />
-        <div className="flex flex-col gap-5 p-5 text-lg w-full md:w-4/5 mx-auto">
-          <h2 className="mx-auto text-lg md:text-3xl font-bold underline text-secondary">
-            {practice.header}
+      <Navbar />
+      <Header photo={team} title={"Practices"} header={practice.header} />
+      <div className="flex flex-col gap-5 p-5 text-lg w-full md:w-4/5 mx-auto">
+        <h2 className="mx-auto text-lg md:text-3xl font-bold underline text-secondary">
+          {practice.header}
+        </h2>
+        {practice.text.map((passage, index) => (
+          <p key={index}>{passage}</p>
+        ))}
+        <Image
+          src={practice.figure}
+          alt={practice.header}
+          placeholder="blur"
+          className="w-4/5 mx-auto"
+        />
+        {practice.subHeader && (
+          <h2 className="text-2xl font-bold underline decoration-secondary">
+            {practice.subHeader}
           </h2>
-          {practice.text.map((passage, index) => (
-            <p key={index}>{passage}</p>
+        )}
+        <ul className="flex flex-col gap-8">
+          {practice.subTopics.map((topic, index) => (
+            <li key={index}>
+              <h3 className="text-xl font-semibold">{topic?.header}</h3>
+              <p>{topic?.passage}</p>
+            </li>
           ))}
-          <Image
-            src={practice.figure}
-            alt={practice.header}
-            placeholder="blur"
-            className="w-4/5 mx-auto"
-          />
-          {practice.subHeader && (
-            <h2 className="text-2xl font-bold underline decoration-secondary">
-              {practice.subHeader}
-            </h2>
-          )}
-          <ul className="flex flex-col gap-8">
-            {practice.subTopics.map((topic, index) => (
-              <li key={index}>
-                <h3 className="text-xl font-semibold">{topic?.header}</h3>
-                <p>{topic?.passage}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <ToTop />
-        <Footer />
+        </ul>
       </div>
+      <ToTop />
+      <Footer />
     </>
   );
 }

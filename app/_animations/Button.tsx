@@ -1,7 +1,6 @@
 "use client";
 import React, { useRef, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
-import Link from "next/link";
 
 interface ButtonProps {
   left: string;
@@ -45,7 +44,7 @@ export default function Button({ left, right, linkTo }: ButtonProps) {
       animate={controls}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
-      <Link href={linkTo} className="flex justify-center items-center group">
+      <a href={linkTo} className="flex justify-center items-center group">
         <div className="p-2 bg-[#00192c] transform transition-transform duration-500 group-hover:bg-secondary rounded-tl-lg">
           {left === "" ? (
             <svg
@@ -69,7 +68,7 @@ export default function Button({ left, right, linkTo }: ButtonProps) {
         <div className="bg-secondary transform transition-transform duration-500 group-hover:bg-[#00192c] rounded-br-lg p-2 text-base md:text-xl text-white font-semibold">
           {right}
         </div>
-      </Link>
+      </a>
     </motion.button>
   );
 }

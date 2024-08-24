@@ -51,16 +51,16 @@ export default function OurLawyers() {
           {profile().map((bio, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-3 group transition-transform duration-500 ease-in-out transform"
+              className="flex-shrink-0 justify-center items-center w-full sm:w-1/2 lg:w-1/3 p-3 group transition-transform duration-500 ease-in-out transform"
             >
               <Link
                 href={`/${bio.id}`}
-                className="w-full max-w-96 flex flex-col items-center gap-4"
+                className="w-full max-w-96 h-full min-h-80 flex flex-col justify-center items-center gap-4"
               >
                 <div className="w-11/12 h-1/2 rounded-b-full bg-gradient-to-b from-secondary opacity-40 -z-20 absolute top-0"></div>
 
                 <div className="flex flex-col items-center">
-                  <h6 className="text-lg md:text-xl">{bio.name}</h6>
+                  <h6 className="text-lg text-center md:text-xl">{bio.name}</h6>
                   <p className="text-secondary text-sm md:text-base">
                     {bio.position}
                   </p>
@@ -69,7 +69,7 @@ export default function OurLawyers() {
                   src={bio.photo}
                   alt="profile"
                   placeholder="blur"
-                  className="size-40 sm:size-44 md:size-48 rounded-full border-2 border-dashed border-secondary p-2 group-hover:scale-95 transition-all ease-in-out duration-200"
+                  className="size-48 rounded-full border-2 border-dashed border-secondary p-2 group-hover:scale-95 transition-all ease-in-out duration-200"
                 />
                 <div className="w-11/12 h-1/2 rounded-t-full -z-20 bg-gradient-to-t from-secondary opacity-40 absolute bottom-0"></div>
               </Link>

@@ -4,6 +4,7 @@ import Image from "next/image";
 
 import image1 from "@/public/assets/carousel/1.jpg";
 import image2 from "@/public/assets/carousel/2.jpg";
+import Link from "next/link";
 
 const Carousel = () => {
   const slides = [
@@ -63,13 +64,13 @@ const Carousel = () => {
               >
                 {slide.text}
               </h2>
-              <div className="text-white text-3xl md:text-7xl">
+              <div className="text-white font-marcellus text-3xl md:text-7xl">
                 <p className={`${animate ? "slide-in delay-500" : "hidden"}`}>
                   The Legal Advice is
                 </p>
                 <p className={`${animate ? "slide-in delay-500" : "hidden"}`}>
                   Just{" "}
-                  <span className="text-transparent font-bold font-outline-2 md:font-outline-4">
+                  <span className="text-transparent font-outline-2 md:font-outline-2">
                     ONE CALL
                   </span>
                 </p>
@@ -91,7 +92,7 @@ const Carousel = () => {
                   </div>
                 </div>
               </div>
-              <a
+              <Link
                 href="contactus"
                 className={`${animate ? "slide-in delay-1100" : "hidden"}`}
               >
@@ -116,7 +117,7 @@ const Carousel = () => {
                     Learn More
                   </div>
                 </button>
-              </a>
+              </Link>
             </div>
           </div>
         ))}

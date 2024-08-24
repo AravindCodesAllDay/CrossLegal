@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
-import logo from "@/public/logo.png";
+import logo from "@/public/assets/logo.png";
 
 export default function Navbar() {
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -60,7 +60,7 @@ export default function Navbar() {
     <div
       className={`fixed z-30 w-screen transition-transform duration-300 bg-primary text-white ${
         navbarVisible ? "translate-y-0" : "-translate-y-full"
-      } ${scrolled ? "" : "md:bg-transparent md:text-white"}`}
+      }`}
     >
       <ul className="w-full flex justify-around items-center border-y border-secondary">
         <li className=" md:hidden">
@@ -80,12 +80,12 @@ export default function Navbar() {
             />
           </svg>
         </li>
-        <li className="py-1 md:py-0 border-secondary">
+        <li className="py-2 md:py-3 border-secondary">
           <Link href="/">
             <Image
               src={logo}
               alt="logo"
-              className="h-12 w-44 md:h-16 md:w-52 m-1"
+              className="h-12 w-44 md:h-16 md:w-52"
               placeholder="blur"
             />
           </Link>
@@ -113,7 +113,7 @@ export default function Navbar() {
               <div className="p-2 bg-white transform transition-transform duration-500 group-hover:bg-secondary rounded-tl-lg">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="icon icon-tabler icon-tabler-plus stroke-primary size-6 transform transition-transform duration-300 group-hover:rotate-90"
+                  className="icon icon-tabler icon-tabler-plus size-6 stroke-primary transform transition-transform duration-300 group-hover:rotate-90"
                   viewBox="0 0 24 24"
                   strokeWidth="2"
                   fill="none"
@@ -162,7 +162,7 @@ export default function Navbar() {
               key={item.path}
               className="border-b border-secondary w-full flex justify-center"
             >
-              <a
+              <Link
                 href={item.path}
                 className={`relative flex items-center py-2 px-4 transition-all duration-300 ${
                   pathname === item.path
@@ -174,7 +174,7 @@ export default function Navbar() {
                   <div className="absolute w-6 h-4 -translate-x-4 rounded-tl-lg rounded-br-lg bg-gradient-to-r from-secondary"></div>
                 )}
                 {item.name}
-              </a>
+              </Link>
             </li>
           ))}
           <li className="p-3 w-full flex justify-center">
@@ -183,7 +183,7 @@ export default function Navbar() {
                 <div className="p-2 bg-primary transform transition-transform duration-500 group-hover:bg-secondary rounded-tl-lg">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="icon icon-tabler icon-tabler-plus size-6 transform transition-transform duration-300 group-hover:rotate-90 stroke-white wiggle"
+                    className="icon icon-tabler icon-tabler-plus size-6 stroke-white transform transition-transform duration-300 group-hover:rotate-90"
                     viewBox="0 0 24 24"
                     strokeWidth="2"
                     fill="none"
