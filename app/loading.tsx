@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import loader from "@/app/_assets/pre-loader.gif";
+import loader from "@/public/assets/pre-loader.gif";
 
 const Loading: React.FC = () => {
   return (

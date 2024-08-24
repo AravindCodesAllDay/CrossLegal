@@ -2,9 +2,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
-import lawyer from "@/app/_assets/lawyerAbt.jpg";
-import justice from "@/app/_assets/justice.svg";
-import quote from "@/app/_assets/leftQuote.png";
+import lawyer from "@/public/assets/lawyerAbt.jpg";
+import justice from "@/public/assets/justice.svg";
+import quote from "@/public/assets/leftQuote.png";
 import Counter from "../_animations/Counter";
 
 export default function AboutUs() {
@@ -58,7 +58,7 @@ export default function AboutUs() {
                 <Counter start={0} count={5} targetNumber={500} />+
               </p>
               <p className="text-[12px] sm:text-[13.5px] md:text-[14.5px] font-semibold">
-                Clients Across the Globe
+                Clients Across our Global Platform
               </p>
             </div>
             <div className="absolute z-10 w-[18%] sm:w-[25%] md:w-[30%] h-[18%] sm:h-[25%] md:h-[30%] opacity-25 top-1/2 left-3/4 transform -translate-x-1/2 -translate-y-1/2">

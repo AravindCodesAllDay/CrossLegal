@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { redirect } from "next/navigation";
 import { practices } from "@/lib/practices";
@@ -7,8 +6,17 @@ import Image from "next/image";
 import Navbar from "@/app/_components/Navbar";
 import Footer from "@/app/_components/Footer";
 import Header from "@/app/_components/Header";
-import team from "@/app/_assets/header/1.jpg";
+import team from "@/public/assets/header/1.jpg";
 import ToTop from "@/app/_components/ToTop";
+
+// Generate static paths for all practice slugs
+export async function generateStaticParams() {
+  const allPractices = practices();
+
+  return allPractices.map((p) => ({
+    slug: p.id.toString(),
+  }));
+}
 
 export default function BlogPractice({ params }: { params: { slug: string } }) {
   const { slug } = params;

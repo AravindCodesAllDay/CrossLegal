@@ -1,24 +1,24 @@
 import { StaticImageData } from "next/image";
 
-import img1 from "@/app/_assets/whatWeDo/1.svg";
-import img2 from "@/app/_assets/whatWeDo/2.svg";
-import img3 from "@/app/_assets/whatWeDo/3.svg";
-import img4 from "@/app/_assets/whatWeDo/4.svg";
-import img5 from "@/app/_assets/whatWeDo/5.svg";
-import img6 from "@/app/_assets/whatWeDo/6.svg";
-import img7 from "@/app/_assets/whatWeDo/7.svg";
-import img8 from "@/app/_assets/whatWeDo/8.svg";
-import img9 from "@/app/_assets/whatWeDo/9.svg";
+import img1 from "@/public/assets/whatWeDo/1.svg";
+import img2 from "@/public/assets/whatWeDo/2.svg";
+import img3 from "@/public/assets/whatWeDo/3.svg";
+import img4 from "@/public/assets/whatWeDo/4.svg";
+import img5 from "@/public/assets/whatWeDo/5.svg";
+import img6 from "@/public/assets/whatWeDo/6.svg";
+import img7 from "@/public/assets/whatWeDo/7.svg";
+import img8 from "@/public/assets/whatWeDo/8.svg";
+import img9 from "@/public/assets/whatWeDo/9.svg";
 
-import photo1 from "@/app/_assets/whatWeDo/1.jpg";
-import photo2 from "@/app/_assets/whatWeDo/2.jpg";
-import photo3 from "@/app/_assets/whatWeDo/3.jpg";
-import photo4 from "@/app/_assets/whatWeDo/4.jpg";
-import photo5 from "@/app/_assets/whatWeDo/5.jpg";
-import photo6 from "@/app/_assets/whatWeDo/6.jpg";
-import photo7 from "@/app/_assets/whatWeDo/7.jpg";
-import photo8 from "@/app/_assets/whatWeDo/8.jpg";
-import photo9 from "@/app/_assets/whatWeDo/9.jpg";
+import photo1 from "@/public/assets/whatWeDo/1.jpg";
+import photo2 from "@/public/assets/whatWeDo/2.jpg";
+import photo3 from "@/public/assets/whatWeDo/3.jpg";
+import photo4 from "@/public/assets/whatWeDo/4.jpg";
+import photo5 from "@/public/assets/whatWeDo/5.jpg";
+import photo6 from "@/public/assets/whatWeDo/6.jpg";
+import photo7 from "@/public/assets/whatWeDo/7.jpg";
+import photo8 from "@/public/assets/whatWeDo/8.jpg";
+import photo9 from "@/public/assets/whatWeDo/9.jpg";
 
 interface practice {
   id: number;

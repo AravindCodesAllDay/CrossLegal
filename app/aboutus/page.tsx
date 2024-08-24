@@ -8,7 +8,7 @@ import AboutUs from "./AboutUs";
 import OurLawyers from "./OurLawyers";
 import ToTop from "../_components/ToTop";
 import Clientele from "../_components/Clientele";
-import team from "@/app/_assets/header/4.jpg";
+import team from "@/public/assets/header/4.jpg";
 
 export default function AboutPage() {
   return (

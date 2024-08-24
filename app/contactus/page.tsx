@@ -7,7 +7,7 @@ import Maps from "./Maps";
 import Contact from "./Contact";
 import ToTop from "../_components/ToTop";
 import Header from "../_components/Header";
-import team from "@/app/_assets/header/3.jpg";
+import team from "@/public/assets/header/3.jpg";
 
 export default function ContactPage() {
   return (

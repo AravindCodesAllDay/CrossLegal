@@ -2,8 +2,8 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-import image1 from "@/app/_assets/carousel/1.jpg";
-import image2 from "@/app/_assets/carousel/2.jpg";
+import image1 from "@/public/assets/carousel/1.jpg";
+import image2 from "@/public/assets/carousel/2.jpg";
 
 const Carousel = () => {
   const slides = [
@@ -63,13 +63,13 @@ const Carousel = () => {
               >
                 {slide.text}
               </h2>
-              <div className="text-white text-3xl font-marcellus md:text-7xl">
+              <div className="text-white text-3xl md:text-7xl">
                 <p className={`${animate ? "slide-in delay-500" : "hidden"}`}>
                   The Legal Advice is
                 </p>
                 <p className={`${animate ? "slide-in delay-500" : "hidden"}`}>
                   Just{" "}
-                  <span className="text-transparent font-outline-2 md:font-outline-2">
+                  <span className="text-transparent font-bold font-outline-2 md:font-outline-4">
                     ONE CALL
                   </span>
                 </p>

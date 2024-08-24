@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-import lookingFor from "@/app/_assets/3.jpg";
+import lookingFor from "@/public/assets/3.jpg";
 
 export default function AboutFirm() {
   return (

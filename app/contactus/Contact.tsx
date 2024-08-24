@@ -28,12 +28,12 @@ export default function Contact() {
   return (
     <div className="flex flex-col md:flex-row justify-between p-5 gap-5">
       <div className="flex flex-col gap-5 p-5 md:w-1/2 rounded-lg">
-        <h3 className="flex items-center gap-3 text-xl text-secondary">
+        <h3 className="flex items-center gap-3 text-2xl text-secondary">
           <div className="h-3 w-5 bg-gradient-to-r from-secondary rounded-tl-md rounded-br-md"></div>
           Get In Touch
           <div className="h-3 w-5 bg-gradient-to-l from-secondary rounded-tl-md rounded-br-md"></div>
         </h3>
-        <p className="flex font-marcellus text-4xl">Contact Information</p>
+        <p className="flex text-4xl">Contact Information</p>
         <div className="flex flex-col sm:flex-row gap-5 justify-around w-full">
           <div className="flex flex-col items-center gap-5 group w-full sm:w-1/2 border p-4 cursor-pointer rounded-tl-3xl rounded-br-3xl">
             <svg
@@ -85,12 +85,13 @@ export default function Contact() {
           </div>
         </div>
         <div className="flex flex-col sm:flex-row bg-secondary text-white text-lg p-3 rounded items-center justify-center gap-3">
-          Get in Touch - Your Answers Await !
+          <p>Our Best Skilled Attorneys, Trust Score 4.6</p>
+          <StarRating rating={4.6} />
         </div>
       </div>
 
       <div className="flex flex-col gap-5 md:w-1/2 p-5 bg-white rounded-lg shadow-md">
-        <h3 className="flex items-center gap-3 text-xl text-secondary">
+        <h3 className="flex items-center gap-3 text-2xl text-secondary">
           <div className="h-3 w-5 bg-gradient-to-r from-secondary rounded-tl-md rounded-br-md"></div>
           Have Any Questions?
           <div className="h-3 w-5 bg-gradient-to-l from-secondary rounded-tl-md rounded-br-md"></div>

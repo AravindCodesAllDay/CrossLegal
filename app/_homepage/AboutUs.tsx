@@ -2,11 +2,11 @@
 import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
 
-import lawfirm from "@/app/_assets/6.jpg";
-import team from "@/app/_assets/8.jpg";
 import Heading from "../_animations/Heading";
 import { phoneNo } from "@/lib/contacts";
 import Button from "../_animations/Button";
+import lawfirm from "@/public/assets/6.jpg";
+import team from "@/public/assets/8.jpg";
 
 export default function AboutUs() {
   const [isInView, setIsInView] = useState(false);
@@ -83,12 +83,12 @@ export default function AboutUs() {
             }`}
           >
             <div>
-              <h3 className="flex items-center gap-3 text-base md:text-xl text-secondary">
+              <h3 className="flex items-center gap-3 text-lg md:text-2xl text-secondary">
                 <div className="h-3 w-5 bg-gradient-to-r from-secondary rounded-tl-md rounded-br-md"></div>
                 Ask a Lawyer
                 <div className="h-3 w-5 bg-gradient-to-l from-secondary rounded-tl-md rounded-br-md"></div>
               </h3>
-              <p className="flex flex-col text-primary text-xl text-center md:text-2xl font-marcellus">
+              <p className="flex flex-col text-primary text-xl md:text-2xl font-bold">
                 <span>We Provide Solid Law</span>
                 <span>Practice</span>
               </p>

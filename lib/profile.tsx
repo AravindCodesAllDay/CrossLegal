@@ -1,10 +1,10 @@
 import { StaticImageData } from "next/image";
 
-import image1 from "@/app/_assets/team/one.jpg";
-import image2 from "@/app/_assets/team/2.png";
-import image3 from "@/app/_assets/team/3.png";
-import image4 from "@/app/_assets/team/4.png";
-import image5 from "@/app/_assets/team/5.png";
+import image1 from "@/public/assets/team/1.png";
+import image2 from "@/public/assets/team/2.png";
+import image3 from "@/public/assets/team/3.png";
+import image4 from "@/public/assets/team/4.png";
+import image5 from "@/public/assets/team/5.png";
 
 interface template {
   id: number;

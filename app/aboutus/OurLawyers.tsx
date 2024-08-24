@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import { profile } from "@/lib/profile";
 import Heading from "../_animations/Heading";
-import globe from "@/app/_assets/map.png";
+import globe from "@/public/assets/map.png";
 
 export default function OurLawyers() {
   const profiles = profile();

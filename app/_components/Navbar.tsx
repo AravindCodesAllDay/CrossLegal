@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
-import logo from "@/app/_assets/logo.png";
+import logo from "@/public/assets/logo.png";
 
 export default function Navbar() {
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -80,12 +80,12 @@ export default function Navbar() {
             />
           </svg>
         </li>
-        <li className="py-1 md:py-7 border-secondary">
+        <li className="py-1 md:py-0 border-secondary">
           <Link href="/">
             <Image
               src={logo}
               alt="logo"
-              className="h-12 w-44 md:h-12 md:w-52"
+              className="h-16 w-44 md:h-20 md:w-52"
               placeholder="blur"
             />
           </Link>
@@ -94,7 +94,7 @@ export default function Navbar() {
           <li key={item.path} className="hidden md:block">
             <Link
               href={item.path}
-              className={`relative flex items-center font-semibold py-2 px-4 transition-all duration-300 ${
+              className={`relative flex items-center py-2 px-4 transition-all duration-300 ${
                 pathname === item.path
                   ? "text-secondary"
                   : "hover:text-secondary"
@@ -108,7 +108,7 @@ export default function Navbar() {
           </li>
         ))}
         <li className="hidden md:block">
-          <a href="/contactus">
+          <Link href="/contactus">
             <button className="flex justify-center items-center group">
               <div className="p-2 bg-white transform transition-transform duration-500 group-hover:bg-secondary rounded-tl-lg">
                 <svg
@@ -129,7 +129,7 @@ export default function Navbar() {
                 Contact Us
               </div>
             </button>
-          </a>
+          </Link>
         </li>
         <li className="md:hidden">
           <a href="/contactus">
@@ -164,7 +164,7 @@ export default function Navbar() {
             >
               <a
                 href={item.path}
-                className={`relative flex items-center font-semibold py-2 px-4 transition-all duration-300 ${
+                className={`relative flex items-center py-2 px-4 transition-all duration-300 ${
                   pathname === item.path
                     ? "text-secondary"
                     : "hover:text-secondary"
