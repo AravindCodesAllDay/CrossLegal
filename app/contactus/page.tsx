@@ -12,14 +12,16 @@ import team from "@/public/assets/header/3.jpg";
 export default function ContactPage() {
   return (
     <>
-      <Navbar />
-      <div className="flex flex-col gap-5">
-        <Header header={"Contact"} title={"Contact"} photo={team} />
-        <Contact />
-        <Maps />
+      <div className="font-marcellus">
+        <Navbar />
+        <div className="flex flex-col gap-5">
+          <Header header={"Contact"} title={"Contact"} photo={team} />
+          <Contact />
+          <Maps />
+        </div>
+        <ToTop />
+        <Footer />
       </div>
-      <ToTop />
-      <Footer />
     </>
   );
 }

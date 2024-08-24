@@ -13,16 +13,18 @@ import team from "@/public/assets/header/4.jpg";
 export default function AboutPage() {
   return (
     <>
-      <Navbar />
-      <Header header={"Aboutus"} title={"About Us"} photo={team} />
-      <div className="flex flex-col gap-12 my-8">
-        <AboutUs />
-        <AboutFirm />
-        <OurLawyers />
-        <Clientele />
+      <div className="font-marcellus">
+        <Navbar />
+        <Header header={"Aboutus"} title={"About Us"} photo={team} />
+        <div className="flex flex-col gap-12 my-8">
+          <AboutUs />
+          <AboutFirm />
+          <OurLawyers />
+          <Clientele />
+        </div>
+        <ToTop />
+        <Footer />
       </div>
-      <ToTop />
-      <Footer />
     </>
   );
 }

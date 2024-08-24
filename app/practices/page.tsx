@@ -9,11 +9,13 @@ import ToTop from "../_components/ToTop";
 export default function PracticePage() {
   return (
     <>
-      <Navbar />
-      <Header title={"Practices"} photo={team} header={"Practices"} />
-      <Practice />
-      <ToTop />
-      <Footer />
+      <div className="font-marcellus">
+        <Navbar />
+        <Header title={"Practices"} photo={team} header={"Practices"} />
+        <Practice />
+        <ToTop />
+        <Footer />
+      </div>
     </>
   );
 }

@@ -58,7 +58,7 @@ export default function AboutUs() {
                 <Counter start={0} count={5} targetNumber={500} />+
               </p>
               <p className="text-[12px] sm:text-[13.5px] md:text-[14.5px] font-semibold">
-                Clients Across our Global Platform
+                Clients Across the Globe
               </p>
             </div>
             <div className="absolute z-10 w-[18%] sm:w-[25%] md:w-[30%] h-[18%] sm:h-[25%] md:h-[30%] opacity-25 top-1/2 left-3/4 transform -translate-x-1/2 -translate-y-1/2">

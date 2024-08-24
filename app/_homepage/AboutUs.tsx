@@ -7,6 +7,7 @@ import { phoneNo } from "@/lib/contacts";
 import Button from "../_animations/Button";
 import lawfirm from "@/public/assets/6.jpg";
 import team from "@/public/assets/8.jpg";
+import Link from "next/link";
 
 export default function AboutUs() {
   const [isInView, setIsInView] = useState(false);
@@ -92,7 +93,7 @@ export default function AboutUs() {
                 <span>We Provide Solid Law</span>
                 <span>Practice</span>
               </p>
-              <a href="contactus">
+              <Link href="contactus">
                 <button className="flex justify-center items-center group text-sm md:text-base">
                   <div className="p-3 bg-[#00192c] text-white transform transition-transform duration-500 group-hover:bg-secondary rounded-tl-lg">
                     Call Us
@@ -101,7 +102,7 @@ export default function AboutUs() {
                     +(91) {phoneNo()}
                   </div>
                 </button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
