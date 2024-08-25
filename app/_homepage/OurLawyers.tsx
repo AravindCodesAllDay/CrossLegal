@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 
 import { profile } from "@/lib/profile";
@@ -10,9 +10,39 @@ import globe from "@/public/assets/map.png";
 export default function OurLawyers() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [profilesPerSlide, setProfilesPerSlide] = useState(1);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const startXRef = useRef<number | null>(null);
 
-  const handleDotClick = (index: number) => {
-    setCurrentIndex(index);
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === Math.ceil(profile().length / profilesPerSlide) - 1
+        ? 0
+        : prevIndex + 1
+    );
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0
+        ? Math.ceil(profile().length / profilesPerSlide) - 1
+        : prevIndex - 1
+    );
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    startXRef.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (startXRef.current !== null) {
+      const endX = e.changedTouches[0].clientX;
+      if (startXRef.current - endX > 50) {
+        handleNext();
+      } else if (endX - startXRef.current > 50) {
+        handlePrev();
+      }
+      startXRef.current = null;
+    }
   };
 
   useEffect(() => {
@@ -34,16 +64,19 @@ export default function OurLawyers() {
     };
   }, []);
 
-  const totalSlides = Math.ceil(profile().length / profilesPerSlide);
-
   return (
-    <div className="flex flex-col gap-8 justify-center items-center p-4">
+    <div className="flex flex-col gap-8 justify-center items-center p-4 relative">
       <Heading
         title={"Our Lawyers"}
         line1={"A Passion For Justice, Our"}
         line2={"Practice Areas"}
       />
-      <div className="relative w-full md:w-4/5 overflow-hidden">
+      <div
+        className="relative w-full md:w-4/5 overflow-hidden"
+        ref={containerRef}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -76,19 +109,18 @@ export default function OurLawyers() {
             </div>
           ))}
         </div>
-        <div className="flex justify-center gap-2 mt-4">
-          {Array.from({ length: totalSlides }, (_, index) => (
-            <div
-              key={index}
-              className={`w-4 h-3 rounded-tl-md rounded-br-md cursor-pointer transition-all duration-300 ${
-                currentIndex === index
-                  ? "bg-secondary transform scale-125"
-                  : "bg-gray-300"
-              }`}
-              onClick={() => handleDotClick(index)}
-            ></div>
-          ))}
-        </div>
+        <button
+          onClick={handlePrev}
+          className="absolute top-1/2 transform h-1/3 w-10 -translate-y-1/2 left-0 bg-secondary text-white p-2 rounded-lg shadow-lg bg-opacity-40 hover:bg-opacity-75 transition-all"
+        >
+          &lt;
+        </button>
+        <button
+          onClick={handleNext}
+          className="absolute top-1/2 transform h-1/3 w-10 -translate-y-1/2 right-0 bg-secondary text-white p-2 rounded-lg shadow-lg bg-opacity-40 hover:bg-opacity-75 transition-all"
+        >
+          &gt;
+        </button>
       </div>
       <Image
         src={globe}

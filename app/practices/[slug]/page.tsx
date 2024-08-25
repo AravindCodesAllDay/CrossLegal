@@ -9,7 +9,6 @@ import Header from "@/app/_components/Header";
 import team from "@/public/assets/header/1.jpg";
 import ToTop from "@/app/_components/ToTop";
 
-// Generate static paths for all practice slugs
 export async function generateStaticParams() {
   const allPractices = practices();
 
