@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import StarRating from "../_animations/StarRating";
 import { address, phoneNo, emailId } from "@/lib/contacts";
 
 export default function Contact() {
