@@ -1,5 +1,7 @@
 import { StaticImageData } from "next/image";
 
+import { phoneNo } from "./contacts";
+
 import image1 from "@/public/assets/team/1.png";
 import image2 from "@/public/assets/team/2.png";
 import image3 from "@/public/assets/team/3.png";
@@ -73,7 +75,7 @@ export function profile() {
       photo: image2,
       name: "SHOBHAN M PADMANABHAN",
       position: "PARTNER",
-      mobile: 9003232007,
+      mobile: phoneNo(),
       mail: "connect@crozzlegal.com",
       content: [],
       qualification: [
@@ -99,7 +101,7 @@ export function profile() {
       photo: image3,
       name: "MALAR SIVAKUMAR",
       position: "PARTNER(IPR)",
-      mobile: 9003232007,
+      mobile: phoneNo(),
       mail: "connect@crozzlegal.com",
       content: [],
       education: [
@@ -117,7 +119,7 @@ export function profile() {
       photo: image4,
       name: "TANYA JECINTHA M",
       position: "Associate",
-      mobile: 9003232007,
+      mobile: phoneNo(),
       mail: "connect@crozzlegal.com",
       content: [
         "Specializing in a range of legal areas including civil, criminal, Arbitration, labour matters and land acquisition matters.  Represented clients in civil and criminal cases before the High Court. Drafted and filed petitions, affidavits, and other legal documents.  Conducted legal research and analysis to support case strategies.   Assisted senior advocates in preparation for hearings and trials.  Developed a solid understanding of procedural and substantive law through hands-on experience. Expertise in Legal Research and Case Analysis. Proficient in Drafting and Filing Legal Documents.",
@@ -132,7 +134,7 @@ export function profile() {
       photo: image5,
       name: "BHAVANI DEVI AK",
       position: "Associate",
-      mobile: 9003232007,
+      mobile: phoneNo(),
       mail: "connect@crozzlegal.com",
       content: [
         "A highly skilled and passionate advocate experience in civil law, criminal law, family law, consumer, DRT. Known for strong advocacy skills, a deep commitment to justice, and a track record of successful case outcomes. Adept at providing legal representation, offering strategic counsel, and advocating for clients’ rights in complex legal matters. Draft and file a wide range of legal documents, such as petitions, affidavits, and case briefs. Conduct detailed legal research and case analysis to support case strategies. Provide expert advice and consultation to clients, ensuring their interests are effectively represented. Participate in courtroom proceedings, including hearings, trials, and negotiations, demonstrating strong advocacy skills.",
