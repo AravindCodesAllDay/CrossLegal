@@ -7,5 +7,5 @@ export function address() {
 }
 
 export function emailId() {
-  return "connect@crozzlegal.com";
+  return "connect@croszlegal.com";
 }

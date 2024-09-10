@@ -1,5 +1,5 @@
 {
-  "name": "cross-legal",
+  "name": "crosz-legal",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "cross-legal": "file:",
+    "crosz-legal": "file:",
     "framer-motion": "^11.3.29",
     "next": "14.2.5",
     "react": "^18",

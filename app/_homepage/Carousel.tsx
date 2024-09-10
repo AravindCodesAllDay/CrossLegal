@@ -9,7 +9,7 @@ import Link from "next/link";
 const Carousel = () => {
   const slides = [
     { image: image1, text: "LEAVE COURT TO US" },
-    { image: image2, text: "WELCOME TO CROZZ LEGAL" },
+    { image: image2, text: "WELCOME TO crosz LEGAL" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState<number>(0);

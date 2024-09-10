@@ -38,7 +38,7 @@ export function practices() {
       figure: photo1,
       header: "Land Acquistion",
       text: [
-        "Acquiring land in India can be a complex and challenging process particularly for NRI's. At Crozz Legal, our team of experienced lawyers specializes in providing comprehensive legal assistance and guidance for land acquisition projects across India.",
+        "Acquiring land in India can be a complex and challenging process particularly for NRI's. At crosz Legal, our team of experienced lawyers specializes in providing comprehensive legal assistance and guidance for land acquisition projects across India.",
         "With a deep understanding of Indian land acquisition laws, regulations, and procedures, our Experienced  lawyers are well-equipped to navigate the intricacies of the land acquisition process on behalf of our clients. Whether you're purchasing agricultural land, residential plots, commercial properties, or industrial sites, we have the knowledge and expertise to help you achieve your objectives efficiently and effectively.",
       ],
       subHeader: "",
@@ -51,7 +51,7 @@ export function practices() {
         {
           header: "Mitigating Risks, Maximizing Opportunities",
           passage:
-            "At Crozz Legal, we understand the importance of mitigating risks and maximizing opportunities in land acquisition projects. Whether you're an individual investor, a corporate entity, or a developer, we leverage our legal expertise and industry knowledge to help you make informed decisions and achieve your goals while minimizing potential liabilities.",
+            "At crosz Legal, we understand the importance of mitigating risks and maximizing opportunities in land acquisition projects. Whether you're an individual investor, a corporate entity, or a developer, we leverage our legal expertise and industry knowledge to help you make informed decisions and achieve your goals while minimizing potential liabilities.",
         },
         {
           header: "Trusted Advisors, Reliable Partners",
@@ -66,7 +66,7 @@ export function practices() {
       figure: photo2,
       header: "TITLE CLEARANCE",
       text: [
-        "Acquiring property in India as a Non-Resident Indian (NRI) can be a rewarding investment opportunity. However, ensuring clear and marketable title is essential to protect your interests and avoid potential legal complications. At Crozz Legal, our team of experienced lawyers specializes in providing comprehensive title clearance services to help you navigate the complexities of property ownership in India with confidence.",
+        "Acquiring property in India as a Non-Resident Indian (NRI) can be a rewarding investment opportunity. However, ensuring clear and marketable title is essential to protect your interests and avoid potential legal complications. At crosz Legal, our team of experienced lawyers specializes in providing comprehensive title clearance services to help you navigate the complexities of property ownership in India with confidence.",
       ],
 
       subHeader: "",

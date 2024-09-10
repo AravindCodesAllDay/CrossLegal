@@ -28,7 +28,7 @@ export default function OurResources() {
             <Counter start={0} count={1} targetNumber={100} />%
           </p>
           <p className="text-center">
-            Crozz Legal Layers Participate in Pro Bono work
+            crosz Legal Layers Participate in Pro Bono work
           </p>
         </div>
         <div className="flex flex-col items-center justify-center p-3 h-full">

@@ -83,7 +83,7 @@ export default function AboutUs() {
           </div>
           <p className="text-[14px] sm:text-[15px] md:text-[16px] py-4 sm:py-5 md:py-6 leading-loose text-gray-500 text-center md:text-left">
             Formerly known as SPAB & Co, Advocates & Legal Consultants, a
-            leading Law Firm for Resident Crozz legal two decades, Crozz legal
+            leading Law Firm for Resident crosz legal two decades, crosz legal
             strives for a unique legal service. We understand the unique legal
             needs of every individual and Non-Resident Indians (NRIs) across the
             globe. Our team of skilled lawyers specializes in providing
