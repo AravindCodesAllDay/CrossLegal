@@ -24,7 +24,7 @@ export default function Footer() {
       </div>
       <div className="flex w-full justify-center bg-primary text-xs md:text-base text-white p-4">
         <p>
-          ©Copyright 2024. All rights reserved-CrossLegal. Designed by TACSS
+          ©Copyright 2024. All rights reserved-CroszLegal. Designed by TACSS
         </p>
       </div>
     </>
