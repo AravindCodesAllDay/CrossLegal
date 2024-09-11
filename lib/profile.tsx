@@ -74,7 +74,7 @@ export function profile() {
       name: "SHOBHAN M PADMANABHAN",
       position: "PARTNER",
       mobile: phoneNo(),
-      mail: "connect@croszlegal.com",
+      mail: "shobhan@croszlegal.com",
       content: [],
       qualification: [
         "Admitted to the Indian bar in 2001. ",
@@ -100,7 +100,7 @@ export function profile() {
       name: "MALAR SIVAKUMAR",
       position: "PARTNER(IPR)",
       mobile: phoneNo(),
-      mail: "connect@croszlegal.com",
+      mail: "malar@croszlegal.com",
       content: [],
       education: [
         "LL.M., School of Legal Studies, Cochin University of Science and Technology, Cochin (Intellectual property Rights and Environmental law), 2004",
@@ -118,7 +118,7 @@ export function profile() {
       name: "TANYA JECINTHA M",
       position: "Associate",
       mobile: phoneNo(),
-      mail: "connect@croszlegal.com",
+      mail: "tanya@croszlegal.com",
       content: [
         "Specializing in a range of legal areas including civil, criminal, Arbitration, labour matters and land acquisition matters.  Represented clients in civil and criminal cases before the High Court. Drafted and filed petitions, affidavits, and other legal documents.  Conducted legal research and analysis to support case strategies.   Assisted senior advocates in preparation for hearings and trials.  Developed a solid understanding of procedural and substantive law through hands-on experience. Expertise in Legal Research and Case Analysis. Proficient in Drafting and Filing Legal Documents.",
       ],
@@ -133,7 +133,7 @@ export function profile() {
       name: "BHAVANI DEVI AK",
       position: "Associate",
       mobile: phoneNo(),
-      mail: "connect@croszlegal.com",
+      mail: "bhavani@croszlegal.com",
       content: [
         "A highly skilled and passionate advocate experience in civil law, criminal law, family law, consumer, DRT. Known for strong advocacy skills, a deep commitment to justice, and a track record of successful case outcomes. Adept at providing legal representation, offering strategic counsel, and advocating for clients’ rights in complex legal matters. Draft and file a wide range of legal documents, such as petitions, affidavits, and case briefs. Conduct detailed legal research and case analysis to support case strategies. Provide expert advice and consultation to clients, ensuring their interests are effectively represented. Participate in courtroom proceedings, including hearings, trials, and negotiations, demonstrating strong advocacy skills.",
       ],
